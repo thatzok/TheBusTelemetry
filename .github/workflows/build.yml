@@ -1,0 +1,38 @@
+name: Build
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        target: [x86_64-pc-windows-gnu]
+ 
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: refresh package inventory
+      run: sudo apt update
+    - name: Install libudev-dev
+      run: sudo apt-get install -y libudev-dev
+    - name: Build
+      run: cargo build --bin TheBus2Komsi --verbose
+    - name: Run tests
+      run: cargo test --verbose
+
+    - name: Login into crates.io
+      run: cargo login ${{ secrets.CRATES_IO }}
+    - name: Build binaries in "release" mode
+      run: cargo build -r
+    - name: "Publish to crates.io"
+      run: cargo publish # publishes your crate as a library that can be added as a dependency
