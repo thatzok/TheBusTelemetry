@@ -1,25 +1,18 @@
-name: Build
+name: BuildAndPublish
 
 on:
   push:
-    branches: [ "main" ]
     tags:
       - '*'
-  pull_request:
-    branches: [ "main" ]
-    tags:
-      - '*'
+
 env:
   CARGO_TERM_COLOR: always
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v4
-
     - name: Build
       run: cargo build --verbose
     - name: Run tests
@@ -30,7 +23,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-
     - name: Login into crates.io
       run: cargo login ${{ secrets.CRATES_IO }}
     - name: Build binaries in "release" mode

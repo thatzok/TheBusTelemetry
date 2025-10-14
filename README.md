@@ -1,4 +1,5 @@
 # the-bus-telemetry 
+[![Build](https://github.com/thatzok/TheBusTelemetry/actions/workflows/build.yml/badge.svg)](https://github.com/thatzok/TheBusTelemetry/actions/workflows/build.yml)
 
 This rust crate is a library for accessing the API (called telemetry) for the "The Bus" bus simulator.<br>
 
