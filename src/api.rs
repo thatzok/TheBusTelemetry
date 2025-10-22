@@ -2,6 +2,48 @@ use reqwest::blocking::Client;
 use serde::Deserialize;
 use std::time::Duration;
 
+pub struct RequestConfig {
+    pub host: String,
+    pub port: String,
+    pub vehicle_name: String,
+    pub timeout: Duration,
+    pub debugging: bool,
+}
+
+impl RequestConfig {
+    pub fn new() -> Self {
+        Self {
+            host: "127.0.0.1".to_string(),
+            port: "37337".to_string(),
+            vehicle_name: "Current".to_string(),
+            timeout: Duration::from_millis(300),
+            debugging: false,
+        }
+    }
+    pub fn host(mut self, host: String) -> Self {
+        self.host = host;
+        self
+    }
+
+    pub fn port(mut self, port: String) -> Self {
+        self.port = port;
+        self
+    }
+    pub fn vehicle_name(mut self, vehicle_name: String) -> Self {
+        self.vehicle_name = vehicle_name;
+        self
+    }
+
+    pub fn timeout(mut self, timeout: Duration) -> Self {
+        self.timeout = timeout;
+        self
+    }
+    pub fn debugging(mut self, debugging: bool) -> Self {
+        self.debugging = debugging;
+        self
+    }
+}
+
 #[derive(Deserialize, Debug, PartialEq)]
 pub struct ApiVehicleType {
     #[serde(rename = "ActorName")]
@@ -36,7 +78,7 @@ pub struct ApiLamps {
     pub light_main: f32,
     #[serde(rename = "LightTraveling", alias = "LightTraveling1")]
     pub traveller_light: f32,
-    #[serde(rename = "ButtonLight Door 1",alias="Door Button 1")]
+    #[serde(rename = "ButtonLight Door 1", alias = "Door Button 1")]
     pub front_door_light: f32,
     #[serde(rename = "ButtonLight Door 2", default)]
     pub second_door_light: f32,
@@ -46,6 +88,7 @@ pub struct ApiLamps {
     pub light_stopbrake: f32,
 }
 
+#[deprecated]
 pub fn getapidata(ip: &String, debug: bool) -> Result<ApiVehicleType, Box<dyn std::error::Error>> {
     let request_url = format!("http://{}:37337/Vehicles/Current", ip);
 
@@ -84,6 +127,112 @@ pub fn getapidata(ip: &String, debug: bool) -> Result<ApiVehicleType, Box<dyn st
     if debug {
         println!("{:?}", &api_vehicle);
     }
+    Ok(api_vehicle)
+}
+
+pub async fn send_telemetry_bus_cmd(
+    config: &RequestConfig,
+    cmd: &str,
+) -> Result<(), Box<dyn std::error::Error>> {
+    let url = format!(
+        "http://{}:{}/vehicles/{}/{}",
+        config.host, config.port, config.vehicle_name, cmd
+    );
+    if config.debugging {
+        println!("send_telemetry_bus_cmd URL: {}", url);
+    }
+
+    let _ = reqwest::Client::new()
+        .get(url)
+        .timeout(config.timeout)
+        .send()
+        .await?;
+
+    Ok(())
+}
+
+pub async fn get_telemetry_data(
+    config: &RequestConfig,
+    path: &str,
+) -> reqwest::Result<serde_json::Value> {
+    let url = format!("http://{}:{}/{}", config.host, config.port, path);
+
+    if config.debugging {
+        println!("get_telemetry_data URL: {}", url);
+    }
+
+    let value = reqwest::Client::new()
+        .get(url)
+        .timeout(config.timeout)
+        .send()
+        .await?
+        .json::<serde_json::Value>()
+        .await?;
+
+    Ok(value)
+}
+
+pub async fn get_current_vehicle_name(config: &RequestConfig) -> String {
+
+    let result = get_telemetry_data(&config, "player").await;
+
+    if result.is_err() {
+        return "".to_string();
+    }
+    let data = result.unwrap();
+
+    if config.debugging {
+        println!("get_current_vehicle_name data: {:?}", data);
+    }
+
+    let mode: Option<String> = data
+        .get("Mode")
+        .and_then(|v| v.as_str())
+        .map(|s| s.to_string());
+
+    let mut mo = "".to_string();
+    if let Some(ref m) = mode {
+        mo = m.clone();
+    }
+
+    if mo != "Vehicle" {
+        return "".to_string();
+    }
+
+    let current_vehicle: Option<String> = data
+        .get("CurrentVehicle")
+        .and_then(|v| v.as_str())
+        .map(|s| s.to_string());
+
+    let mut bus = "".to_string();
+
+    if let Some(ref cv) = current_vehicle {
+        bus = cv.clone();
+    }
+    bus
+}
+
+pub async fn get_vehicle(
+    config: &RequestConfig,
+) -> Result<ApiVehicleType, Box<dyn std::error::Error>> {
+
+    let path = format!("vehicles/{}", config.vehicle_name);
+
+    if config.debugging {
+        println!("get_vehicle path: {}", path);
+    }
+
+    let body = get_telemetry_data(&config, &path).await?;
+
+    let api_vehicle: ApiVehicleType = serde_json::from_value(body).map_err(|e| {
+        eprintln!("Failed to parse API response as Vehicle JSON: {}", e);
+        Box::new(e) as Box<dyn std::error::Error>
+    })?;
+
+    if config.debugging {
+        println!("{:?}", &api_vehicle);
+    }
+
     Ok(api_vehicle)
 }
 
@@ -269,5 +418,4 @@ mod tests {
         assert_eq!(lamps.led_stop_request, 0.0);
         assert_eq!(lamps.light_stopbrake, 0.0);
     }
-
 }

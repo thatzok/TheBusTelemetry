@@ -2,3 +2,4 @@
 pub mod api;
 pub mod vehicle;
 pub mod api2vehicle;
+pub mod vehicle_diff;
