@@ -1,5 +1,6 @@
 use reqwest::blocking::Client;
 use serde::Deserialize;
+use std::string::ToString;
 use std::time::Duration;
 
 pub struct RequestConfig {
@@ -70,6 +71,8 @@ pub struct ApiVehicleType {
     pub indicator_state: i8,
     #[serde(rename = "AllLamps")]
     pub all_lamps: ApiLamps,
+    #[serde(skip)]
+    pub all_buttons: ApiButtons,
 }
 
 #[derive(Deserialize, Debug, PartialEq)]
@@ -88,6 +91,20 @@ pub struct ApiLamps {
     pub light_stopbrake: f32,
 }
 
+#[derive(Default, Debug, PartialEq)]
+pub struct ApiButtons {
+    pub gear_selector: String,
+}
+pub fn get_json_field_value(json_string: &str, name:&str) -> String {
+    let value = serde_json::from_str(json_string);
+    if value.is_err() {
+        return "".to_string();
+    }
+    let data: serde_json::Value = value.unwrap();
+    let ret = data[name].as_str().unwrap_or("");
+    ret.to_string()
+}
+
 #[deprecated]
 pub fn getapidata(ip: &String, debug: bool) -> Result<ApiVehicleType, Box<dyn std::error::Error>> {
     let request_url = format!("http://{}:37337/Vehicles/Current", ip);
@@ -100,15 +117,10 @@ pub fn getapidata(ip: &String, debug: bool) -> Result<ApiVehicleType, Box<dyn st
     }
 
     let response = client.get(&request_url).timeout(timeout).send()?; // wir warten auf die antwort
-    // eprintln!("http get erfolgt");
 
     if !response.status().is_success() {
         Err("Error: response code")?
     }
-
-    // eprintln!("http code OK");
-    // eprintln!("Response: {:?} {}", response.version(), response.status());
-    // eprintln!("Headers: {:#?}\n", response.headers());
 
     let value = response.json::<serde_json::Value>()?;
     if debug {
@@ -173,7 +185,6 @@ pub async fn get_telemetry_data(
 }
 
 pub async fn get_current_vehicle_name(config: &RequestConfig) -> String {
-
     let result = get_telemetry_data(&config, "player").await;
 
     if result.is_err() {
@@ -215,7 +226,6 @@ pub async fn get_current_vehicle_name(config: &RequestConfig) -> String {
 pub async fn get_vehicle(
     config: &RequestConfig,
 ) -> Result<ApiVehicleType, Box<dyn std::error::Error>> {
-
     let path = format!("vehicles/{}", config.vehicle_name);
 
     if config.debugging {
@@ -224,16 +234,40 @@ pub async fn get_vehicle(
 
     let body = get_telemetry_data(&config, &path).await?;
 
-    let api_vehicle: ApiVehicleType = serde_json::from_value(body).map_err(|e| {
+    // special case for array of buttons, because they did not work with serde_json::from_value
+    let gear_selector = get_button_by_name(&body, "Gear Selector");
+
+    let mut api_vehicle: ApiVehicleType = serde_json::from_value(body).map_err(|e| {
         eprintln!("Failed to parse API response as Vehicle JSON: {}", e);
         Box::new(e) as Box<dyn std::error::Error>
     })?;
+
+    api_vehicle.all_buttons.gear_selector = gear_selector;
 
     if config.debugging {
         println!("{:?}", &api_vehicle);
     }
 
     Ok(api_vehicle)
+}
+
+pub fn get_button_by_name(data: &serde_json::Value, name: &str) -> String {
+    let ret = data
+        .get("Buttons")
+        .and_then(|v| v.as_array())
+        .and_then(|arr| {
+            arr.iter().find(|entry| {
+                entry
+                    .get("Name")
+                    .and_then(|n| n.as_str())
+                    .map_or(false, |s| s == name)
+            })
+        })
+        .and_then(|entry| entry.get("State"))
+        .and_then(|v| v.as_str())
+        .map(|s| s.to_string());
+
+    ret.unwrap_or_else(|| "".to_string())
 }
 
 #[cfg(test)]
@@ -392,7 +426,6 @@ mod tests {
         // If the API server is running, this should succeed
         if result.is_ok() {
             let vehicle = result.unwrap();
-            // Basic validation that we got a valid response
             assert!(!vehicle.actor_name.is_empty());
         } else {
             // If the test is run without an API server, this will be skipped
@@ -417,5 +450,21 @@ mod tests {
         assert_eq!(lamps.second_door_light, 0.0);
         assert_eq!(lamps.led_stop_request, 0.0);
         assert_eq!(lamps.light_stopbrake, 0.0);
+    }
+
+    #[test]
+    fn test_get_button_by_name() {
+        use std::fs;
+        let path = "tests/json/mb_ecitaro.json";
+        let file = fs::read_to_string(path).expect("mb_ecitaro.json not found");
+        let data: serde_json::Value = serde_json::from_str(&file).expect("invalid json");
+
+        // existing
+        let state = get_button_by_name(&data, "Wiper");
+        assert_eq!(state.as_str(), "Off");
+
+        // non-existing
+        let none_state = get_button_by_name(&data, "__does_not_exist__");
+        assert_eq!(none_state.as_str(), "");
     }
 }

@@ -59,6 +59,7 @@ pub fn compare_vehicle_states(old: &VehicleState, new: &VehicleState, force: boo
         force,
     );
     handle_u8_field_change(old.battery_light, new.battery_light, "batterylight", force);
+    handle_u8_field_change(old.gear_selector, new.gear_selector, "gearselector", force);
 
     // Handle u32 fields
     handle_u32_field_change(old.fuel, new.fuel, "fuel", force);

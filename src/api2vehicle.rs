@@ -30,12 +30,19 @@ pub fn get_vehicle_state_from_api(av: ApiVehicleType) -> VehicleState {
         _ => s.fixing_brake = 0,
     }
 
-    // wir prüfen nur ob gesetzt, nicht in welche Richtung (in api: -1,0,1 für links,aus,rechts)
+    // we only check if set, not in which direction (in api: -1,0,1 for left,off,right)
     match av.indicator_state {
-        0 => s.indicator = 0,  // aus
-        -1 => s.indicator = 1, // an links
-        1 => s.indicator = 2,  // an rechts
+        0 => s.indicator = 0,  // off
+        -1 => s.indicator = 1, // on left
+        1 => s.indicator = 2,  // on right
         _ => s.indicator = 0,
+    }
+
+    match av.all_buttons.gear_selector.as_str() {
+        "Drive" => s.gear_selector = 1,
+        "Neutral" => s.gear_selector = 2,
+        "Reverse" => s.gear_selector = 3,
+        _ => s.gear_selector = 2,
     }
 
     s.speed = av.speed.abs().round() as u32;

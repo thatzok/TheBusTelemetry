@@ -3,16 +3,8 @@
   "IsPlayerControlled": "true",
   "VehicleModel": "eCitybus",
   "InputIdentifier": "eCitaro",
-  "DaytimeLight": "false",
-  "ParkingLight": "false",
-  "Headlight": "false",
-  "TravellerLight": "false",
-  "FogLight": "false",
-  "RearFogLight": "false",
-  "MainLight": "false",
-  "DashboardLight": "false",
   "Speed": 0.0,
-  "RPM": -0.0,
+  "RPM": 0.0,
   "IdleRPM": 0.0,
   "MaxRPM": 11000.0,
   "Mass": 14000.0,
@@ -25,14 +17,14 @@
   "GearboxType": "None",
   "LowFuelWarning": "false",
   "Location": {
-    "X": 164988.847245,
-    "Y": 76578.088169,
-    "Z": 4696.714756
+    "X": 167.709886,
+    "Y": -452.644085,
+    "Z": -580.014281
   },
   "Rotation": {
-    "Roll": 0.575352,
-    "Pitch": -0.119879,
-    "Yaw": -111.762299
+    "Roll": -1.870468,
+    "Pitch": 1.015357,
+    "Yaw": -37.990757
   },
   "IndicatorState": 0,
   "IndicatorValue": 0,
@@ -41,83 +33,83 @@
   "Gearbox": {},
   "Wheels": [
     {
-      "CurrentSuspension": 24.802507,
-      "PreviousSuspension": 24.802507,
+      "CurrentSuspension": 26.983986,
+      "PreviousSuspension": 26.984001,
       "Location": {
         "X": 222.768143,
         "Y": -116.451004,
-        "Z": 41.802507
+        "Z": 43.983986
       },
       "Rotation": {
         "Roll": 0.0,
-        "Pitch": -0.014762,
+        "Pitch": 0.0,
         "Yaw": 0.0
       },
-      "SuspensionForce": 2924831.61676,
+      "SuspensionForce": 3852520.579626,
       "OnGround": "true",
       "HasContraction": "true"
     },
     {
-      "CurrentSuspension": 25.40803,
-      "PreviousSuspension": 25.40803,
+      "CurrentSuspension": 22.887615,
+      "PreviousSuspension": 22.88763,
       "Location": {
         "X": 222.768143,
         "Y": 116.451004,
-        "Z": 47.40803
+        "Z": 44.887615
       },
       "Rotation": {
         "Roll": 0.0,
-        "Pitch": 0.010533,
+        "Pitch": -0.0,
         "Yaw": 0.0
       },
-      "SuspensionForce": 3100432.88324,
+      "SuspensionForce": 2132047.159338,
       "OnGround": "true",
       "HasContraction": "true"
     },
     {
-      "CurrentSuspension": 24.815443,
-      "PreviousSuspension": 24.815443,
+      "CurrentSuspension": 23.569729,
+      "PreviousSuspension": 23.569714,
       "Location": {
         "X": -358.161896,
         "Y": -116.451004,
-        "Z": 41.815443
+        "Z": 40.569729
       },
       "Rotation": {
         "Roll": 0.0,
-        "Pitch": -0.005227,
+        "Pitch": -0.0,
         "Yaw": 0.0
       },
-      "SuspensionForce": 3801233.28476,
+      "SuspensionForce": 3159602.669849,
       "OnGround": "true",
       "HasContraction": "true"
     },
     {
-      "CurrentSuspension": 25.346743,
-      "PreviousSuspension": 25.346743,
+      "CurrentSuspension": 26.8612,
+      "PreviousSuspension": 26.861183,
       "Location": {
         "X": -358.161896,
         "Y": 116.451004,
-        "Z": 47.346743
+        "Z": 48.8612
       },
       "Rotation": {
         "Roll": 0.0,
-        "Pitch": 0.012811,
+        "Pitch": -0.0,
         "Yaw": 0.0
       },
-      "SuspensionForce": 3973905.46524,
+      "SuspensionForce": 4657221.141466,
       "OnGround": "true",
       "HasContraction": "true"
     }
   ],
   "IsRadioPlaying": "false",
   "ActiveRadioChannel": "",
-  "RadioVolume": 0.0,
+  "RadioVolume": 1.0,
   "PassengerDoorsOpen": "true",
   "LuggageDoorsOpen": "false",
   "NumSeats": 30,
   "NumOccupiedSeats": 0,
   "IgnitionEnabled": "true",
-  "EngineTemperature": 0.0047,
+  "EngineTemperature": 0.336695,
   "WiperLevel": 0,
   "DestinationDisplayActive": "true",
   "CruiseControlActive": "false",
@@ -126,7 +118,7 @@
   "DirtIntensity": 0.0,
   "CurrentFuel": 243.0,
   "MaxFuel": 243.0,
-  "DisplayFuel": 0.96659,
+  "DisplayFuel": 1.0,
   "Buttons": [
     {
       "Name": "DriverWindow 1",
@@ -136,6 +128,10 @@
         "DriverWindowOpen",
         "DriverWindowClose",
         "None"
+      ],
+      "States": [
+        "Primary",
+        "Secondary"
       ]
     },
     {
@@ -146,7 +142,8 @@
       "Actions": [
         "WindowShadeSideDown",
         "WindowShadeSideUp"
-      ]
+      ],
+      "States": []
     },
     {
       "Name": "Sun Blind Small Left",
@@ -155,7 +152,8 @@
       "Value": "0.0",
       "Actions": [
         "None"
-      ]
+      ],
+      "States": []
     },
     {
       "Name": "WindowShade 1",
@@ -165,6 +163,10 @@
         "WindowShadeDown",
         "WindowShadeUp",
         "None"
+      ],
+      "States": [
+        "Primary",
+        "Secondary"
       ]
     },
     {
@@ -174,6 +176,12 @@
       "Actions": [
         "WiperDown",
         "WiperUp"
+      ],
+      "States": [
+        "fast",
+        "On",
+        "Interval",
+        "Off"
       ]
     },
     {
@@ -183,6 +191,10 @@
       "Actions": [
         "WindowHeating",
         "None"
+      ],
+      "States": [
+        "Primary",
+        "Secondary"
       ]
     },
     {
@@ -192,6 +204,11 @@
       "Actions": [
         "Fans",
         "None"
+      ],
+      "States": [
+        "Primary",
+        "Secondary",
+        "Tertiary"
       ]
     },
     {
@@ -200,6 +217,10 @@
       "State": "false",
       "Actions": [
         "None"
+      ],
+      "States": [
+        "On",
+        "Off"
       ]
     },
     {
@@ -208,6 +229,10 @@
       "State": "false",
       "Actions": [
         "None"
+      ],
+      "States": [
+        "On",
+        "Off"
       ]
     },
     {
@@ -216,16 +241,25 @@
       "State": "Primary",
       "Actions": [
         "FixingBrake"
+      ],
+      "States": [
+        "Primary",
+        "Secondary"
       ]
     },
     {
       "Name": "Gear Selector",
       "Tooltip": "",
-      "State": "Neutral",
+      "State": "Reverse",
       "Actions": [
         "SetGearN",
         "SetGearR",
         "SetGearD"
+      ],
+      "States": [
+        "Drive",
+        "Neutral",
+        "Reverse"
       ]
     },
     {
@@ -234,6 +268,11 @@
       "State": "Start",
       "Actions": [
         "MotorStartStop"
+      ],
+      "States": [
+        "Start",
+        "On",
+        "Off"
       ]
     },
     {
@@ -244,6 +283,14 @@
         "Lightswitch",
         "LightSwitchDown",
         "LightSwitchUp"
+      ],
+      "States": [
+        "Off",
+        "Parking Lights",
+        "Headlights",
+        "High Beam",
+        "Front Fog Light",
+        "Rear Fog Light"
       ]
     },
     {
@@ -254,6 +301,11 @@
         "IndicatorDown",
         "IndicatorUp",
         "None"
+      ],
+      "States": [
+        "Primary",
+        "Secondary",
+        "Tertiary"
       ]
     },
     {
@@ -262,6 +314,10 @@
       "State": "false",
       "Actions": [
         "ToggleWarningLights"
+      ],
+      "States": [
+        "On",
+        "Off"
       ]
     },
     {
@@ -270,6 +326,10 @@
       "State": "false",
       "Actions": [
         "ToggleDriversLight"
+      ],
+      "States": [
+        "On",
+        "Off"
       ]
     },
     {
@@ -280,6 +340,10 @@
         "RetarderOn",
         "RetarderOff",
         "RetarderMaxOff"
+      ],
+      "States": [
+        "Primary",
+        "Secondary"
       ]
     },
     {
@@ -294,6 +358,13 @@
         "RetarderLevel5",
         "RetarderDown",
         "RetarderUp"
+      ],
+      "States": [
+        "Retarder1",
+        "Retarder2",
+        "Retarder3",
+        "Retarder4",
+        "Retarder5"
       ]
     },
     {
@@ -302,6 +373,10 @@
       "State": "false",
       "Actions": [
         "None"
+      ],
+      "States": [
+        "On",
+        "Off"
       ]
     },
     {
@@ -310,6 +385,10 @@
       "State": "false",
       "Actions": [
         "Announcement"
+      ],
+      "States": [
+        "On",
+        "Off"
       ]
     },
     {
@@ -318,6 +397,10 @@
       "State": "Primary",
       "Actions": [
         "None"
+      ],
+      "States": [
+        "Primary",
+        "Secondary"
       ]
     },
     {
@@ -327,6 +410,11 @@
       "Actions": [
         "AirFilter",
         "None"
+      ],
+      "States": [
+        "Primary",
+        "Secondary",
+        "Tertiary"
       ]
     },
     {
@@ -335,6 +423,10 @@
       "State": "false",
       "Actions": [
         "SteeringWheelAdjust"
+      ],
+      "States": [
+        "On",
+        "Off"
       ]
     },
     {
@@ -343,6 +435,10 @@
       "State": "false",
       "Actions": [
         "LaneAssist"
+      ],
+      "States": [
+        "On",
+        "Off"
       ]
     },
     {
@@ -351,6 +447,10 @@
       "State": "false",
       "Actions": [
         "ToggleASRThreshold"
+      ],
+      "States": [
+        "On",
+        "Off"
       ]
     },
     {
@@ -361,6 +461,10 @@
         "LiftDown",
         "LiftUp",
         "None"
+      ],
+      "States": [
+        "Primary",
+        "Secondary"
       ]
     },
     {
@@ -371,6 +475,10 @@
         "KneelDown",
         "KneelUp",
         "None"
+      ],
+      "States": [
+        "Primary",
+        "Secondary"
       ]
     },
     {
@@ -379,6 +487,10 @@
       "State": "false",
       "Actions": [
         "Camera"
+      ],
+      "States": [
+        "On",
+        "Off"
       ]
     },
     {
@@ -387,6 +499,10 @@
       "State": "false",
       "Actions": [
         "ToggleCameraDisplay"
+      ],
+      "States": [
+        "On",
+        "Off"
       ]
     },
     {
@@ -395,6 +511,10 @@
       "State": "false",
       "Actions": [
         "MenuHomescreen"
+      ],
+      "States": [
+        "On",
+        "Off"
       ]
     },
     {
@@ -403,6 +523,10 @@
       "State": "false",
       "Actions": [
         "Pedestrians"
+      ],
+      "States": [
+        "On",
+        "Off"
       ]
     },
     {
@@ -413,6 +537,11 @@
         "InteriorLightDim",
         "InteriorLightBright",
         "None"
+      ],
+      "States": [
+        "Primary",
+        "Secondary",
+        "Tertiary"
       ]
     },
     {
@@ -421,6 +550,10 @@
       "State": "false",
       "Actions": [
         "TogglePassengersLight"
+      ],
+      "States": [
+        "On",
+        "Off"
       ]
     },
     {
@@ -429,6 +562,10 @@
       "State": "true",
       "Actions": [
         "ToggleAutomaticRearDoorClosing"
+      ],
+      "States": [
+        "On",
+        "Off"
       ]
     },
     {
@@ -440,6 +577,11 @@
         "DoorWingLockLeft",
         "DoorWingLockRight",
         "None"
+      ],
+      "States": [
+        "Primary",
+        "Secondary",
+        "Tertiary"
       ]
     },
     {
@@ -448,6 +590,10 @@
       "State": "false",
       "Actions": [
         "StopBrakeOnOff"
+      ],
+      "States": [
+        "On",
+        "Off"
       ]
     },
     {
@@ -456,6 +602,10 @@
       "State": "false",
       "Actions": [
         "ToggleDoorClearance"
+      ],
+      "States": [
+        "On",
+        "Off"
       ]
     },
     {
@@ -464,6 +614,10 @@
       "State": "false",
       "Actions": [
         "DoorFrontOpenClose"
+      ],
+      "States": [
+        "On",
+        "Off"
       ]
     },
     {
@@ -472,6 +626,10 @@
       "State": "false",
       "Actions": [
         "DoorMiddleOpenClose"
+      ],
+      "States": [
+        "On",
+        "Off"
       ]
     },
     {
@@ -480,6 +638,10 @@
       "State": "false",
       "Actions": [
         "DoorRearOpenClose"
+      ],
+      "States": [
+        "On",
+        "Off"
       ]
     },
     {
@@ -488,6 +650,10 @@
       "State": "false",
       "Actions": [
         "DoorFourthOpenClose"
+      ],
+      "States": [
+        "On",
+        "Off"
       ]
     },
     {
@@ -498,6 +664,10 @@
         "ElectricRampIn",
         "ElectricRampOut",
         "None"
+      ],
+      "States": [
+        "Primary",
+        "Secondary"
       ]
     },
     {
@@ -506,6 +676,10 @@
       "State": "Primary",
       "Actions": [
         "ToggleAirCondition"
+      ],
+      "States": [
+        "Primary",
+        "Secondary"
       ]
     },
     {
@@ -514,6 +688,10 @@
       "State": "Primary",
       "Actions": [
         "ACMode"
+      ],
+      "States": [
+        "Primary",
+        "Secondary"
       ]
     },
     {
@@ -522,6 +700,10 @@
       "State": "Primary",
       "Actions": [
         "ACRear"
+      ],
+      "States": [
+        "Primary",
+        "Secondary"
       ]
     },
     {
@@ -530,6 +712,10 @@
       "State": "Primary",
       "Actions": [
         "ACCirculation"
+      ],
+      "States": [
+        "Primary",
+        "Secondary"
       ]
     },
     {
@@ -538,6 +724,10 @@
       "State": "Primary",
       "Actions": [
         "ACCirculationFront"
+      ],
+      "States": [
+        "Primary",
+        "Secondary"
       ]
     },
     {
@@ -547,6 +737,12 @@
       "Actions": [
         "AC 1 AirFlowFakeLeft",
         "AC 1 AirFlowFakeRight"
+      ],
+      "States": [
+        "AC_Mode_1",
+        "AC_Mode_2",
+        "AC_Mode_3",
+        "AC_Mode_4"
       ]
     },
     {
@@ -577,6 +773,29 @@
         "SetTemp280",
         "AirconditionMinus",
         "AirconditionPlus"
+      ],
+      "States": [
+        "180",
+        "185",
+        "190",
+        "195",
+        "200",
+        "205",
+        "210",
+        "215",
+        "220",
+        "225",
+        "230",
+        "235",
+        "240",
+        "245",
+        "250",
+        "255",
+        "260",
+        "265",
+        "270",
+        "275",
+        "280"
       ]
     },
     {
@@ -585,6 +804,9 @@
       "Value": "76.233184",
       "Actions": [
         "None"
+      ],
+      "States": [
+        "Default"
       ]
     },
     {
@@ -593,6 +815,9 @@
       "Value": "0.0",
       "Actions": [
         "None"
+      ],
+      "States": [
+        "Default"
       ]
     },
     {
@@ -601,6 +826,10 @@
       "State": "false",
       "Actions": [
         "None"
+      ],
+      "States": [
+        "On",
+        "Off"
       ]
     },
     {
@@ -609,6 +838,10 @@
       "State": "false",
       "Actions": [
         "SwitchPreviousCamera"
+      ],
+      "States": [
+        "On",
+        "Off"
       ]
     },
     {
@@ -617,6 +850,10 @@
       "State": "false",
       "Actions": [
         "SwitchNextCamera"
+      ],
+      "States": [
+        "On",
+        "Off"
       ]
     },
     {
@@ -625,6 +862,10 @@
       "State": "false",
       "Actions": [
         "None"
+      ],
+      "States": [
+        "On",
+        "Off"
       ]
     },
     {
@@ -633,6 +874,10 @@
       "State": "Primary",
       "Actions": [
         "None"
+      ],
+      "States": [
+        "Primary",
+        "Secondary"
       ]
     },
     {
@@ -641,6 +886,10 @@
       "State": "Primary",
       "Actions": [
         "None"
+      ],
+      "States": [
+        "Primary",
+        "Secondary"
       ]
     },
     {
@@ -649,6 +898,10 @@
       "State": "false",
       "Actions": [
         "None"
+      ],
+      "States": [
+        "On",
+        "Off"
       ]
     },
     {
@@ -658,7 +911,8 @@
       "Value": "0.0",
       "Actions": [
         "None"
-      ]
+      ],
+      "States": []
     },
     {
       "Name": "BoardComputer",
@@ -666,6 +920,10 @@
       "State": "false",
       "Actions": [
         "Select Boardcomputer"
+      ],
+      "States": [
+        "On",
+        "Off"
       ]
     },
     {
@@ -674,6 +932,10 @@
       "State": "false",
       "Actions": [
         "Coins15"
+      ],
+      "States": [
+        "On",
+        "Off"
       ]
     },
     {
@@ -682,6 +944,10 @@
       "State": "false",
       "Actions": [
         "Coins20"
+      ],
+      "States": [
+        "On",
+        "Off"
       ]
     },
     {
@@ -690,6 +956,10 @@
       "State": "false",
       "Actions": [
         "Coins30"
+      ],
+      "States": [
+        "On",
+        "Off"
       ]
     },
     {
@@ -698,6 +968,10 @@
       "State": "false",
       "Actions": [
         "Coins50"
+      ],
+      "States": [
+        "On",
+        "Off"
       ]
     },
     {
@@ -706,6 +980,10 @@
       "State": "false",
       "Actions": [
         "Coins60"
+      ],
+      "States": [
+        "On",
+        "Off"
       ]
     },
     {
@@ -714,14 +992,22 @@
       "State": "false",
       "Actions": [
         "Coins100"
+      ],
+      "States": [
+        "On",
+        "Off"
       ]
     },
     {
       "Name": "2 Euro",
       "Tooltip": "2 €",
-      "State": "false",
+      "State": "true",
       "Actions": [
         "Coins200"
+      ],
+      "States": [
+        "On",
+        "Off"
       ]
     },
     {
@@ -730,6 +1016,10 @@
       "State": "false",
       "Actions": [
         "Coins400"
+      ],
+      "States": [
+        "On",
+        "Off"
       ]
     },
     {
@@ -738,6 +1028,10 @@
       "State": "false",
       "Actions": [
         "Coins600"
+      ],
+      "States": [
+        "On",
+        "Off"
       ]
     },
     {
@@ -746,22 +1040,34 @@
       "State": "false",
       "Actions": [
         "Coins800"
+      ],
+      "States": [
+        "On",
+        "Off"
       ]
     },
     {
       "Name": "5 Cent",
-      "Tooltip": "",
+      "Tooltip": "0,05 €",
       "State": "false",
       "Actions": [
         "Coins5"
+      ],
+      "States": [
+        "On",
+        "Off"
       ]
     },
     {
       "Name": "10 Cent",
-      "Tooltip": "",
+      "Tooltip": "0.1 €",
       "State": "false",
       "Actions": [
         "Coins10"
+      ],
+      "States": [
+        "On",
+        "Off"
       ]
     },
     {
@@ -770,6 +1076,10 @@
       "State": "false",
       "Actions": [
         "Take Cash Money"
+      ],
+      "States": [
+        "On",
+        "Off"
       ]
     }
   ],
@@ -788,9 +1098,9 @@
     }
   ],
   "UMG": {
-    "Navigation": "/vehicles/BP_Mercedes_eCitaro_12m_2Door_C_2147345014/navigation",
-    "Atron": "/vehicles/BP_Mercedes_eCitaro_12m_2Door_C_2147345014/boardcomputer",
-    "Driver Display": "/vehicles/BP_Mercedes_eCitaro_12m_2Door_C_2147345014/driverdisplay"
+    "Driver Display": "/vehicles/BP_Mercedes_eCitaro_12m_2Door_C_2147475968/driverdisplay",
+    "Atron": "/vehicles/BP_Mercedes_eCitaro_12m_2Door_C_2147475968/boardcomputer",
+    "Navigation": "/vehicles/BP_Mercedes_eCitaro_12m_2Door_C_2147475968/navigation"
   },
   "AllLamps": {
     "Default Emissive Materials": 0.0,
@@ -803,7 +1113,7 @@
     "LightHeadlight": 0.0,
     "LightTraveling": 0.0,
     "LightBrake": 1.0,
-    "LightReversal": 0.0,
+    "LightReversal": 1.0,
     "LightFog": 0.0,
     "LightFog_LED": 0.0,
     "LightRearFog": 0.0,
@@ -844,7 +1154,7 @@
     "ButtonLight Camera 1": 1.0,
     "ButtonLight SteeringWheelAdjust": 0.0,
     "ButtonLight BusStopBrake": 1.0,
-    "ButtonLight TractionControl": 1.0,
+    "ButtonLight TractionControl": 0.0,
     "ButtonLight DriverDoor": 0.0,
     "ButtonLight AutomaticDoorClosing": 1.0,
     "ButtonLight AutomaticKneeling": 1.0,

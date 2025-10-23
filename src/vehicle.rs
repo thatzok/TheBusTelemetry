@@ -16,6 +16,7 @@ pub struct VehicleState {
     pub lights_stop_brake: u8,
     pub lights_high_beam: u8,
     pub battery_light: u8,
+    pub gear_selector: u8,
 }
 
 pub fn print_vehicle_state(v: &VehicleState) {
@@ -35,6 +36,8 @@ pub fn print_vehicle_state(v: &VehicleState) {
     print!("speed:{} ", v.speed);
     print!("maxspeed:{} ", v.maxspeed);
     print!("batterylight:{} ", v.battery_light);
+    print!("gear-selector:{} ", v.gear_selector);
+
     println!(" ");
 }
 
@@ -56,7 +59,7 @@ pub fn init_vehicle_state() -> VehicleState {
         fuel: 0,
         lights_stop_brake: 0,
         battery_light: 0,
+        gear_selector: 2,
     };
     return s;
 }
-
