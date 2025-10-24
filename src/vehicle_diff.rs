@@ -52,6 +52,21 @@ pub fn compare_vehicle_states(old: &VehicleState, new: &VehicleState, force: boo
         "lights_second_door",
         force,
     );
+
+    handle_u8_field_change(
+        old.lights_third_door,
+        new.lights_third_door,
+        "lights_third_door",
+        force,
+    );
+
+    handle_u8_field_change(
+        old.lights_fourth_door,
+        new.lights_fourth_door,
+        "lights_fourth_door",
+        force,
+    );
+
     handle_u8_field_change(
         old.lights_high_beam,
         new.lights_high_beam,

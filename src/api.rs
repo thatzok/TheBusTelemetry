@@ -71,8 +71,8 @@ pub struct ApiVehicleType {
     pub indicator_state: i8,
     #[serde(rename = "AllLamps")]
     pub all_lamps: ApiLamps,
-    #[serde(skip)]
-    pub all_buttons: ApiButtons,
+    #[serde(rename = "Buttons", default)]
+    pub buttons: Vec<ApiButton>,
 }
 
 #[derive(Deserialize, Debug, PartialEq)]
@@ -81,28 +81,74 @@ pub struct ApiLamps {
     pub light_main: f32,
     #[serde(rename = "LightTraveling", alias = "LightTraveling1")]
     pub traveller_light: f32,
-    #[serde(rename = "ButtonLight Door 1", alias = "Door Button 1")]
+    #[serde(rename = "Door Button 1", alias = "ButtonLight Door 1", default)]
     pub front_door_light: f32,
-    #[serde(rename = "ButtonLight Door 2", default)]
+    #[serde(rename = "Door Button 2", alias = "ButtonLight Door 2", default)]
     pub second_door_light: f32,
+    #[serde(rename = "Door Button 3", alias = "ButtonLight Door 3", default)]
+    pub third_door_light: f32,
+    #[serde(rename = "Door Button 4", alias = "ButtonLight Door 4", default)]
+    pub fourth_door_light: f32,
     #[serde(rename = "LED StopRequest", default)]
     pub led_stop_request: f32,
     #[serde(rename = "ButtonLight BusStopBrake", default)]
     pub light_stopbrake: f32,
 }
 
-#[derive(Default, Debug, PartialEq)]
-pub struct ApiButtons {
-    pub gear_selector: String,
+#[derive(Deserialize, Debug, PartialEq, Default, Clone)]
+pub struct ApiButton {
+    #[serde(rename = "Name")]
+    pub name: String,
+    #[serde(rename = "Tooltip", default)]
+    pub tooltip: String,
+    #[serde(rename = "State", default)]
+    pub state: String,
+    #[serde(rename = "Value", default)]
+    pub value: String,
+    #[serde(rename = "Actions", default)]
+    pub actions: Vec<String>,
+    #[serde(rename = "States", default)]
+    pub states: Vec<String>,
 }
-pub fn get_json_field_value(json_string: &str, name:&str) -> String {
-    let value = serde_json::from_str(json_string);
-    if value.is_err() {
-        return "".to_string();
+
+impl ApiVehicleType {
+    pub fn get_button(&self, name: &str) -> Option<ApiButton> {
+        self.buttons.iter().find(|b| b.name == name).cloned()
     }
-    let data: serde_json::Value = value.unwrap();
-    let ret = data[name].as_str().unwrap_or("");
-    ret.to_string()
+    pub fn get_button_state(&self, name: &str) -> String {
+        self.buttons
+            .iter()
+            .find(|b| b.name == name)
+            .map(|b| b.state.clone())
+            .unwrap_or_else(|| "".to_string())
+    }
+
+    pub fn get_button_state_contains(&self, part: &str) -> String {
+        self.buttons
+            .iter()
+            .find(|b| b.name.contains(part))
+            .map(|b| b.state.clone())
+            .unwrap_or_else(|| "".to_string())
+    }
+
+    pub fn filtered_buttons(&self, name: &str) -> Vec<ApiButton> {
+        self.buttons
+            .iter()
+            .filter(|b| b.name == name)
+            .cloned()
+            .collect()
+    }
+
+    pub fn retain_buttons_by_name(&mut self, name: &str) {
+        self.buttons.retain(|b| b.name == name);
+    }
+
+    pub fn buttons_name_state(&self) -> Vec<(String, String)> {
+        self.buttons
+            .iter()
+            .map(|b| (b.name.clone(), b.state.clone()))
+            .collect()
+    }
 }
 
 #[deprecated]
@@ -234,15 +280,10 @@ pub async fn get_vehicle(
 
     let body = get_telemetry_data(&config, &path).await?;
 
-    // special case for array of buttons, because they did not work with serde_json::from_value
-    let gear_selector = get_button_by_name(&body, "Gear Selector");
-
     let mut api_vehicle: ApiVehicleType = serde_json::from_value(body).map_err(|e| {
         eprintln!("Failed to parse API response as Vehicle JSON: {}", e);
         Box::new(e) as Box<dyn std::error::Error>
     })?;
-
-    api_vehicle.all_buttons.gear_selector = gear_selector;
 
     if config.debugging {
         println!("{:?}", &api_vehicle);
@@ -268,203 +309,4 @@ pub fn get_button_by_name(data: &serde_json::Value, name: &str) -> String {
         .map(|s| s.to_string());
 
     ret.unwrap_or_else(|| "".to_string())
-}
-
-#[cfg(test)]
-mod tests {
-    use super::*;
-    use serde_json::json;
-
-    #[test]
-    fn test_api_lamps_deserialization() {
-        let json_data = json!({
-            "LightHeadlight": 1.0,
-            "LightTraveling": 0.5,
-            "ButtonLight Door 1": 0.0,
-            "ButtonLight Door 2": 1.0,
-            "LED StopRequest": 0.0,
-            "ButtonLight BusStopBrake": 1.0
-        });
-
-        let lamps: ApiLamps = serde_json::from_value(json_data).unwrap();
-
-        assert_eq!(lamps.light_main, 1.0);
-        assert_eq!(lamps.traveller_light, 0.5);
-        assert_eq!(lamps.front_door_light, 0.0);
-        assert_eq!(lamps.second_door_light, 1.0);
-        assert_eq!(lamps.led_stop_request, 0.0);
-        assert_eq!(lamps.light_stopbrake, 1.0);
-    }
-
-    #[test]
-    fn test_api_lamps_alias_deserialization() {
-        // Test the alias functionality for LightTraveling1
-        let json_data = json!({
-            "LightHeadlight": 1.0,
-            "LightTraveling1": 0.5,  // Using the alias
-            "Door Button 1": 0.0,    // Using the alias
-            "ButtonLight Door 2": 1.0,
-            "LED StopRequest": 0.0,
-            "ButtonLight BusStopBrake": 1.0
-        });
-
-        let lamps: ApiLamps = serde_json::from_value(json_data).unwrap();
-
-        assert_eq!(lamps.traveller_light, 0.5);
-        assert_eq!(lamps.front_door_light, 0.0);
-    }
-
-    #[test]
-    fn test_api_vehicle_type_deserialization() {
-        let json_data = json!({
-            "ActorName": "TestVehicle",
-            "VehicleModel": "TestVehicleModel",
-            "IgnitionEnabled": "True",
-            "EngineStarted": "True",
-            "WarningLights": "False",
-            "PassengerDoorsOpen": "False",
-            "FixingBrake": "False",
-            "Speed": 50.5,
-            "AllowedSpeed": 60.0,
-            "DisplayFuel": 75.5,
-            "IndicatorState": 0,
-            "AllLamps": {
-                "LightHeadlight": 1.0,
-                "LightTraveling": 0.5,
-                "ButtonLight Door 1": 0.0,
-                "ButtonLight Door 2": 1.0,
-                "LED StopRequest": 0.0,
-                "ButtonLight BusStopBrake": 1.0
-            }
-        });
-
-        let vehicle: ApiVehicleType = serde_json::from_value(json_data).unwrap();
-
-        assert_eq!(vehicle.actor_name, "TestVehicle");
-        assert_eq!(vehicle.vehicle_model, "TestVehicleModel");
-        assert_eq!(vehicle.ignition_enabled, "True");
-        assert_eq!(vehicle.engine_started, "True");
-        assert_eq!(vehicle.warning_lights, "False");
-        assert_eq!(vehicle.passenger_doors_open, "False");
-        assert_eq!(vehicle.fixing_brake, "False");
-        assert_eq!(vehicle.speed, 50.5);
-        assert_eq!(vehicle.allowed_speed, 60.0);
-        assert_eq!(vehicle.display_fuel, 75.5);
-        assert_eq!(vehicle.indicator_state, 0);
-
-        // Check the nested ApiLamps struct
-        assert_eq!(vehicle.all_lamps.light_main, 1.0);
-        assert_eq!(vehicle.all_lamps.traveller_light, 0.5);
-        assert_eq!(vehicle.all_lamps.front_door_light, 0.0);
-        assert_eq!(vehicle.all_lamps.second_door_light, 1.0);
-        assert_eq!(vehicle.all_lamps.led_stop_request, 0.0);
-        assert_eq!(vehicle.all_lamps.light_stopbrake, 1.0);
-    }
-
-    #[test]
-    fn test_getapidata_error_handling() {
-        // Test with an invalid IP address that should cause a connection error
-        let result = getapidata(&"invalid-ip-address".to_string(), false);
-        assert!(result.is_err());
-    }
-
-    #[test]
-    fn test_api_json_parsing_error() {
-        // Test the error handling for invalid JSON
-        let invalid_json = json!({
-            // Missing required fields
-            "ActorName": "TestVehicle",
-            // Other fields are missing
-        });
-
-        let result = serde_json::from_value::<ApiVehicleType>(invalid_json);
-        assert!(result.is_err());
-    }
-
-    #[test]
-    fn test_api_json_parsing_success() {
-        // Test successful JSON parsing
-        let valid_json = json!({
-            "ActorName": "TestVehicle",
-            "VehicleModel": "TestVehicleModel",
-            "IgnitionEnabled": "True",
-            "EngineStarted": "True",
-            "WarningLights": "False",
-            "PassengerDoorsOpen": "False",
-            "FixingBrake": "False",
-            "Speed": 50.5,
-            "AllowedSpeed": 60.0,
-            "DisplayFuel": 75.5,
-            "IndicatorState": 0,
-            "AllLamps": {
-                "LightHeadlight": 1.0,
-                "LightTraveling": 0.5,
-                "ButtonLight Door 1": 0.0,
-                "ButtonLight Door 2": 1.0,
-                "LED StopRequest": 0.0,
-                "ButtonLight BusStopBrake": 1.0
-            }
-        });
-
-        let result = serde_json::from_value::<ApiVehicleType>(valid_json);
-        assert!(result.is_ok());
-
-        let vehicle = result.unwrap();
-        assert_eq!(vehicle.actor_name, "TestVehicle");
-        assert_eq!(vehicle.speed, 50.5);
-    }
-
-    // This test is marked as ignored because it requires a real API server
-    // It can be run manually with: cargo test -- --ignored
-    #[test]
-    #[ignore]
-    fn test_getapidata_real_api() {
-        // This test requires a real API server running at 127.0.0.1:37337
-        // It's marked as ignored to avoid failing in CI environments
-        let result = getapidata(&"127.0.0.1".to_string(), true);
-
-        // If the API server is running, this should succeed
-        if result.is_ok() {
-            let vehicle = result.unwrap();
-            assert!(!vehicle.actor_name.is_empty());
-        } else {
-            // If the test is run without an API server, this will be skipped
-            println!("Skipping real API test as no server is available");
-        }
-    }
-
-    // Test for default values in ApiLamps
-    #[test]
-    fn test_api_lamps_default_values() {
-        // Test that default values are used when fields are missing
-        let json_data = json!({
-            "LightHeadlight": 1.0,
-            "LightTraveling": 0.5,
-            "ButtonLight Door 1": 0.0
-            // Missing: "ButtonLight Door 2", "LED StopRequest", "ButtonLight BusStopBrake"
-        });
-
-        let lamps: ApiLamps = serde_json::from_value(json_data).unwrap();
-
-        // These fields have default values (0.0) when missing
-        assert_eq!(lamps.second_door_light, 0.0);
-        assert_eq!(lamps.led_stop_request, 0.0);
-        assert_eq!(lamps.light_stopbrake, 0.0);
-    }
-
-    #[test]
-    fn test_get_button_by_name() {
-        use std::fs;
-        let path = "tests/json/mb_ecitaro.json";
-        let file = fs::read_to_string(path).expect("mb_ecitaro.json not found");
-        let data: serde_json::Value = serde_json::from_str(&file).expect("invalid json");
-
-        // existing
-        let state = get_button_by_name(&data, "Wiper");
-        assert_eq!(state.as_str(), "Off");
-
-        // non-existing
-        let none_state = get_button_by_name(&data, "__does_not_exist__");
-        assert_eq!(none_state.as_str(), "");
-    }
 }

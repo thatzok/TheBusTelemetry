@@ -38,7 +38,8 @@ pub fn get_vehicle_state_from_api(av: ApiVehicleType) -> VehicleState {
         _ => s.indicator = 0,
     }
 
-    match av.all_buttons.gear_selector.as_str() {
+    let gear_selector = av.get_button_state("Gear Selector");
+    match gear_selector.as_str() {
         "Drive" => s.gear_selector = 1,
         "Neutral" => s.gear_selector = 2,
         "Reverse" => s.gear_selector = 3,
@@ -54,6 +55,8 @@ pub fn get_vehicle_state_from_api(av: ApiVehicleType) -> VehicleState {
     s.lights_high_beam = av.all_lamps.traveller_light.trunc() as u8;
     s.lights_front_door = av.all_lamps.front_door_light.trunc() as u8;
     s.lights_second_door = av.all_lamps.second_door_light.trunc() as u8;
+    s.lights_third_door = av.all_lamps.third_door_light.trunc() as u8;
+    s.lights_fourth_door = av.all_lamps.fourth_door_light.trunc() as u8;
     s.lights_stop_request = av.all_lamps.led_stop_request.trunc() as u8;
     s.lights_stop_brake = av.all_lamps.light_stopbrake.trunc() as u8;
 
