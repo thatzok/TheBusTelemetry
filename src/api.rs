@@ -7,6 +7,7 @@ pub struct RequestConfig {
     pub host: String,
     pub port: String,
     pub vehicle_name: String,
+    pub vehicle_model: String,
     pub timeout: Duration,
     pub debugging: bool,
 }
@@ -17,6 +18,7 @@ impl RequestConfig {
             host: "127.0.0.1".to_string(),
             port: "37337".to_string(),
             vehicle_name: "Current".to_string(),
+            vehicle_model: "Current".to_string(),
             timeout: Duration::from_millis(300),
             debugging: false,
         }
@@ -32,6 +34,10 @@ impl RequestConfig {
     }
     pub fn vehicle_name(mut self, vehicle_name: String) -> Self {
         self.vehicle_name = vehicle_name;
+        self
+    }
+    pub fn vehicle_model(mut self, vehicle_model: String) -> Self {
+        self.vehicle_model = vehicle_model;
         self
     }
 
