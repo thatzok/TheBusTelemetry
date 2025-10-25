@@ -1,9 +1,7 @@
-
 #[cfg(test)]
 mod tests {
-    use super::*;
     use serde_json::json;
-    use the_bus_telemetry::api::{get_button_by_name, getapidata, ApiLamps, ApiVehicleType};
+    use the_bus_telemetry::api::{get_button_by_name, ApiLamps, ApiVehicleType};
 
     #[test]
     fn test_api_lamps_deserialization() {
@@ -92,13 +90,6 @@ mod tests {
     }
 
     #[test]
-    fn test_getapidata_error_handling() {
-        // Test with an invalid IP address that should cause a connection error
-        let result = getapidata(&"invalid-ip-address".to_string(), false);
-        assert!(result.is_err());
-    }
-
-    #[test]
     fn test_api_json_parsing_error() {
         // Test the error handling for invalid JSON
         let invalid_json = json!({
@@ -142,23 +133,6 @@ mod tests {
         let vehicle = result.unwrap();
         assert_eq!(vehicle.actor_name, "TestVehicle");
         assert_eq!(vehicle.speed, 50.5);
-    }
-
-    // This test is marked as ignored because it requires a real API server
-    // It can be run manually with: cargo test -- --ignored
-    #[test]
-    #[ignore]
-    fn test_getapidata_real_api() {
-          let result = getapidata(&"127.0.0.1".to_string(), true);
-
-        // If the API server is running, this should succeed
-        if result.is_ok() {
-            let vehicle = result.unwrap();
-            assert!(!vehicle.actor_name.is_empty());
-        } else {
-            // If the test is run without an API server, this will be skipped
-            println!("Skipping real API test as no server is available");
-        }
     }
 
     // Test for default values in ApiLamps
@@ -219,7 +193,6 @@ mod tests {
         assert_eq!(state.as_str(), "Neutral");
     }
 
-
     #[test]
     fn test_get_button_by_name_gear_selector_solaris_urbino() {
         use std::fs;
@@ -256,7 +229,8 @@ fn test_api_vehicle_get_button_state_gear_selector() {
     assert_eq!(state.as_str(), "Reverse");
 
     // Solaris Urbino 18m 4D
-    let file2 = fs::read_to_string("tests/json/BP_Solaris_Urbino_18m_4D_C.json").expect("BP_Solaris_Urbino_18m_4D_C.json not found");
+    let file2 = fs::read_to_string("tests/json/BP_Solaris_Urbino_18m_4D_C.json")
+        .expect("BP_Solaris_Urbino_18m_4D_C.json not found");
     let vehicle2: ApiVehicleType = serde_json::from_str(&file2).expect("invalid json");
     let state2 = vehicle2.get_button_state("Gear Selector");
     assert_eq!(state2.as_str(), "Neutral");
@@ -324,7 +298,8 @@ fn test_api_vehicle_get_button_state_contains() {
     assert_eq!(vehicle.get_button_state_contains("__nope__"), "");
 
     // Solaris Urbino 18m 4D
-    let file2 = fs::read_to_string("tests/json/BP_Solaris_Urbino_18m_4D_C.json").expect("BP_Solaris_Urbino_18m_4D_C.json not found");
+    let file2 = fs::read_to_string("tests/json/BP_Solaris_Urbino_18m_4D_C.json")
+        .expect("BP_Solaris_Urbino_18m_4D_C.json not found");
     let vehicle2: ApiVehicleType = serde_json::from_str(&file2).expect("invalid json");
     assert_eq!(vehicle2.get_button_state_contains("Gear"), "Neutral");
 }
@@ -354,7 +329,8 @@ fn test_api_vehicle_get_button_returns_struct() {
     assert!(vehicle.get_button("__does_not_exist__").is_none());
 
     // Solaris Urbino 18m 4D
-    let file2 = fs::read_to_string("tests/json/BP_Solaris_Urbino_18m_4D_C.json").expect("BP_Solaris_Urbino_18m_4D_C.json not found");
+    let file2 = fs::read_to_string("tests/json/BP_Solaris_Urbino_18m_4D_C.json")
+        .expect("BP_Solaris_Urbino_18m_4D_C.json not found");
     let vehicle2: ApiVehicleType = serde_json::from_str(&file2).expect("invalid json");
     let gear2 = vehicle2.get_button("Gear Selector");
     assert!(gear2.is_some());

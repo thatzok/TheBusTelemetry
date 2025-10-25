@@ -1,4 +1,3 @@
-use reqwest::blocking::Client;
 use serde::Deserialize;
 use std::string::ToString;
 use std::time::Duration;
@@ -157,43 +156,6 @@ impl ApiVehicleType {
     }
 }
 
-#[deprecated]
-pub fn getapidata(ip: &String, debug: bool) -> Result<ApiVehicleType, Box<dyn std::error::Error>> {
-    let request_url = format!("http://{}:37337/Vehicles/Current", ip);
-
-    let timeout = Duration::new(2, 0);
-    let client = Client::new();
-
-    if debug {
-        eprintln!("Fetching url {} ...", &request_url);
-    }
-
-    let response = client.get(&request_url).timeout(timeout).send()?; // wir warten auf die antwort
-
-    if !response.status().is_success() {
-        Err("Error: response code")?
-    }
-
-    let value = response.json::<serde_json::Value>()?;
-    if debug {
-        eprintln!(
-            "JSON structure:\n{}",
-            serde_json::to_string_pretty(&value).unwrap()
-        );
-    }
-
-    let api_vehicle: ApiVehicleType = serde_json::from_value(value).map_err(|e| {
-        eprintln!("Failed to parse API response as JSON: {}", e);
-        eprintln!("API endpoint: {}", request_url);
-        Box::new(e) as Box<dyn std::error::Error>
-    })?;
-
-    if debug {
-        println!("{:?}", &api_vehicle);
-    }
-    Ok(api_vehicle)
-}
-
 pub async fn send_telemetry_bus_cmd(
     config: &RequestConfig,
     cmd: &str,
@@ -286,7 +248,7 @@ pub async fn get_vehicle(
 
     let body = get_telemetry_data(&config, &path).await?;
 
-    let mut api_vehicle: ApiVehicleType = serde_json::from_value(body).map_err(|e| {
+    let api_vehicle: ApiVehicleType = serde_json::from_value(body).map_err(|e| {
         eprintln!("Failed to parse API response as Vehicle JSON: {}", e);
         Box::new(e) as Box<dyn std::error::Error>
     })?;
