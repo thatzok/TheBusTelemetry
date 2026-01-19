@@ -1,9 +1,8 @@
 use crate::api::ApiVehicleType;
-use crate::vehicle::VehicleState;
-use crate::vehicle::init_vehicle_state;
+use komsi::vehicle::VehicleState;
 
 pub fn get_vehicle_state_from_api(av: ApiVehicleType) -> VehicleState {
-    let mut s = init_vehicle_state();
+    let mut s = VehicleState::default();
 
     match av.ignition_enabled.as_str() {
         "true" => s.ignition = 1,
