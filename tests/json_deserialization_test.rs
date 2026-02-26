@@ -5,11 +5,13 @@ use serde_json;
 
 #[test]
 fn test_json_deserialization_from_files() {
+    test_vehicle_deserialization("tests/json/BP_Mercedes_eCitaro_12m_2Door_C.json", "BP_Mercedes_eCitaro_12m_2Door_C_2147297308");
+    test_vehicle_deserialization("tests/json/BP_Solaris_Urbino_18m_4D_C.json", "BP_Solaris_Urbino_18m_4D_C_2147441325");
 
     test_vehicle_deserialization("tests/json/man_lionscity.json", "BP_MAN_LionsCityDD_Base_C_2147417439");
-    test_vehicle_deserialization("tests/json/mb_ecitaro.json", "BP_Mercedes_eCitaro_12m_2Door_C_2147345014");
     test_vehicle_deserialization("tests/json/scania_citywide.json", "BP_Scania_Citywide_12M2D_C_2147248282");
     test_vehicle_deserialization("tests/json/solaris_urbino.json", "BP_Solaris_Urbino_12m_2D_C_2147468046");
+    test_vehicle_deserialization("tests/json/Solaris_Urbino.txt", "BP_Solaris_Urbino_18m_3D_C_2146245266");
     test_vehicle_deserialization("tests/json/vdl_citea.json", "BP_VDL_Citea_LLE_120_2D_C_2147124848");
     
 }

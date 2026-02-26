@@ -157,8 +157,8 @@ mod tests {
     #[test]
     fn test_get_button_by_name_wiper() {
         use std::fs;
-        let path = "tests/json/mb_ecitaro.json";
-        let file = fs::read_to_string(path).expect("mb_ecitaro.json not found");
+        let path = "tests/json/BP_Mercedes_eCitaro_12m_2Door_C.json";
+        let file = fs::read_to_string(path).expect("BP_Mercedes_eCitaro_12m_2Door_C.json not found");
         let data: serde_json::Value = serde_json::from_str(&file).expect("invalid json");
 
         // existing
@@ -172,13 +172,13 @@ mod tests {
     #[test]
     fn test_get_button_by_name_gear_selector() {
         use std::fs;
-        let path = "tests/json/mb_ecitaro.json";
-        let file = fs::read_to_string(path).expect("mb_ecitaro.json not found");
+        let path = "tests/json/BP_Mercedes_eCitaro_12m_2Door_C.json";
+        let file = fs::read_to_string(path).expect("BP_Mercedes_eCitaro_12m_2Door_C.json not found");
         let data: serde_json::Value = serde_json::from_str(&file).expect("invalid json");
 
         // existing
         let state = get_button_by_name(&data, "Gear Selector");
-        assert_eq!(state.as_str(), "Reverse");
+        assert_eq!(state.as_str(), "Neutral");
     }
 
     #[test]
@@ -210,8 +210,8 @@ mod tests {
 fn test_api_vehicle_get_button_state_wiper() {
     use std::fs;
     use the_bus_telemetry::api::ApiVehicleType;
-    let path = "tests/json/mb_ecitaro.json";
-    let file = fs::read_to_string(path).expect("mb_ecitaro.json not found");
+    let path = "tests/json/BP_Mercedes_eCitaro_12m_2Door_C.json";
+    let file = fs::read_to_string(path).expect("BP_Mercedes_eCitaro_12m_2Door_C.json not found");
     let vehicle: ApiVehicleType = serde_json::from_str(&file).expect("invalid json");
     let state = vehicle.get_button_state("Wiper");
     assert_eq!(state.as_str(), "Off");
@@ -223,10 +223,10 @@ fn test_api_vehicle_get_button_state_gear_selector() {
     use the_bus_telemetry::api::ApiVehicleType;
 
     // eCitaro
-    let file = fs::read_to_string("tests/json/mb_ecitaro.json").expect("mb_ecitaro.json not found");
+    let file = fs::read_to_string("tests/json/BP_Mercedes_eCitaro_12m_2Door_C.json").expect("BP_Mercedes_eCitaro_12m_2Door_C.json not found");
     let vehicle: ApiVehicleType = serde_json::from_str(&file).expect("invalid json");
     let state = vehicle.get_button_state("Gear Selector");
-    assert_eq!(state.as_str(), "Reverse");
+    assert_eq!(state.as_str(), "Neutral");
 
     // Solaris Urbino 18m 4D
     let file2 = fs::read_to_string("tests/json/BP_Solaris_Urbino_18m_4D_C.json")
@@ -245,7 +245,7 @@ fn test_api_vehicle_filtered_buttons_and_retain() {
     use std::fs;
     use the_bus_telemetry::api::ApiVehicleType;
 
-    let file = fs::read_to_string("tests/json/mb_ecitaro.json").expect("mb_ecitaro.json not found");
+    let file = fs::read_to_string("tests/json/BP_Mercedes_eCitaro_12m_2Door_C.json").expect("BP_Mercedes_eCitaro_12m_2Door_C.json not found");
     let mut vehicle: ApiVehicleType = serde_json::from_str(&file).expect("invalid json");
 
     // Non-mutating filter
@@ -268,7 +268,7 @@ fn test_api_vehicle_buttons_name_state() {
     use std::fs;
     use the_bus_telemetry::api::ApiVehicleType;
 
-    let file = fs::read_to_string("tests/json/mb_ecitaro.json").expect("mb_ecitaro.json not found");
+    let file = fs::read_to_string("tests/json/BP_Mercedes_eCitaro_12m_2Door_C.json").expect("BP_Mercedes_eCitaro_12m_2Door_C.json not found");
     let vehicle: ApiVehicleType = serde_json::from_str(&file).expect("invalid json");
 
     let pairs = vehicle.buttons_name_state();
@@ -278,7 +278,7 @@ fn test_api_vehicle_buttons_name_state() {
 
     // It should contain at least these known buttons with expected states
     assert!(pairs.contains(&("Wiper".to_string(), "Off".to_string())));
-    assert!(pairs.contains(&("Gear Selector".to_string(), "Reverse".to_string())));
+    assert!(pairs.contains(&("Gear Selector".to_string(), "Neutral".to_string())));
 }
 
 #[test]
@@ -287,12 +287,12 @@ fn test_api_vehicle_get_button_state_contains() {
     use the_bus_telemetry::api::ApiVehicleType;
 
     // eCitaro
-    let file = fs::read_to_string("tests/json/mb_ecitaro.json").expect("mb_ecitaro.json not found");
+    let file = fs::read_to_string("tests/json/BP_Mercedes_eCitaro_12m_2Door_C.json").expect("BP_Mercedes_eCitaro_12m_2Door_C.json not found");
     let vehicle: ApiVehicleType = serde_json::from_str(&file).expect("invalid json");
 
     // Partial matches
     assert_eq!(vehicle.get_button_state_contains("Wip"), "Off"); // matches "Wiper"
-    assert_eq!(vehicle.get_button_state_contains("Gear"), "Reverse"); // matches "Gear Selector"
+    assert_eq!(vehicle.get_button_state_contains("Gear"), "Neutral"); // matches "Gear Selector"
 
     // Not found
     assert_eq!(vehicle.get_button_state_contains("__nope__"), "");
@@ -310,7 +310,7 @@ fn test_api_vehicle_get_button_returns_struct() {
     use the_bus_telemetry::api::ApiVehicleType;
 
     // eCitaro
-    let file = fs::read_to_string("tests/json/mb_ecitaro.json").expect("mb_ecitaro.json not found");
+    let file = fs::read_to_string("tests/json/BP_Mercedes_eCitaro_12m_2Door_C.json").expect("BP_Mercedes_eCitaro_12m_2Door_C.json not found");
     let vehicle: ApiVehicleType = serde_json::from_str(&file).expect("invalid json");
 
     // Existing: Wiper
@@ -323,7 +323,7 @@ fn test_api_vehicle_get_button_returns_struct() {
     // Existing: Gear Selector
     let gear = vehicle.get_button("Gear Selector");
     assert!(gear.is_some());
-    assert_eq!(gear.as_ref().unwrap().state, "Reverse");
+    assert_eq!(gear.as_ref().unwrap().state, "Neutral");
 
     // Not found
     assert!(vehicle.get_button("__does_not_exist__").is_none());

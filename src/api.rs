@@ -82,9 +82,9 @@ pub struct ApiVehicleType {
 
 #[derive(Deserialize, Debug, PartialEq)]
 pub struct ApiLamps {
-    #[serde(rename = "LightHeadlight", alias = "LightHeadlight1")]
+    #[serde(rename = "LightHeadlight", alias = "LightHeadlight1", alias="Light Headlight")]
     pub light_main: f32,
-    #[serde(rename = "LightTraveling", alias = "LightTraveling1")]
+    #[serde(rename = "LightTraveling", alias = "LightTraveling1", alias="Light Travelling")]
     pub traveller_light: f32,
     #[serde(rename = "Door Button 1", alias = "ButtonLight Door 1", default)]
     pub front_door_light: f32,
