@@ -5,28 +5,28 @@ pub fn get_vehicle_state_from_api(av: ApiVehicleType) -> VehicleState {
     let mut s = VehicleState::default();
 
     match av.ignition_enabled.as_str() {
-        "true" => s.ignition = 1,
-        _ => s.ignition = 0,
+        "true" => s.ignition = true,
+        _ => s.ignition = false,
     }
 
     match av.engine_started.as_str() {
-        "true" => s.engine = 1,
-        _ => s.engine = 0,
+        "true" => s.engine = true,
+        _ => s.engine = false,
     }
 
     match av.warning_lights.as_str() {
-        "true" => s.lights_warning = 1,
-        _ => s.lights_warning = 0,
+        "true" => s.lights_warning = true,
+        _ => s.lights_warning = false,
     }
 
     match av.passenger_doors_open.as_str() {
-        "true" => s.doors = 1,
-        _ => s.doors = 0,
+        "true" => s.doors = true,
+        _ => s.doors = false,
     }
 
     match av.fixing_brake.as_str() {
-        "true" => s.fixing_brake = 1,
-        _ => s.fixing_brake = 0,
+        "true" => s.fixing_brake = true,
+        _ => s.fixing_brake = false,
     }
 
     // we only check if set, not in which direction (in api: -1,0,1 for left,off,right)
@@ -48,16 +48,16 @@ pub fn get_vehicle_state_from_api(av: ApiVehicleType) -> VehicleState {
     s.speed = av.speed.abs().round() as u32;
     s.maxspeed = av.allowed_speed.abs().round() as u32;
 
-    s.fuel = (av.display_fuel * 100.0).trunc() as u32;
+    s.fuel = (av.display_fuel * 100.0).trunc() as u8;
 
-    s.lights_main = av.all_lamps.light_main.trunc() as u8;
-    s.lights_high_beam = av.all_lamps.traveller_light.trunc() as u8;
-    s.lights_front_door = av.all_lamps.front_door_light.trunc() as u8;
-    s.lights_second_door = av.all_lamps.second_door_light.trunc() as u8;
-    s.lights_third_door = av.all_lamps.third_door_light.trunc() as u8;
-    s.lights_fourth_door = av.all_lamps.fourth_door_light.trunc() as u8;
-    s.lights_stop_request = av.all_lamps.led_stop_request.trunc() as u8;
-    s.lights_stop_brake = av.all_lamps.light_stopbrake.trunc() as u8;
+    s.lights_main = av.all_lamps.light_main > 0.0;
+    s.lights_high_beam = av.all_lamps.traveller_light > 0.0;
+    s.lights_front_door = av.all_lamps.front_door_light > 0.0;
+    s.lights_second_door = av.all_lamps.second_door_light > 0.0;
+    s.lights_third_door = av.all_lamps.third_door_light > 0.0;
+    s.lights_fourth_door = av.all_lamps.fourth_door_light > 0.0;
+    s.lights_stop_request = av.all_lamps.led_stop_request > 0.0;
+    s.lights_stop_brake = av.all_lamps.light_stopbrake > 0.0;
 
     return s;
 }
