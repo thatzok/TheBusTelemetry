@@ -51,6 +51,20 @@ impl RequestConfig {
 }
 
 #[derive(Deserialize, Debug, PartialEq)]
+pub struct ApiWorldType {
+    #[serde(rename = "LevelName")]
+    pub level_name: String,
+    #[serde(rename = "DateTime")]
+    pub date_time: String,
+    #[serde(rename = "TimeFactor")]
+    pub time_factor: f32,
+    #[serde(rename = "BaseLatitude")]
+    pub base_latitude: f64,
+    #[serde(rename = "BaseLongitude")]
+    pub base_longitude: f64,
+}
+
+#[derive(Deserialize, Debug, PartialEq)]
 pub struct ApiVehicleType {
     #[serde(rename = "ActorName")]
     pub actor_name: String,
@@ -82,9 +96,17 @@ pub struct ApiVehicleType {
 
 #[derive(Deserialize, Debug, PartialEq)]
 pub struct ApiLamps {
-    #[serde(rename = "LightHeadlight", alias = "LightHeadlight1", alias="Light Headlight")]
+    #[serde(
+        rename = "LightHeadlight",
+        alias = "LightHeadlight1",
+        alias = "Light Headlight"
+    )]
     pub light_main: f32,
-    #[serde(rename = "LightTraveling", alias = "LightTraveling1", alias="Light Travelling")]
+    #[serde(
+        rename = "LightTraveling",
+        alias = "LightTraveling1",
+        alias = "Light Travelling"
+    )]
     pub traveller_light: f32,
     #[serde(rename = "Door Button 1", alias = "ButtonLight Door 1", default)]
     pub front_door_light: f32,
@@ -258,6 +280,26 @@ pub async fn get_vehicle(
     }
 
     Ok(api_vehicle)
+}
+
+pub async fn get_world(config: &RequestConfig) -> Result<ApiWorldType, Box<dyn std::error::Error>> {
+    let path = "world";
+
+    if config.debugging {
+        println!("get_world path: {}", path);
+    }
+
+    let body = get_telemetry_data(&config, &path).await?;
+
+    let api_world: ApiWorldType = serde_json::from_value(body).map_err(|e| {
+        eprintln!("Failed to parse API response as World JSON: {}", e);
+        Box::new(e) as Box<dyn std::error::Error>
+    })?;
+
+    if config.debugging {
+        println!("{:?}", &api_world);
+    }
+    Ok(api_world)
 }
 
 pub fn get_button_by_name(data: &serde_json::Value, name: &str) -> String {

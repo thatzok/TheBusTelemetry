@@ -1,0 +1,17 @@
+{
+  "LevelName": "Castrop",
+  "IsInMainMenu": "false",
+  "DateTime": "2026-01-01T09:43:48",
+  "NightLightEnabled": "false",
+  "TimeFactor": 1.0,
+  "BaseLatitude": 51.549339,
+  "BaseLongitude": 7.308765,
+  "Temperature": -7.083445,
+  "Wetness": 0.0,
+  "RainIntensity": 0.0,
+  "SnowIntensity": 0.0,
+  "SnowPack": 1.0,
+  "CloudIntensity": 0.0,
+  "NebularIntensity": 0.5,
+  "WindIntensity": 0.4
+}

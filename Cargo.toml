@@ -1,6 +1,6 @@
 [package]
 name = "the-bus-telemetry"
-version = "4.1.0"
+version = "4.3.0"
 edition = "2024"
 description = "Library for handling data exchange with the api (called telemetry) of the simulation software The Bus"
 license = "MIT"
@@ -10,4 +10,4 @@ repository = "https://github.com/thatzok/TheBusTelemetry"
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
 reqwest = { version = "0.12", features = ["json","blocking"] }
-komsi = "1.0"
+komsi = "1.1"

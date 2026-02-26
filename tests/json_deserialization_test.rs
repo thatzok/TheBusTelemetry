@@ -1,7 +1,9 @@
 use std::fs;
 use std::path::Path;
-use the_bus_telemetry::api::ApiVehicleType;
+use the_bus_telemetry::api::{ApiVehicleType, ApiWorldType};
 use serde_json;
+use komsi::komsi::KomsiDateTime;
+
 
 #[test]
 fn test_json_deserialization_from_files() {
@@ -14,6 +16,30 @@ fn test_json_deserialization_from_files() {
     test_vehicle_deserialization("tests/json/Solaris_Urbino.txt", "BP_Solaris_Urbino_18m_3D_C_2146245266");
     test_vehicle_deserialization("tests/json/vdl_citea.json", "BP_VDL_Citea_LLE_120_2D_C_2147124848");
     
+    test_world_deserialization("tests/json/world.json");
+}
+
+fn test_world_deserialization(file_path: &str) {
+    let file = Path::new(file_path);
+    let json = fs::read_to_string(file)
+        .expect(&format!("Failed to read {}", file_path));
+
+    let world: ApiWorldType = serde_json::from_str(&json)
+        .expect(&format!("Failed to deserialize {}", file_path));
+
+    assert_eq!(world.level_name, "Castrop");
+    assert_eq!(world.date_time, "2026-01-01T09:43:48");
+    assert!(world.time_factor > 0.0);
+
+    let date_time = KomsiDateTime::from_iso(&world.date_time).unwrap();
+    assert_eq!(date_time.year, 2026);
+    assert_eq!(date_time.month, 1);
+    assert_eq!(date_time.day, 1);
+    assert_eq!(date_time.hour, 9);
+    assert_eq!(date_time.min, 43);
+    assert_eq!(date_time.sec, 48);
+
+    println!("Successfully deserialized world: {}", world.level_name);
 }
 
 fn test_vehicle_deserialization(file_path: &str, actor_name: &str) {
