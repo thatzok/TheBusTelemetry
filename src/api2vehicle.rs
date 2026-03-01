@@ -1,6 +1,9 @@
+//! This module provides functions to map API-specific telemetry data to type-safe komsi vehicle states.
+
 use crate::api::ApiVehicleType;
 use komsi::vehicle::VehicleState;
 
+/// Maps `ApiVehicleType` data to a `VehicleState` structure.
 pub fn get_vehicle_state_from_api(av: ApiVehicleType) -> VehicleState {
     let mut s = VehicleState::default();
 
@@ -29,7 +32,7 @@ pub fn get_vehicle_state_from_api(av: ApiVehicleType) -> VehicleState {
         _ => s.fixing_brake = false,
     }
 
-    // we only check if set, not in which direction (in api: -1,0,1 for left,off,right)
+    // we only check if set and in which direction (in api: -1,0,1 for left,off,right)
     match av.indicator_state {
         0 => s.indicator = 0,  // off
         -1 => s.indicator = 1, // on left
