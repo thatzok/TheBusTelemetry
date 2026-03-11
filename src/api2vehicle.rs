@@ -53,7 +53,7 @@ pub fn get_vehicle_state_from_api(av: ApiVehicleType) -> VehicleState {
 
     s.fuel = (av.display_fuel * 100.0).trunc() as u8;
 
-    s.lights_main = av.all_lamps.light_main > 0.0;
+    s.lights_main = av.all_lamps.light_main > 0.0 && av.all_lamps.light_headlight > 0.0;
     s.lights_high_beam = av.all_lamps.traveller_light > 0.0;
     s.lights_front_door = av.all_lamps.front_door_light > 0.0;
     s.lights_second_door = av.all_lamps.second_door_light > 0.0;
@@ -61,6 +61,7 @@ pub fn get_vehicle_state_from_api(av: ApiVehicleType) -> VehicleState {
     s.lights_fourth_door = av.all_lamps.fourth_door_light > 0.0;
     s.lights_stop_request = av.all_lamps.led_stop_request > 0.0;
     s.lights_stop_brake = av.all_lamps.light_stopbrake > 0.0;
+    s.door_clearance = av.all_lamps.door_clearance_light > 0.0;
 
-    return s;
+    s
 }

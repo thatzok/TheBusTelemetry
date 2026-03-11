@@ -6,22 +6,26 @@ mod tests {
     #[test]
     fn test_api_lamps_deserialization() {
         let json_data = json!({
-            "LightHeadlight": 1.0,
+            "Light MAIN": 1.0,
+            "LightHeadlight":1.0,
             "LightTraveling": 0.5,
             "ButtonLight Door 1": 0.0,
             "ButtonLight Door 2": 1.0,
             "LED StopRequest": 0.0,
-            "ButtonLight BusStopBrake": 1.0
+            "ButtonLight BusStopBrake": 1.0,
+            "ButtonLight DoorClearance": 1.0
         });
 
         let lamps: ApiLamps = serde_json::from_value(json_data).unwrap();
 
         assert_eq!(lamps.light_main, 1.0);
+        assert_eq!(lamps.light_headlight, 1.0);
         assert_eq!(lamps.traveller_light, 0.5);
         assert_eq!(lamps.front_door_light, 0.0);
         assert_eq!(lamps.second_door_light, 1.0);
         assert_eq!(lamps.led_stop_request, 0.0);
         assert_eq!(lamps.light_stopbrake, 1.0);
+        assert_eq!(lamps.door_clearance_light, 1.0);
     }
 
     #[test]
@@ -58,6 +62,7 @@ mod tests {
             "IndicatorState": 0,
             "AllLamps": {
                 "LightHeadlight": 1.0,
+                "Light MAIN": 1.0,
                 "LightTraveling": 0.5,
                 "ButtonLight Door 1": 0.0,
                 "ButtonLight Door 2": 1.0,

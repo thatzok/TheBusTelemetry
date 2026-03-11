@@ -133,12 +133,13 @@ pub struct ApiVehicleType {
 /// Represents various lamp intensities or states.
 #[derive(Deserialize, Debug, PartialEq)]
 pub struct ApiLamps {
-    /// Main headlight intensity (0.0 to 1.0).
     #[serde(
         rename = "LightHeadlight",
         alias = "LightHeadlight1",
         alias = "Light Headlight"
     )]
+    pub light_headlight: f32,
+    #[serde(rename = "Light MAIN", default)]
     pub light_main: f32,
     /// High beam / traveller light intensity (0.0 or 1.0).
     #[serde(
@@ -165,6 +166,8 @@ pub struct ApiLamps {
     /// Bus stop brake light intensity.
     #[serde(rename = "ButtonLight BusStopBrake", default)]
     pub light_stopbrake: f32,
+    #[serde(rename = "ButtonLight DoorClearance", alias = "DoorClearanceButton", default)]
+    pub door_clearance_light:f32
 }
 
 /// Represents a button in the vehicle and its current state.
