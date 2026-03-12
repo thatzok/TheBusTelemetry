@@ -1,6 +1,6 @@
 [package]
 name = "the-bus-telemetry"
-version = "5.1.0"
+version = "5.2.0"
 edition = "2024"
 rust-version = "1.92.0"
 description = "Library for handling data exchange with the api (called telemetry) of the simulation software The Bus"
