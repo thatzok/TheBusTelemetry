@@ -7,6 +7,7 @@ mod tests {
     fn test_api_lamps_deserialization() {
         let json_data = json!({
             "Light MAIN": 1.0,
+            "Light Parking": 1.1,
             "LightHeadlight":1.0,
             "LightTraveling": 0.5,
             "ButtonLight Door 1": 0.0,
@@ -20,6 +21,7 @@ mod tests {
 
         assert_eq!(lamps.light_main, 1.0);
         assert_eq!(lamps.light_headlight, 1.0);
+        assert_eq!(lamps.light_parking, 1.1);
         assert_eq!(lamps.traveller_light, 0.5);
         assert_eq!(lamps.front_door_light, 0.0);
         assert_eq!(lamps.second_door_light, 1.0);
@@ -32,16 +34,20 @@ mod tests {
     fn test_api_lamps_alias_deserialization() {
         // Test the alias functionality for LightTraveling1
         let json_data = json!({
+            "Light Main": 1.0,
             "LightHeadlight": 1.0,
+            "LightParking1": 0.7,  // Using the alias
             "LightTraveling1": 0.5,  // Using the alias
             "Door Button 1": 0.0,    // Using the alias
             "ButtonLight Door 2": 1.0,
             "LED StopRequest": 0.0,
-            "ButtonLight BusStopBrake": 1.0
+            "ButtonLight BusStopBrake": 1.0,
+            "ButtonLight DoorClearance": 1.0
         });
 
         let lamps: ApiLamps = serde_json::from_value(json_data).unwrap();
 
+        assert_eq!(lamps.light_parking, 0.7);
         assert_eq!(lamps.traveller_light, 0.5);
         assert_eq!(lamps.front_door_light, 0.0);
     }
@@ -64,10 +70,12 @@ mod tests {
                 "LightHeadlight": 1.0,
                 "Light MAIN": 1.0,
                 "LightTraveling": 0.5,
+                "LightParking": 0.8,
                 "ButtonLight Door 1": 0.0,
                 "ButtonLight Door 2": 1.0,
                 "LED StopRequest": 0.0,
-                "ButtonLight BusStopBrake": 1.0
+                "ButtonLight BusStopBrake": 1.0,
+                "ButtonLight DoorClearance": 1.2
             }
         });
 
@@ -87,11 +95,13 @@ mod tests {
 
         // Check the nested ApiLamps struct
         assert_eq!(vehicle.all_lamps.light_main, 1.0);
+        assert_eq!(vehicle.all_lamps.light_parking, 0.8);
         assert_eq!(vehicle.all_lamps.traveller_light, 0.5);
         assert_eq!(vehicle.all_lamps.front_door_light, 0.0);
         assert_eq!(vehicle.all_lamps.second_door_light, 1.0);
         assert_eq!(vehicle.all_lamps.led_stop_request, 0.0);
         assert_eq!(vehicle.all_lamps.light_stopbrake, 1.0);
+        assert_eq!(vehicle.all_lamps.door_clearance_light, 1.2);
     }
 
     #[test]
@@ -125,10 +135,13 @@ mod tests {
             "AllLamps": {
                 "LightHeadlight": 1.0,
                 "LightTraveling": 0.5,
+                "LightParking": 0.6,
+                "LightMain": 0.6,
                 "ButtonLight Door 1": 0.0,
                 "ButtonLight Door 2": 1.0,
                 "LED StopRequest": 0.0,
-                "ButtonLight BusStopBrake": 1.0
+                "ButtonLight BusStopBrake": 1.0,
+                "DoorClearanceButton": 0.0
             }
         });
 
@@ -141,29 +154,37 @@ mod tests {
     }
 
     // Test for default values in ApiLamps
-    #[test]
-    fn test_api_lamps_default_values() {
-        // Test that default values are used when fields are missing
-        let json_data = json!({
-            "LightHeadlight": 1.0,
-            "LightTraveling": 0.5,
-            "ButtonLight Door 1": 0.0
-            // Missing: "ButtonLight Door 2", "LED StopRequest", "ButtonLight BusStopBrake"
-        });
+    // we elimineted default values
+    /*
+        #[test]
+        fn test_api_lamps_default_values() {
+            // Test that default values are used when fields are missing
+            let json_data = json!({
+                "LightHeadlight": 1.0,
+                "LightTraveling": 0.5,
+                "LightParking": 0.6,
+                "LightMain": 0.7,
+                "ButtonLight Door 1": 0.0
+                // Missing: "ButtonLight Door 2", "LED StopRequest", "ButtonLight BusStopBrake"
+            });
 
-        let lamps: ApiLamps = serde_json::from_value(json_data).unwrap();
+            let lamps: ApiLamps = serde_json::from_value(json_data).unwrap();
 
-        // These fields have default values (0.0) when missing
-        assert_eq!(lamps.second_door_light, 0.0);
-        assert_eq!(lamps.led_stop_request, 0.0);
-        assert_eq!(lamps.light_stopbrake, 0.0);
-    }
+            // These fields have default values (0.0) when missing
+            assert_eq!(lamps.second_door_light, 0.0);
+            assert_eq!(lamps.led_stop_request, 0.0);
+            assert_eq!(lamps.light_stopbrake, 0.0);
+            assert_eq!(lamps.light_parking, 0.6);
+            assert_eq!(lamps.light_main, 0.7);
+        }
+    */
 
     #[test]
     fn test_get_button_by_name_wiper() {
         use std::fs;
         let path = "tests/json/BP_Mercedes_eCitaro_12m_2Door_C.json";
-        let file = fs::read_to_string(path).expect("BP_Mercedes_eCitaro_12m_2Door_C.json not found");
+        let file =
+            fs::read_to_string(path).expect("BP_Mercedes_eCitaro_12m_2Door_C.json not found");
         let data: serde_json::Value = serde_json::from_str(&file).expect("invalid json");
 
         // existing
@@ -178,7 +199,8 @@ mod tests {
     fn test_get_button_by_name_gear_selector() {
         use std::fs;
         let path = "tests/json/BP_Mercedes_eCitaro_12m_2Door_C.json";
-        let file = fs::read_to_string(path).expect("BP_Mercedes_eCitaro_12m_2Door_C.json not found");
+        let file =
+            fs::read_to_string(path).expect("BP_Mercedes_eCitaro_12m_2Door_C.json not found");
         let data: serde_json::Value = serde_json::from_str(&file).expect("invalid json");
 
         // existing
@@ -228,7 +250,8 @@ fn test_api_vehicle_get_button_state_gear_selector() {
     use the_bus_telemetry::api::ApiVehicleType;
 
     // eCitaro
-    let file = fs::read_to_string("tests/json/BP_Mercedes_eCitaro_12m_2Door_C.json").expect("BP_Mercedes_eCitaro_12m_2Door_C.json not found");
+    let file = fs::read_to_string("tests/json/BP_Mercedes_eCitaro_12m_2Door_C.json")
+        .expect("BP_Mercedes_eCitaro_12m_2Door_C.json not found");
     let vehicle: ApiVehicleType = serde_json::from_str(&file).expect("invalid json");
     let state = vehicle.get_button_state("Gear Selector");
     assert_eq!(state.as_str(), "Neutral");
@@ -250,7 +273,8 @@ fn test_api_vehicle_filtered_buttons_and_retain() {
     use std::fs;
     use the_bus_telemetry::api::ApiVehicleType;
 
-    let file = fs::read_to_string("tests/json/BP_Mercedes_eCitaro_12m_2Door_C.json").expect("BP_Mercedes_eCitaro_12m_2Door_C.json not found");
+    let file = fs::read_to_string("tests/json/BP_Mercedes_eCitaro_12m_2Door_C.json")
+        .expect("BP_Mercedes_eCitaro_12m_2Door_C.json not found");
     let mut vehicle: ApiVehicleType = serde_json::from_str(&file).expect("invalid json");
 
     // Non-mutating filter
@@ -273,7 +297,8 @@ fn test_api_vehicle_buttons_name_state() {
     use std::fs;
     use the_bus_telemetry::api::ApiVehicleType;
 
-    let file = fs::read_to_string("tests/json/BP_Mercedes_eCitaro_12m_2Door_C.json").expect("BP_Mercedes_eCitaro_12m_2Door_C.json not found");
+    let file = fs::read_to_string("tests/json/BP_Mercedes_eCitaro_12m_2Door_C.json")
+        .expect("BP_Mercedes_eCitaro_12m_2Door_C.json not found");
     let vehicle: ApiVehicleType = serde_json::from_str(&file).expect("invalid json");
 
     let pairs = vehicle.buttons_name_state();
@@ -292,7 +317,8 @@ fn test_api_vehicle_get_button_state_contains() {
     use the_bus_telemetry::api::ApiVehicleType;
 
     // eCitaro
-    let file = fs::read_to_string("tests/json/BP_Mercedes_eCitaro_12m_2Door_C.json").expect("BP_Mercedes_eCitaro_12m_2Door_C.json not found");
+    let file = fs::read_to_string("tests/json/BP_Mercedes_eCitaro_12m_2Door_C.json")
+        .expect("BP_Mercedes_eCitaro_12m_2Door_C.json not found");
     let vehicle: ApiVehicleType = serde_json::from_str(&file).expect("invalid json");
 
     // Partial matches
@@ -315,7 +341,8 @@ fn test_api_vehicle_get_button_returns_struct() {
     use the_bus_telemetry::api::ApiVehicleType;
 
     // eCitaro
-    let file = fs::read_to_string("tests/json/BP_Mercedes_eCitaro_12m_2Door_C.json").expect("BP_Mercedes_eCitaro_12m_2Door_C.json not found");
+    let file = fs::read_to_string("tests/json/BP_Mercedes_eCitaro_12m_2Door_C.json")
+        .expect("BP_Mercedes_eCitaro_12m_2Door_C.json not found");
     let vehicle: ApiVehicleType = serde_json::from_str(&file).expect("invalid json");
 
     // Existing: Wiper

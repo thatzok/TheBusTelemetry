@@ -53,7 +53,7 @@ pub fn get_vehicle_state_from_api(av: ApiVehicleType) -> VehicleState {
 
     s.fuel = (av.display_fuel * 100.0).trunc() as u8;
 
-    s.lights_main = av.all_lamps.light_main > 0.0 && av.all_lamps.light_headlight > 0.0;
+    s.lights_main = av.all_lamps.light_parking > 0.0 || av.all_lamps.light_headlight > 0.0;
     s.lights_high_beam = av.all_lamps.traveller_light > 0.0;
     s.lights_front_door = av.all_lamps.front_door_light > 0.0;
     s.lights_second_door = av.all_lamps.second_door_light > 0.0;

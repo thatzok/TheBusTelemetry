@@ -139,7 +139,18 @@ pub struct ApiLamps {
         alias = "Light Headlight"
     )]
     pub light_headlight: f32,
-    #[serde(rename = "Light MAIN", default)]
+    #[serde(
+        rename = "Light Parking",
+        alias = "LightParking1",
+        alias = "LightParking"
+    )]
+    pub light_parking: f32,
+    #[serde(
+        rename = "Light MAIN",
+        alias = "Light Main",
+        alias = "LightMain",
+        default
+    )] // we need default man_lionscity does not have this field
     pub light_main: f32,
     /// High beam / traveller light intensity (0.0 or 1.0).
     #[serde(
@@ -149,10 +160,14 @@ pub struct ApiLamps {
     )]
     pub traveller_light: f32,
     /// Front door light state.
-    #[serde(rename = "Door Button 1", alias = "ButtonLight Door 1", default)]
+    #[serde(rename = "Door Button 1", alias = "ButtonLight Door 1")]
     pub front_door_light: f32,
     /// Second door light state.
-    #[serde(rename = "Door Button 2", alias = "ButtonLight Door 2", default)]
+    #[serde(
+        rename = "Door Button 2",
+        alias = "ButtonLight Door 2",
+        alias = "LightDoorMiddle"
+    )]
     pub second_door_light: f32,
     /// Third door light state.
     #[serde(rename = "Door Button 3", alias = "ButtonLight Door 3", default)]
@@ -161,13 +176,23 @@ pub struct ApiLamps {
     #[serde(rename = "Door Button 4", alias = "ButtonLight Door 4", default)]
     pub fourth_door_light: f32,
     /// Stop request LED intensity.
-    #[serde(rename = "LED StopRequest", default)]
+    #[serde(
+        rename = "LED StopRequest",
+        alias = "DB Stop Request",
+        alias = "TachoStopRequest",
+        default
+    )] // we need default vdl_citea does not have this field
     pub led_stop_request: f32,
     /// Bus stop brake light intensity.
-    #[serde(rename = "ButtonLight BusStopBrake", default)]
+    #[serde(rename = "ButtonLight BusStopBrake", alias = "LED Stop Brake", default)]
+    // we need default man_lionscity does not have this field
     pub light_stopbrake: f32,
-    #[serde(rename = "ButtonLight DoorClearance", alias = "DoorClearanceButton", default)]
-    pub door_clearance_light:f32
+    #[serde(
+        rename = "ButtonLight DoorClearance",
+        alias = "DoorClearanceButton",
+        default
+    )] // we need default man_lionscity does not have this field
+    pub door_clearance_light: f32,
 }
 
 /// Represents a button in the vehicle and its current state.
