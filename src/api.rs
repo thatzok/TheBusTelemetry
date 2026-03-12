@@ -87,7 +87,7 @@ pub struct ApiWorldType {
 }
 
 /// Vehicle telemetry data.
-#[derive(Deserialize, Debug, PartialEq)]
+#[derive(Deserialize, Debug, PartialEq, Default)]
 pub struct ApiVehicleType {
     /// Internal actor name.
     #[serde(rename = "ActorName")]
@@ -131,7 +131,7 @@ pub struct ApiVehicleType {
 }
 
 /// Represents various lamp intensities or states.
-#[derive(Deserialize, Debug, PartialEq)]
+#[derive(Deserialize, Debug, PartialEq, Default)]
 pub struct ApiLamps {
     #[serde(
         rename = "LightHeadlight",
@@ -219,6 +219,11 @@ pub struct ApiButton {
 }
 
 impl ApiVehicleType {
+
+    pub fn new() -> Self {
+        Self::default()
+    }
+
     /// Returns the button with the given name, if found.
     pub fn get_button(&self, name: &str) -> Option<ApiButton> {
         self.buttons.iter().find(|b| b.name == name).cloned()

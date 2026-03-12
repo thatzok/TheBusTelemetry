@@ -4,6 +4,37 @@ mod tests {
     use the_bus_telemetry::api::{get_button_by_name, ApiLamps, ApiVehicleType};
 
     #[test]
+    fn test_api_vehicle_type_new() {
+        let vehicle = ApiVehicleType::new();
+
+        assert_eq!(vehicle.actor_name, "");
+        assert_eq!(vehicle.vehicle_model, "");
+        assert_eq!(vehicle.ignition_enabled, "");
+        assert_eq!(vehicle.engine_started, "");
+        assert_eq!(vehicle.warning_lights, "");
+        assert_eq!(vehicle.passenger_doors_open, "");
+        assert_eq!(vehicle.fixing_brake, "");
+        assert_eq!(vehicle.speed, 0.0);
+        assert_eq!(vehicle.allowed_speed, 0.0);
+        assert_eq!(vehicle.display_fuel, 0.0);
+        assert_eq!(vehicle.indicator_state, 0);
+        assert_eq!(vehicle.buttons.len(), 0);
+
+        // Check nested default ApiLamps
+        assert_eq!(vehicle.all_lamps.light_headlight, 0.0);
+        assert_eq!(vehicle.all_lamps.light_parking, 0.0);
+        assert_eq!(vehicle.all_lamps.light_main, 0.0);
+        assert_eq!(vehicle.all_lamps.traveller_light, 0.0);
+        assert_eq!(vehicle.all_lamps.front_door_light, 0.0);
+        assert_eq!(vehicle.all_lamps.second_door_light, 0.0);
+        assert_eq!(vehicle.all_lamps.third_door_light, 0.0);
+        assert_eq!(vehicle.all_lamps.fourth_door_light, 0.0);
+        assert_eq!(vehicle.all_lamps.led_stop_request, 0.0);
+        assert_eq!(vehicle.all_lamps.light_stopbrake, 0.0);
+        assert_eq!(vehicle.all_lamps.door_clearance_light, 0.0);
+    }
+
+    #[test]
     fn test_api_lamps_deserialization() {
         let json_data = json!({
             "Light MAIN": 1.0,
