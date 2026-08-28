@@ -1,135 +1,137 @@
 {
-  "ActorName": "BP_Mercedes_eCitaro_12m_2Door_C_2147297308",
-  "IsPlayerControlled": "true",
   "VehicleModel": "eCitybus",
+  "GearboxType": "Static",
+  "ActorName": "BP_Mercedes_eCitaro_12m_2Door_C_2147439900",
   "InputIdentifier": "eCitaro",
-  "Speed": 0.0,
-  "RPM": 0.0,
-  "IdleRPM": 0.0,
-  "MaxRPM": 11000.0,
-  "Mass": 14000.000977,
-  "Steering": 0.0,
-  "Throttle": 0.0,
-  "Brake": 0.8,
-  "FixingBrake": "true",
-  "Load": 0.0,
-  "EngineStarted": "true",
-  "GearboxType": "None",
-  "LowFuelWarning": "false",
-  "Location": {
-    "X": 4523.945969,
-    "Y": -4393.06584,
-    "Z": -485.433591
+  "IsPlayerControlled": true,
+  "Speed": 0,
+  "RPM": 0,
+  "IdleRPM": 0,
+  "MaxRPM": 11000,
+  "Mass": 14000.0009765625,
+  "Steering": 0,
+  "Throttle": 0,
+  "Brake": 0.80000001192092896,
+  "Load": 0,
+  "EngineStarted": false,
+  "Gearbox":
+  {
+    "CurrentSelector": "N",
+    "CurrentGear": 0,
+    "TargetGear": 0,
+    "GearCount": 3
   },
-  "Rotation": {
-    "Roll": -4.951125,
-    "Pitch": 0.134765,
-    "Yaw": -58.879131
-  },
+  "FixingBrake": true,
+  "LowFuelWarning": false,
+  "MissingFields": [],
   "IndicatorState": 0,
   "IndicatorValue": 0,
-  "WarningLights": "false",
-  "IsOffroad": "false",
-  "Gearbox": {
-    "CurrentSelector": "N"
+  "WarningLights": false,
+  "Location":
+  {
+    "X": 9363.7493162974606,
+    "Y": -38869.425993567915,
+    "Z": 727.99688659895855
+  },
+  "Rotation":
+  {
+    "Roll": -3.2087326351443721,
+    "Pitch": 0.54042014356514634,
+    "Yaw": -40.857071860152494
   },
   "Wheels": [
     {
-      "CurrentSuspension": 17.462601,
-      "PreviousSuspension": 17.462627,
-      "Location": {
-        "X": 222.768143,
+      "CurrentSuspension": 21.193275451660156,
+      "PreviousSuspension": 21.193269729614258,
+      "SuspensionForce": 3314085.2582506123,
+      "Location":
+      {
+        "X": 222.76814300000001,
         "Y": -116.451004,
-        "Z": 42.462601
+        "Z": 46.193275451660156
       },
-      "Rotation": {
-        "Roll": 0.0,
-        "Pitch": -0.0,
-        "Yaw": 0.0
+      "Rotation":
+      {
+        "Roll": 0,
+        "Pitch": -0.34787124847556899,
+        "Yaw": 0
       },
-      "SuspensionForce": 3178728.646953,
-      "OnGround": "true",
-      "HasContraction": "true"
+      "OnGround": true,
+      "HasContraction": true
     },
     {
-      "CurrentSuspension": 16.713341,
-      "PreviousSuspension": 16.713367,
-      "Location": {
-        "X": 222.768143,
+      "CurrentSuspension": 20.129411697387695,
+      "PreviousSuspension": 20.129405975341797,
+      "SuspensionForce": 2700169.5211950014,
+      "Location":
+      {
+        "X": 222.76814300000001,
         "Y": 116.451004,
-        "Z": 41.713341
+        "Z": 45.129411697387695
       },
-      "Rotation": {
-        "Roll": 0.0,
-        "Pitch": 0.0,
-        "Yaw": 0.0
+      "Rotation":
+      {
+        "Roll": 0,
+        "Pitch": -0.68371772124435815,
+        "Yaw": 0
       },
-      "SuspensionForce": 2780589.842081,
-      "OnGround": "true",
-      "HasContraction": "true"
+      "OnGround": true,
+      "HasContraction": true
     },
     {
-      "CurrentSuspension": 17.988068,
-      "PreviousSuspension": 17.98806,
-      "Location": {
-        "X": -358.161896,
+      "CurrentSuspension": 21.647903442382812,
+      "PreviousSuspension": 21.647895812988281,
+      "SuspensionForce": 4161533.0988699701,
+      "Location":
+      {
+        "X": -358.16189600000001,
         "Y": -116.451004,
-        "Z": 42.988068
+        "Z": 46.647903442382812
       },
-      "Rotation": {
-        "Roll": 0.0,
-        "Pitch": 0.0,
-        "Yaw": 0.0
+      "Rotation":
+      {
+        "Roll": 0,
+        "Pitch": 0.016495697772000308,
+        "Yaw": 0
       },
-      "SuspensionForce": 4174255.151759,
-      "OnGround": "true",
-      "HasContraction": "true"
+      "OnGround": true,
+      "HasContraction": true
     },
     {
-      "CurrentSuspension": 16.907444,
-      "PreviousSuspension": 16.907436,
-      "Location": {
-        "X": -358.161896,
+      "CurrentSuspension": 20.720226287841797,
+      "PreviousSuspension": 20.720218658447266,
+      "SuspensionForce": 3552877.1623734487,
+      "Location":
+      {
+        "X": -358.16189600000001,
         "Y": 116.451004,
-        "Z": 41.907444
+        "Z": 45.720226287841797
       },
-      "Rotation": {
-        "Roll": 0.0,
-        "Pitch": -0.0,
-        "Yaw": 0.0
+      "Rotation":
+      {
+        "Roll": 0,
+        "Pitch": -0.053565805997694234,
+        "Yaw": 0
       },
-      "SuspensionForce": 3540326.64043,
-      "OnGround": "true",
-      "HasContraction": "true"
+      "OnGround": true,
+      "HasContraction": true
     }
   ],
-  "IsRadioPlaying": "false",
-  "ActiveRadioChannel": "",
-  "RadioVolume": 0.28,
-  "PassengerDoorsOpen": "false",
-  "LuggageDoorsOpen": "false",
-  "NumSeats": 30,
-  "NumOccupiedSeats": 0,
-  "IgnitionEnabled": "true",
-  "EngineTemperature": 0.208563,
-  "WiperLevel": 0,
-  "DestinationDisplayActive": "true",
-  "CruiseControlActive": "false",
-  "AllowedSpeed": 0.0,
-  "IsAtStop": "false",
-  "DirtIntensity": 0.0,
-  "CurrentFuel": 243.0,
-  "MaxFuel": 243.0,
-  "DisplayFuel": 1.0,
+  "IsOffroad": false,
+  "UMG":
+  {
+    "Navigation": "/vehicles/BP_Mercedes_eCitaro_12m_2Door_C_2147439900/navigation",
+    "Boardcomputer": "/vehicles/BP_Mercedes_eCitaro_12m_2Door_C_2147439900/boardcomputer",
+    "driverdisplay": "/vehicles/BP_Mercedes_eCitaro_12m_2Door_C_2147439900/driverdisplay"
+  },
   "Buttons": [
     {
       "Name": "Driver Window",
-      "Tooltip": "Fahrerfenster öffnen",
+      "ToolTip": "",
       "State": "Primary",
       "Actions": [
         "DriverWindowOpen",
-        "DriverWindowClose",
-        "None"
+        "DriverWindowClose"
       ],
       "States": [
         "Primary",
@@ -138,9 +140,8 @@
     },
     {
       "Name": "Sun Blind Left",
-      "Tooltip": "",
+      "ToolTip": "",
       "State": "Top",
-      "Value": "1.0",
       "Actions": [
         "WindowShadeSideDown",
         "WindowShadeSideUp"
@@ -149,22 +150,18 @@
     },
     {
       "Name": "Sun Blind Small Left",
-      "Tooltip": "",
+      "ToolTip": "",
       "State": "None",
-      "Value": "0.0",
-      "Actions": [
-        "None"
-      ],
+      "Actions": [],
       "States": []
     },
     {
       "Name": "Window Shade",
-      "Tooltip": "Sonnenblende runterfahren",
+      "ToolTip": "",
       "State": "Primary",
       "Actions": [
         "WindowShadeDown",
-        "WindowShadeUp",
-        "None"
+        "WindowShadeUp"
       ],
       "States": [
         "Primary",
@@ -173,26 +170,25 @@
     },
     {
       "Name": "Wiper",
-      "Tooltip": "",
+      "ToolTip": "",
       "State": "Off",
       "Actions": [
         "WiperDown",
         "WiperUp"
       ],
       "States": [
-        "fast",
+        "Fast",
         "On",
-        "Interval",
+        "interval",
         "Off"
       ]
     },
     {
       "Name": "WindowHeating 1",
-      "Tooltip": "",
+      "ToolTip": "",
       "State": "Primary",
       "Actions": [
-        "WindowHeating",
-        "None"
+        "WindowHeating"
       ],
       "States": [
         "Primary",
@@ -201,11 +197,10 @@
     },
     {
       "Name": "Fans 1",
-      "Tooltip": "Automatische Ventilation",
+      "ToolTip": "",
       "State": "Primary",
       "Actions": [
-        "Fans",
-        "None"
+        "Fans"
       ],
       "States": [
         "Primary",
@@ -215,11 +210,9 @@
     },
     {
       "Name": "EmergencyValve 1",
-      "Tooltip": "Nothahnrückstellung",
-      "State": "false",
-      "Actions": [
-        "None"
-      ],
+      "ToolTip": "Nothahnrückstellung",
+      "State": "Off",
+      "Actions": [],
       "States": [
         "On",
         "Off"
@@ -227,11 +220,9 @@
     },
     {
       "Name": "Bus Stop Brake Emergency Release",
-      "Tooltip": "",
-      "State": "false",
-      "Actions": [
-        "None"
-      ],
+      "ToolTip": "",
+      "State": "Off",
+      "Actions": [],
       "States": [
         "On",
         "Off"
@@ -239,7 +230,7 @@
     },
     {
       "Name": "Parking Brake",
-      "Tooltip": "Feststellbremse",
+      "ToolTip": "Feststellbremse",
       "State": "Primary",
       "Actions": [
         "FixingBrake"
@@ -251,7 +242,7 @@
     },
     {
       "Name": "Gear Selector",
-      "Tooltip": "",
+      "ToolTip": "",
       "State": "Neutral",
       "Actions": [
         "SetGearN",
@@ -266,8 +257,8 @@
     },
     {
       "Name": "Fake Ignition",
-      "Tooltip": "",
-      "State": "Start",
+      "ToolTip": "",
+      "State": "Off",
       "Actions": [
         "MotorStartStop"
       ],
@@ -279,8 +270,8 @@
     },
     {
       "Name": "Light Switch",
+      "ToolTip": "Aus",
       "State": "Off",
-      "Value": "0.0",
       "Actions": [
         "Lightswitch",
         "LightSwitchDown",
@@ -290,18 +281,17 @@
         "Off",
         "Parking Lights",
         "Headlights",
-        "Front Fog Light",
-        "Rear Fog Light"
+        "Rear Fog Light",
+        "Front Fog Light"
       ]
     },
     {
       "Name": "Indicator",
-      "Tooltip": "",
+      "ToolTip": "",
       "State": "Primary",
       "Actions": [
         "IndicatorDown",
-        "IndicatorUp",
-        "None"
+        "IndicatorUp"
       ],
       "States": [
         "Primary",
@@ -311,7 +301,7 @@
     },
     {
       "Name": "High Beam",
-      "Tooltip": "",
+      "ToolTip": "",
       "State": "Primary",
       "Actions": [
         "ToggleTravellerLights"
@@ -323,8 +313,8 @@
     },
     {
       "Name": "Warning Light",
-      "Tooltip": "Warnblinker umschalten",
-      "State": "false",
+      "ToolTip": "Warnblinker umschalten",
+      "State": "Off",
       "Actions": [
         "ToggleWarningLights"
       ],
@@ -335,8 +325,8 @@
     },
     {
       "Name": "Driver Light",
-      "Tooltip": "Fahrer Licht ein/aus",
-      "State": "false",
+      "ToolTip": "Fahrer Licht ein/aus",
+      "State": "Off",
       "Actions": [
         "ToggleDriversLight"
       ],
@@ -347,7 +337,7 @@
     },
     {
       "Name": "Retarder",
-      "Tooltip": "Retarder aus",
+      "ToolTip": "",
       "State": "Primary",
       "Actions": [
         "RetarderOff",
@@ -361,8 +351,8 @@
     },
     {
       "Name": "Retarder Lever",
+      "ToolTip": "1",
       "State": "Retarder1",
-      "Value": "0.0",
       "Actions": [
         "RetarderLevel1",
         "RetarderLevel2",
@@ -382,11 +372,9 @@
     },
     {
       "Name": "SosLight",
-      "Tooltip": "SOS Licht",
-      "State": "false",
-      "Actions": [
-        "None"
-      ],
+      "ToolTip": "SOS Licht",
+      "State": "Off",
+      "Actions": [],
       "States": [
         "On",
         "Off"
@@ -394,8 +382,8 @@
     },
     {
       "Name": "Announcement",
-      "Tooltip": "Ansage",
-      "State": "false",
+      "ToolTip": "Ansage",
+      "State": "Off",
       "Actions": [
         "Announcement"
       ],
@@ -406,11 +394,9 @@
     },
     {
       "Name": "Announcement Volume",
-      "Tooltip": "Lautstärke verringern",
+      "ToolTip": "",
       "State": "Primary",
-      "Actions": [
-        "None"
-      ],
+      "Actions": [],
       "States": [
         "Primary",
         "Secondary"
@@ -418,11 +404,10 @@
     },
     {
       "Name": "Air Filter System",
-      "Tooltip": "",
+      "ToolTip": "",
       "State": "Primary",
       "Actions": [
-        "AirFilter",
-        "None"
+        "AirFilter"
       ],
       "States": [
         "Primary",
@@ -432,8 +417,8 @@
     },
     {
       "Name": "SteeringWheelAdjust",
-      "Tooltip": "Lenkrad Justierung umschalten",
-      "State": "false",
+      "ToolTip": "Lenkrad Justierung umschalten",
+      "State": "Off",
       "Actions": [
         "SteeringWheelAdjust"
       ],
@@ -444,8 +429,8 @@
     },
     {
       "Name": "LaneAssist",
-      "Tooltip": "Spur Assistent ein/aus",
-      "State": "false",
+      "ToolTip": "Spur Assistent ein/aus",
+      "State": "Off",
       "Actions": [
         "LaneAssist"
       ],
@@ -456,8 +441,8 @@
     },
     {
       "Name": "TractionControl",
-      "Tooltip": "Antischlupfregelung umschalten",
-      "State": "true",
+      "ToolTip": "Antischlupfregelung umschalten",
+      "State": "On",
       "Actions": [
         "ToggleASRThreshold"
       ],
@@ -468,12 +453,11 @@
     },
     {
       "Name": "Lifting",
-      "Tooltip": "Lift runter",
+      "ToolTip": "",
       "State": "Primary",
       "Actions": [
         "LiftDown",
-        "LiftUp",
-        "None"
+        "LiftUp"
       ],
       "States": [
         "Primary",
@@ -482,12 +466,11 @@
     },
     {
       "Name": "Kneeling",
-      "Tooltip": "Kneeling Runter",
+      "ToolTip": "",
       "State": "Primary",
       "Actions": [
         "KneelDown",
-        "KneelUp",
-        "None"
+        "KneelUp"
       ],
       "States": [
         "Primary",
@@ -496,8 +479,8 @@
     },
     {
       "Name": "Camera 1",
-      "Tooltip": "Überwachungskamera umschalten",
-      "State": "false",
+      "ToolTip": "Überwachungskamera umschalten",
+      "State": "Off",
       "Actions": [
         "Camera"
       ],
@@ -508,8 +491,8 @@
     },
     {
       "Name": "Camera 2",
-      "Tooltip": "Monitor ein-/ausschalten",
-      "State": "false",
+      "ToolTip": "Monitor ein-/ausschalten",
+      "State": "Off",
       "Actions": [
         "ToggleCameraDisplay"
       ],
@@ -520,8 +503,8 @@
     },
     {
       "Name": "DisplayNext",
-      "Tooltip": "Menü wechseln",
-      "State": "false",
+      "ToolTip": "Menü wechseln",
+      "State": "Off",
       "Actions": [
         "MenuHomescreen"
       ],
@@ -532,8 +515,8 @@
     },
     {
       "Name": "Automatic Kneeling",
-      "Tooltip": "Automatisches Kneeling umschalten",
-      "State": "false",
+      "ToolTip": "Automatisches Kneeling umschalten",
+      "State": "Off",
       "Actions": [
         "Pedestrians"
       ],
@@ -544,12 +527,11 @@
     },
     {
       "Name": "InteriorLightControl 2",
-      "Tooltip": "Innenbeleuchtung vollständig einschalten",
+      "ToolTip": "",
       "State": "Primary",
       "Actions": [
         "InteriorLightDim",
-        "InteriorLightBright",
-        "None"
+        "InteriorLightBright"
       ],
       "States": [
         "Primary",
@@ -559,8 +541,8 @@
     },
     {
       "Name": "InteriorLightControl 1",
-      "Tooltip": "Innenbeleuchtung ein/aus",
-      "State": "false",
+      "ToolTip": "Innenbeleuchtung ein/aus",
+      "State": "Off",
       "Actions": [
         "TogglePassengersLight"
       ],
@@ -571,8 +553,8 @@
     },
     {
       "Name": "Automatic Door Closing",
-      "Tooltip": "Automatisches Tür schließen ein/aus",
-      "State": "true",
+      "ToolTip": "Automatisches Tür schließen ein/aus",
+      "State": "On",
       "Actions": [
         "ToggleAutomaticRearDoorClosing"
       ],
@@ -583,13 +565,12 @@
     },
     {
       "Name": "Door Lock",
-      "Tooltip": "Rechte Vordertüre sperren",
+      "ToolTip": "",
       "State": "Primary",
       "Actions": [
         "DoorWingLockOff",
         "DoorWingLockLeft",
-        "DoorWingLockRight",
-        "None"
+        "DoorWingLockRight"
       ],
       "States": [
         "Primary",
@@ -599,8 +580,8 @@
     },
     {
       "Name": "Stop Brake",
-      "Tooltip": "Haltestellenbremse",
-      "State": "false",
+      "ToolTip": "Haltestellenbremse",
+      "State": "Off",
       "Actions": [
         "StopBrakeOnOff"
       ],
@@ -611,8 +592,8 @@
     },
     {
       "Name": "Door Clearance",
-      "Tooltip": "Hintere Türfreigabe umschalten",
-      "State": "false",
+      "ToolTip": "Hintere Türfreigabe umschalten",
+      "State": "Off",
       "Actions": [
         "ToggleDoorClearance"
       ],
@@ -623,8 +604,8 @@
     },
     {
       "Name": "Door 1",
-      "Tooltip": "Vordere Tür öffnen/schließen",
-      "State": "true",
+      "ToolTip": "Vordere Tür öffnen/schließen",
+      "State": "On",
       "Actions": [
         "DoorFrontOpenClose"
       ],
@@ -635,8 +616,8 @@
     },
     {
       "Name": "Door 2",
-      "Tooltip": "Zweite Tür Öffnen/Schließen",
-      "State": "false",
+      "ToolTip": "Zweite Tür Öffnen/Schließen",
+      "State": "Off",
       "Actions": [
         "DoorMiddleOpenClose"
       ],
@@ -647,8 +628,8 @@
     },
     {
       "Name": "Door 3",
-      "Tooltip": "Dritte Tür öffnen/schließen",
-      "State": "false",
+      "ToolTip": "Dritte Tür öffnen/schließen",
+      "State": "Off",
       "Actions": [
         "DoorRearOpenClose"
       ],
@@ -659,8 +640,8 @@
     },
     {
       "Name": "Door 4",
-      "Tooltip": "Vierte Tür öffnen/schließen",
-      "State": "false",
+      "ToolTip": "Vierte Tür öffnen/schließen",
+      "State": "Off",
       "Actions": [
         "DoorFourthOpenClose"
       ],
@@ -671,12 +652,11 @@
     },
     {
       "Name": "WheelchairRamp",
-      "Tooltip": "Rollstuhlrampe einfahren",
+      "ToolTip": "",
       "State": "Primary",
       "Actions": [
         "ElectricRampIn",
-        "ElectricRampOut",
-        "None"
+        "ElectricRampOut"
       ],
       "States": [
         "Primary",
@@ -685,7 +665,7 @@
     },
     {
       "Name": "Air Condition",
-      "Tooltip": "Klimaanlage einschalten",
+      "ToolTip": "Klimaanlage einschalten",
       "State": "Primary",
       "Actions": [
         "ToggleAirCondition"
@@ -697,7 +677,7 @@
     },
     {
       "Name": "AC 1 Mode",
-      "Tooltip": "Zum Kühlmodus wechseln",
+      "ToolTip": "Zum Kühlmodus wechseln",
       "State": "Primary",
       "Actions": [
         "ACMode"
@@ -709,7 +689,7 @@
     },
     {
       "Name": "AC Rear",
-      "Tooltip": "Hintere Klimaanlage einschalten",
+      "ToolTip": "Hintere Klimaanlage einschalten",
       "State": "Primary",
       "Actions": [
         "ACRear"
@@ -721,7 +701,7 @@
     },
     {
       "Name": "AC 1 Circulation",
-      "Tooltip": "Luftzirkulation aktivieren",
+      "ToolTip": "Luftzirkulation aktivieren",
       "State": "Primary",
       "Actions": [
         "ACCirculation"
@@ -733,7 +713,7 @@
     },
     {
       "Name": "AC Circulation Front",
-      "Tooltip": "Vordere Luftzirkulation aktivieren",
+      "ToolTip": "Vordere Luftzirkulation aktivieren",
       "State": "Primary",
       "Actions": [
         "ACCirculationFront"
@@ -745,8 +725,8 @@
     },
     {
       "Name": "AC 1 AirFlow",
+      "ToolTip": "",
       "State": "AC_Mode_3",
-      "Value": "0.673077",
       "Actions": [
         "AC 1 AirFlowFakeLeft",
         "AC 1 AirFlowFakeRight"
@@ -760,8 +740,8 @@
     },
     {
       "Name": "Air Condition Temperature",
+      "ToolTip": "20",
       "State": "200",
-      "Value": "0.2",
       "Actions": [
         "SetTemp180",
         "SetTemp185",
@@ -813,33 +793,27 @@
     },
     {
       "Name": "AC 1 FanSpeed",
+      "ToolTip": "",
       "State": "Default",
-      "Value": "76.233184",
-      "Actions": [
-        "None"
-      ],
+      "Actions": [],
       "States": [
         "Default"
       ]
     },
     {
       "Name": "vent",
+      "ToolTip": "",
       "State": "Default",
-      "Value": "0.0",
-      "Actions": [
-        "None"
-      ],
+      "Actions": [],
       "States": [
         "Default"
       ]
     },
     {
       "Name": "Display Monitor",
-      "Tooltip": "",
-      "State": "false",
-      "Actions": [
-        "None"
-      ],
+      "ToolTip": "",
+      "State": "Off",
+      "Actions": [],
       "States": [
         "On",
         "Off"
@@ -847,8 +821,8 @@
     },
     {
       "Name": "CameraPrevious",
-      "Tooltip": "Zur vorherigen Kamera wechseln",
-      "State": "false",
+      "ToolTip": "Zur vorherigen Kamera wechseln",
+      "State": "Off",
       "Actions": [
         "SwitchPreviousCamera"
       ],
@@ -859,8 +833,8 @@
     },
     {
       "Name": "CameraNext",
-      "Tooltip": "Zur nächsten Kamera wechseln",
-      "State": "false",
+      "ToolTip": "Zur nächsten Kamera wechseln",
+      "State": "Off",
       "Actions": [
         "SwitchNextCamera"
       ],
@@ -871,11 +845,9 @@
     },
     {
       "Name": "Display Mirror Image",
-      "Tooltip": "",
-      "State": "false",
-      "Actions": [
-        "None"
-      ],
+      "ToolTip": "",
+      "State": "Off",
+      "Actions": [],
       "States": [
         "On",
         "Off"
@@ -883,11 +855,9 @@
     },
     {
       "Name": "Vent Right",
-      "Tooltip": "",
+      "ToolTip": "",
       "State": "Primary",
-      "Actions": [
-        "None"
-      ],
+      "Actions": [],
       "States": [
         "Primary",
         "Secondary"
@@ -895,11 +865,9 @@
     },
     {
       "Name": "Vent Left",
-      "Tooltip": "",
+      "ToolTip": "",
       "State": "Primary",
-      "Actions": [
-        "None"
-      ],
+      "Actions": [],
       "States": [
         "Primary",
         "Secondary"
@@ -907,8 +875,8 @@
     },
     {
       "Name": "DriverDoor",
-      "Tooltip": "",
-      "State": "false",
+      "ToolTip": "",
+      "State": "Off",
       "Actions": [
         "DriverDoor"
       ],
@@ -919,18 +887,15 @@
     },
     {
       "Name": "DriverDoorHandle",
-      "Tooltip": "",
+      "ToolTip": "",
       "State": "None",
-      "Value": "0.0",
-      "Actions": [
-        "None"
-      ],
+      "Actions": [],
       "States": []
     },
     {
-      "Name": "BoardComputer",
-      "Tooltip": "Atron auswählen",
-      "State": "false",
+      "Name": "Boardcomputer",
+      "ToolTip": "Atron auswählen",
+      "State": "Off",
       "Actions": [
         "Select Boardcomputer"
       ],
@@ -941,12 +906,11 @@
     },
     {
       "Name": "Pantograph",
-      "Tooltip": "Fahrerfenster öffnen",
+      "ToolTip": "",
       "State": "Primary",
       "Actions": [
         "Deactivate Pantograph",
-        "Activate Pantograph",
-        "None"
+        "Activate Pantograph"
       ],
       "States": [
         "Primary",
@@ -955,8 +919,8 @@
     },
     {
       "Name": "15 Cent",
-      "Tooltip": "0.15 €",
-      "State": "false",
+      "ToolTip": "0.15 €",
+      "State": "Off",
       "Actions": [
         "Coins15"
       ],
@@ -967,8 +931,8 @@
     },
     {
       "Name": "20 Cent",
-      "Tooltip": "0.20 €",
-      "State": "false",
+      "ToolTip": "0.20 €",
+      "State": "Off",
       "Actions": [
         "Coins20"
       ],
@@ -979,8 +943,8 @@
     },
     {
       "Name": "30 Cent",
-      "Tooltip": "0.30 €",
-      "State": "false",
+      "ToolTip": "0.30 €",
+      "State": "Off",
       "Actions": [
         "Coins30"
       ],
@@ -991,8 +955,8 @@
     },
     {
       "Name": "50 Cent",
-      "Tooltip": "0.50 €",
-      "State": "false",
+      "ToolTip": "0.50 €",
+      "State": "Off",
       "Actions": [
         "Coins50"
       ],
@@ -1003,8 +967,8 @@
     },
     {
       "Name": "60 Cent",
-      "Tooltip": "0.60 €",
-      "State": "false",
+      "ToolTip": "0.60 €",
+      "State": "Off",
       "Actions": [
         "Coins60"
       ],
@@ -1015,8 +979,8 @@
     },
     {
       "Name": "1 Euro",
-      "Tooltip": "1 €",
-      "State": "false",
+      "ToolTip": "1 €",
+      "State": "Off",
       "Actions": [
         "Coins100"
       ],
@@ -1027,8 +991,8 @@
     },
     {
       "Name": "2 Euro",
-      "Tooltip": "2 €",
-      "State": "false",
+      "ToolTip": "2 €",
+      "State": "Off",
       "Actions": [
         "Coins200"
       ],
@@ -1039,8 +1003,8 @@
     },
     {
       "Name": "4 Euro",
-      "Tooltip": "4 €",
-      "State": "false",
+      "ToolTip": "4 €",
+      "State": "Off",
       "Actions": [
         "Coins400"
       ],
@@ -1051,8 +1015,8 @@
     },
     {
       "Name": "6 Euro",
-      "Tooltip": "6 €",
-      "State": "false",
+      "ToolTip": "6 €",
+      "State": "Off",
       "Actions": [
         "Coins600"
       ],
@@ -1063,8 +1027,8 @@
     },
     {
       "Name": "8 Euro",
-      "Tooltip": "8 €",
-      "State": "false",
+      "ToolTip": "8 €",
+      "State": "Off",
       "Actions": [
         "Coins800"
       ],
@@ -1075,8 +1039,8 @@
     },
     {
       "Name": "5 Cent",
-      "Tooltip": "0,05 €",
-      "State": "false",
+      "ToolTip": "0,05 €",
+      "State": "Off",
       "Actions": [
         "Coins5"
       ],
@@ -1087,8 +1051,8 @@
     },
     {
       "Name": "10 Cent",
-      "Tooltip": "0.1 €",
-      "State": "false",
+      "ToolTip": "0.1 €",
+      "State": "Off",
       "Actions": [
         "Coins10"
       ],
@@ -1099,8 +1063,8 @@
     },
     {
       "Name": "Cash Money",
-      "Tooltip": "",
-      "State": "false",
+      "ToolTip": "",
+      "State": "Off",
       "Actions": [
         "Take Cash Money"
       ],
@@ -1110,97 +1074,112 @@
       ]
     }
   ],
-  "Doors": [
+  "AllLamps":
+  {
+    "Default Emissive Materials": 0,
+    "Default Emissive": 0,
+    "Light Indicator Left": 0,
+    "Light Indicator Right": 0,
+    "Light Daytime": 0,
+    "Light Main": 0,
+    "Light Parking": 0,
+    "Light Headlight": 0,
+    "Light Travelling": 0,
+    "Light Brake": 0,
+    "Light Reverse": 0,
+    "Light Front Fog": 0,
+    "LED Front Fog": 0,
+    "Light Rear Fog": 0,
+    "LED Rear Fog": 0,
+    "Interior Lights": 0,
+    "InteriorLightMain LED": 0,
+    "InteriorLightDimmState LED": 0,
+    "InteriorLightBrightState LED": 0,
+    "Interior Lights Door1": 0,
+    "Interior Lights Door2": 0,
+    "Interior Lights Door3": 0,
+    "Interior Lights Door4": 0,
+    "ButtonLight Door 1": 0,
+    "ButtonLight Door 2": 0,
+    "ButtonLight Door 3": 0,
+    "ButtonLight Door 4": 0,
+    "Door 2 WarningLight": 0,
+    "Door 3 WarningLight": 0,
+    "Door 4 WarningLight": 0,
+    "Light Driver": 0,
+    "LED Strip Ramp": 0,
+    "USB Lights": 0,
+    "LED Misc": 0,
+    "ButtonLight LaneAssist": 0,
+    "ButtonLight WindowHeating 1 State1": 0,
+    "ButtonLight WindowHeating 1 State2": 0,
+    "ButtonLight  Fans 1 State1": 0,
+    "ButtonLight  Fans 1 State2": 0,
+    "ButtonLight SosLight": 0,
+    "ButtonLight Warning": 0,
+    "ButtonLight Retarder": 0,
+    "ButtonLight InteriorLightControl 2 State1": 0,
+    "ButtonLight InteriorLightControl 2 State2": 0,
+    "LED Driver Light": 0,
+    "ButtonLight InteriorLightControl 1": 0,
+    "LED Announcement": 0,
+    "LED WLAN Clearance": 0,
+    "ButtonLight Camera 1": 0,
+    "ButtonLight SteeringWheelAdjust": 0,
+    "LED Stop Brake": 0,
+    "ButtonLight TractionControl": 0,
+    "ButtonLight DriverDoor": 0,
+    "ButtonLight AutomaticDoorClosing": 0,
+    "ButtonLight AutomaticKneeling": 0,
+    "ButtonLight WheelchairRamp State1": 0,
+    "ButtonLight WheelchairRamp State2": 0,
+    "ButtonLight DoorClearance": 0,
+    "ButtonLight DoorLock 1 State1": 0,
+    "ButtonLight DoorLock 1 State2": 0,
+    "SecondDoorRequest": 0,
+    "ThirdDoorRequest": 0,
+    "FourthDoorRequest": 0,
+    "LED Warning": 0,
+    "DB Dot": 0,
+    "LED Parking Brake": 0,
+    "LED StopRequest": 0,
+    "Gear_N": 0
+  },
+  "PassengerDoorsOpen": "true",
+  "doors": [
     {
       "Name": "Door Front",
-      "Open": "false",
-      "Progress": "0.0",
-      "StopRequest": "false"
+      "Open": "true",
+      "Progress": "1.0",
+      "StopRequest": "false",
+      "Index": "First"
     },
     {
       "Name": "Door Second",
       "Open": "false",
       "Progress": "0.0",
-      "StopRequest": "false"
+      "StopRequest": "false",
+      "Index": "Second "
     }
   ],
-  "UMG": {
-    "Driver Display": "/vehicles/BP_Mercedes_eCitaro_12m_2Door_C_2147297308/driverdisplay",
-    "Navigation": "/vehicles/BP_Mercedes_eCitaro_12m_2Door_C_2147297308/navigation",
-    "Atron": "/vehicles/BP_Mercedes_eCitaro_12m_2Door_C_2147297308/boardcomputer"
-  },
-  "AllLamps": {
-    "Default Emissive Materials": 0.0,
-    "Default Emissive": 0.0,
-    "Light Indicator Left": 0.0,
-    "Light Indicator Right": 0.0,
-    "Light DAYTIME": 1.0,
-    "Light MAIN": 1.0,
-    "Light Parking": 0.0,
-    "Light Headlight": 0.0,
-    "Light Travelling": 0.0,
-    "Light BRAKE": 1.0,
-    "Light Reverse": 0.0,
-    "Light Front Fog": 0.0,
-    "LED Front Fog": 0.0,
-    "Light Rear Fog": 0.0,
-    "LED Rear Fog": 0.0,
-    "Interior Lights": 0.0,
-    "InteriorLightMain LED": 0.0,
-    "InteriorLightDimmState LED": 0.0,
-    "InteriorLightBrightState LED": 0.0,
-    "Interior Lights Door1": 0.0,
-    "Interior Lights Door2": 0.0,
-    "Interior Lights Door3": 0.0,
-    "Interior Lights Door4": 0.0,
-    "ButtonLight Door 1": 0.0,
-    "ButtonLight Door 2": 0.0,
-    "ButtonLight Door 3": 0.0,
-    "ButtonLight Door 4": 0.0,
-    "Door 2 WarningLight": 0.0,
-    "Door 3 WarningLight": 0.0,
-    "Door 4 WarningLight": 0.0,
-    "Light Driver": 0.0,
-    "LED Strip Ramp": 0.0,
-    "USB Lights": 1.0,
-    "LED Misc": 0.0,
-    "ButtonLight LaneAssist": 0.0,
-    "ButtonLight WindowHeating 1 State1": 0.0,
-    "ButtonLight WindowHeating 1 State2": 0.0,
-    "ButtonLight  Fans 1 State1": 0.0,
-    "ButtonLight  Fans 1 State2": 0.0,
-    "ButtonLight SosLight": 0.0,
-    "ButtonLight Warning": 0.0,
-    "ButtonLight Retarder": 0.0,
-    "ButtonLight InteriorLightControl 2 State1": 0.0,
-    "ButtonLight InteriorLightControl 2 State2": 0.0,
-    "LED Driver Light": 0.0,
-    "ButtonLight InteriorLightControl 1": 0.0,
-    "LED Announcement": 0.0,
-    "LED WLAN Clearance": 0.0,
-    "ButtonLight Camera 1": 1.0,
-    "ButtonLight SteeringWheelAdjust": 0.0,
-    "LED Stop Brake": 1.0,
-    "ButtonLight TractionControl": 1.0,
-    "ButtonLight DriverDoor": 0.0,
-    "ButtonLight AutomaticDoorClosing": 1.0,
-    "ButtonLight AutomaticKneeling": 1.0,
-    "ButtonLight WheelchairRamp State1": 0.0,
-    "ButtonLight WheelchairRamp State2": 0.0,
-    "ButtonLight DoorClearance": 0.0,
-    "ButtonLight DoorLock 1 State1": 0.0,
-    "ButtonLight DoorLock 1 State2": 0.0,
-    "SecondDoorRequest": 0.0,
-    "ThirdDoorRequest": 0.0,
-    "FourthDoorRequest": 0.0,
-    "LED Warning": 0.0,
-    "DB Dot": 0.0,
-    "LED Parking Brake": 1.0,
-    "LED StopRequest": 0.0,
-    "Gear_N": 0.0
-  },
-  "BusLogic": {
-    "Sales": {}
-  },
-  "PowerMeter": "0.0"
+  "LuggageDoorsOpen": "false",
+  "IsRadioPlaying": "false",
+  "ActiveRadioChannel": "NONE",
+  "NumSeats": "30",
+  "NumOccupiedSeats": "0",
+  "IgnitionEnabled": "false",
+  "EngineTemperature": "0.0",
+  "WiperLevel": "0",
+  "DestinationDisplayActive": "true",
+  "CruiseControlActive": "false",
+  "AllowedSpeed": "30",
+  "IsAtStop": "false",
+  "DirtIntensity": "0.0",
+  "CurrentFuel": "243.0",
+  "MaxFuel": "243",
+  "DisplayFuel": "0.0",
+  "BusLogic":
+  {
+    "Asset": "/Game/Maps/Castrop/Castrop.Castrop:PersistentLevel.BP_Mercedes_eCitaro_12m_2Door_C_2147439900.BP_TheBus_BusLogic_C_2147439378"
+  }
 }

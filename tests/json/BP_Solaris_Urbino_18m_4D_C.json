@@ -1,169 +1,176 @@
 {
-  "ActorName": "BP_Solaris_Urbino_18m_4D_C_2147441325",
-  "IsPlayerControlled": "true",
   "VehicleModel": "Urban",
+  "GearboxType": "Static",
+  "ActorName": "BP_Solaris_Urbino_18m_4D_C_2147352571",
   "InputIdentifier": "urbino",
-  "Speed": 0.0,
-  "RPM": 0.0,
-  "IdleRPM": 0.0,
-  "MaxRPM": 11000.0,
-  "Mass": 20619.519531,
-  "Steering": 0.0,
-  "Throttle": 0.0,
-  "Brake": 0.8,
-  "FixingBrake": "true",
-  "Load": 0.0,
-  "EngineStarted": "true",
-  "GearboxType": "None",
-  "LowFuelWarning": "false",
-  "Location": {
-    "X": 4468.713276,
-    "Y": -4302.075992,
-    "Z": -483.936451
+  "IsPlayerControlled": true,
+  "Speed": 0,
+  "RPM": 0,
+  "IdleRPM": 0,
+  "MaxRPM": 11000,
+  "Mass": 20619.51953125,
+  "Steering": 0,
+  "Throttle": 0,
+  "Brake": 0.80000001192092896,
+  "Load": 0,
+  "EngineStarted": false,
+  "Gearbox":
+  {
+    "CurrentSelector": "N",
+    "CurrentGear": 0,
+    "TargetGear": 0,
+    "GearCount": 3
   },
-  "Rotation": {
-    "Roll": -3.941828,
-    "Pitch": 0.045979,
-    "Yaw": -58.958889
-  },
+  "FixingBrake": true,
+  "LowFuelWarning": false,
+  "MissingFields": [],
   "IndicatorState": 0,
   "IndicatorValue": 0,
-  "WarningLights": "false",
-  "IsOffroad": "false",
-  "Gearbox": {
-    "CurrentSelector": "N"
+  "WarningLights": false,
+  "Location":
+  {
+    "X": 9283.6362544258318,
+    "Y": -38800.361754250611,
+    "Z": 726.907882937458
+  },
+  "Rotation":
+  {
+    "Roll": -3.2770763877743434,
+    "Pitch": 0.93579486860397798,
+    "Yaw": -40.949345654612578
   },
   "Wheels": [
     {
-      "CurrentSuspension": 13.646168,
-      "PreviousSuspension": 13.646166,
-      "Location": {
-        "X": 329.052307,
-        "Y": -116.899414,
-        "Z": 41.646168
+      "CurrentSuspension": 18.108572006225586,
+      "PreviousSuspension": 18.108585357666016,
+      "SuspensionForce": 4250910.6806804277,
+      "Location":
+      {
+        "X": 329.05230699999998,
+        "Y": -116.89941399999999,
+        "Z": 46.108572006225586
       },
-      "Rotation": {
-        "Roll": 0.0,
-        "Pitch": 0.0,
-        "Yaw": 0.0
+      "Rotation":
+      {
+        "Roll": 0,
+        "Pitch": -0.75215401588915343,
+        "Yaw": 0
       },
-      "SuspensionForce": 3771100.178165,
-      "OnGround": "true",
-      "HasContraction": "true"
+      "OnGround": true,
+      "HasContraction": true
     },
     {
-      "CurrentSuspension": 15.948244,
-      "PreviousSuspension": 15.948243,
-      "Location": {
-        "X": 329.052307,
-        "Y": 116.899414,
-        "Z": 43.948244
+      "CurrentSuspension": 16.801416397094727,
+      "PreviousSuspension": 16.801427841186523,
+      "SuspensionForce": 3855646.8477659761,
+      "Location":
+      {
+        "X": 329.05230699999998,
+        "Y": 116.89941399999999,
+        "Z": 44.801416397094727
       },
-      "Rotation": {
-        "Roll": 0.0,
-        "Pitch": 0.0,
-        "Yaw": 0.0
+      "Rotation":
+      {
+        "Roll": 0,
+        "Pitch": -0.53156338054226737,
+        "Yaw": 0
       },
-      "SuspensionForce": 4424828.680418,
-      "OnGround": "true",
-      "HasContraction": "true"
+      "OnGround": true,
+      "HasContraction": true
     },
     {
-      "CurrentSuspension": 13.334547,
-      "PreviousSuspension": 13.334553,
-      "Location": {
+      "CurrentSuspension": 22.67857551574707,
+      "PreviousSuspension": 22.678583145141602,
+      "SuspensionForce": 3483493.0443918286,
+      "Location":
+      {
         "X": -260.139771,
-        "Y": -116.899414,
-        "Z": 41.334547
+        "Y": -116.89941399999999,
+        "Z": 50.67857551574707
       },
-      "Rotation": {
-        "Roll": 0.0,
-        "Pitch": 0.0,
-        "Yaw": 0.0
+      "Rotation":
+      {
+        "Roll": 0,
+        "Pitch": -0.6938505345510444,
+        "Yaw": 0
       },
-      "SuspensionForce": 3053238.487319,
-      "OnGround": "true",
-      "HasContraction": "true"
+      "OnGround": true,
+      "HasContraction": true
     },
     {
-      "CurrentSuspension": 15.3055,
-      "PreviousSuspension": 15.305506,
-      "Location": {
+      "CurrentSuspension": 21.501531600952148,
+      "PreviousSuspension": 21.50153923034668,
+      "SuspensionForce": 3166355.558592536,
+      "Location":
+      {
         "X": -260.139771,
-        "Y": 116.899414,
-        "Z": 43.3055
+        "Y": 116.89941399999999,
+        "Z": 49.501531600952148
       },
-      "Rotation": {
-        "Roll": 0.0,
-        "Pitch": 0.0,
-        "Yaw": 0.0
+      "Rotation":
+      {
+        "Roll": 0,
+        "Pitch": -0.47788325425334011,
+        "Yaw": 0
       },
-      "SuspensionForce": 3575854.01809,
-      "OnGround": "true",
-      "HasContraction": "true"
+      "OnGround": true,
+      "HasContraction": true
     },
     {
-      "CurrentSuspension": 15.794976,
-      "PreviousSuspension": 15.794976,
-      "Location": {
-        "X": -340.291626,
-        "Y": -116.899994,
-        "Z": 11.794976
+      "CurrentSuspension": 18.621452331542969,
+      "PreviousSuspension": 18.621452331542969,
+      "SuspensionForce": 3393774.3608902171,
+      "Location":
+      {
+        "X": -340.29162600000001,
+        "Y": -116.89999400000001,
+        "Z": 14.621452331542969
       },
-      "Rotation": {
-        "Roll": 0.0,
-        "Pitch": -0.0,
-        "Yaw": 0.0
+      "Rotation":
+      {
+        "Roll": 0,
+        "Pitch": 0.053742551372029088,
+        "Yaw": 0
       },
-      "SuspensionForce": 3605561.197416,
-      "OnGround": "true",
-      "HasContraction": "true"
+      "OnGround": true,
+      "HasContraction": true
     },
     {
-      "CurrentSuspension": 14.472946,
-      "PreviousSuspension": 14.472946,
-      "Location": {
-        "X": -340.291626,
-        "Y": 116.899994,
-        "Z": 10.472946
+      "CurrentSuspension": 16.553430557250977,
+      "PreviousSuspension": 16.553430557250977,
+      "SuspensionForce": 2131935.7889072695,
+      "Location":
+      {
+        "X": -340.29162600000001,
+        "Y": 116.89999400000001,
+        "Z": 12.553430557250977
       },
-      "Rotation": {
-        "Roll": 0.0,
-        "Pitch": -0.0,
-        "Yaw": 0.0
+      "Rotation":
+      {
+        "Roll": 0,
+        "Pitch": -0.022178700938463063,
+        "Yaw": 0
       },
-      "SuspensionForce": 2431955.032484,
-      "OnGround": "true",
-      "HasContraction": "true"
+      "OnGround": true,
+      "HasContraction": true
     }
   ],
-  "IsRadioPlaying": "false",
-  "ActiveRadioChannel": "",
-  "RadioVolume": 0.28,
-  "PassengerDoorsOpen": "true",
-  "LuggageDoorsOpen": "false",
-  "NumSeats": 36,
-  "NumOccupiedSeats": 7,
-  "IgnitionEnabled": "true",
-  "EngineTemperature": 0.497958,
-  "WiperLevel": 0,
-  "DestinationDisplayActive": "true",
-  "CruiseControlActive": "false",
-  "AllowedSpeed": 20.0,
-  "IsAtStop": "true",
-  "DirtIntensity": 0.0,
-  "CurrentFuel": 267.337006,
-  "MaxFuel": 300.0,
-  "DisplayFuel": 0.891123,
+  "IsOffroad": false,
+  "UMG":
+  {
+    "Navigation": "/vehicles/BP_Solaris_Urbino_18m_4D_C_2147352571/navigation",
+    "Boardcomputer": "/vehicles/BP_Solaris_Urbino_18m_4D_C_2147352571/boardcomputer",
+    "driverdisplayfull": "/vehicles/BP_Solaris_Urbino_18m_4D_C_2147352571/driverdisplayfull",
+    "driverdisplay": "/vehicles/BP_Solaris_Urbino_18m_4D_C_2147352571/driverdisplay"
+  },
   "Buttons": [
     {
       "Name": "Pantograph",
-      "Tooltip": "Stromabnehmer einfahren",
+      "ToolTip": "",
       "State": "Primary",
       "Actions": [
         "Deactivate Pantograph",
-        "Activate Pantograph",
-        "None"
+        "Activate Pantograph"
       ],
       "States": [
         "Primary",
@@ -172,12 +179,11 @@
     },
     {
       "Name": "Driver Window",
-      "Tooltip": "",
+      "ToolTip": "",
       "State": "Primary",
       "Actions": [
         "DriverWindowClose",
-        "DriverWindowOpen",
-        "None"
+        "DriverWindowOpen"
       ],
       "States": [
         "Primary",
@@ -186,9 +192,8 @@
     },
     {
       "Name": "Manual Shade",
-      "Tooltip": "",
+      "ToolTip": "",
       "State": "None",
-      "Value": "0.0",
       "Actions": [
         "WindowShadeSideUp",
         "WindowShadeSideDown"
@@ -197,6 +202,7 @@
     },
     {
       "Name": "Window Shade Up",
+      "ToolTip": "",
       "State": "Off",
       "Actions": [
         "WindowShadeUp"
@@ -208,6 +214,7 @@
     },
     {
       "Name": "Window Shade Down",
+      "ToolTip": "",
       "State": "Off",
       "Actions": [
         "WindowShadeDown"
@@ -219,12 +226,11 @@
     },
     {
       "Name": "Window Shade",
-      "Tooltip": "",
+      "ToolTip": "",
       "State": "Primary",
       "Actions": [
         "WindowShadeUp",
-        "WindowShadeDown",
-        "None"
+        "WindowShadeDown"
       ],
       "States": [
         "Primary",
@@ -233,21 +239,22 @@
     },
     {
       "Name": "Wiper",
-      "Tooltip": "",
+      "ToolTip": "",
       "State": "Off",
       "Actions": [
         "WiperDown",
         "WiperUp"
       ],
       "States": [
-        "fast",
+        "Fast",
         "On",
-        "Interval",
+        "interval",
         "Off"
       ]
     },
     {
       "Name": "Window Heating",
+      "ToolTip": "Fenster Heizung einschalten",
       "State": "Primary",
       "Actions": [],
       "States": [
@@ -257,6 +264,7 @@
     },
     {
       "Name": "Mirror Heating",
+      "ToolTip": "Spiegelbeheizung einschalten",
       "State": "Primary",
       "Actions": [],
       "States": [
@@ -266,8 +274,8 @@
     },
     {
       "Name": "Horn",
-      "Tooltip": "Hupe",
-      "State": "false",
+      "ToolTip": "Hupe",
+      "State": "Off",
       "Actions": [
         "Horn"
       ],
@@ -278,7 +286,7 @@
     },
     {
       "Name": "Parking Brake",
-      "Tooltip": "Feststellbremse",
+      "ToolTip": "Feststellbremse",
       "State": "Primary",
       "Actions": [
         "FixingBrake"
@@ -290,7 +298,7 @@
     },
     {
       "Name": "Gear Selector",
-      "Tooltip": "",
+      "ToolTip": "",
       "State": "Neutral",
       "Actions": [
         "GearDown",
@@ -304,6 +312,7 @@
     },
     {
       "Name": "Gear Drive",
+      "ToolTip": "",
       "State": "Off",
       "Actions": [
         "SetGearD"
@@ -315,6 +324,7 @@
     },
     {
       "Name": "Gear Neutral",
+      "ToolTip": "",
       "State": "Off",
       "Actions": [
         "SetGearN"
@@ -326,6 +336,7 @@
     },
     {
       "Name": "Gear Reverse",
+      "ToolTip": "",
       "State": "Off",
       "Actions": [
         "SetGearR"
@@ -337,8 +348,8 @@
     },
     {
       "Name": "Fake Ignition",
-      "Tooltip": "",
-      "State": "Start",
+      "ToolTip": "",
+      "State": "On",
       "Actions": [
         "MotorStartStop"
       ],
@@ -350,12 +361,11 @@
     },
     {
       "Name": "Indicator",
-      "Tooltip": "",
+      "ToolTip": "",
       "State": "Primary",
       "Actions": [
         "IndicatorDown",
-        "IndicatorUp",
-        "None"
+        "IndicatorUp"
       ],
       "States": [
         "Primary",
@@ -365,8 +375,8 @@
     },
     {
       "Name": "Light Switch",
+      "ToolTip": "Aus",
       "State": "Off",
-      "Value": "0.0",
       "Actions": [
         "Lightswitch",
         "LightSwitchDownFake",
@@ -380,6 +390,7 @@
     },
     {
       "Name": "Headlight",
+      "ToolTip": "Scheinwerfer einschalten",
       "State": "Primary",
       "Actions": [
         "ToggleLightSwitch"
@@ -391,6 +402,7 @@
     },
     {
       "Name": "Main Light",
+      "ToolTip": "Positionslichter einschalten",
       "State": "Primary",
       "Actions": [
         "ToggleMainLight"
@@ -402,7 +414,7 @@
     },
     {
       "Name": "High Beam",
-      "Tooltip": "Fernlicht einschalten",
+      "ToolTip": "Fernlicht einschalten",
       "State": "Primary",
       "Actions": [
         "ToggleTravellerLights"
@@ -414,8 +426,8 @@
     },
     {
       "Name": "TravellerLights",
-      "Tooltip": "",
-      "State": "false",
+      "ToolTip": "",
+      "State": "Off",
       "Actions": [
         "High Beam Flasher On"
       ],
@@ -426,6 +438,7 @@
     },
     {
       "Name": "Front Fog Light",
+      "ToolTip": "Nebelscheinwerfer einschalten",
       "State": "Primary",
       "Actions": [
         "ToggleFogLight"
@@ -437,6 +450,7 @@
     },
     {
       "Name": "Rear Fog Light",
+      "ToolTip": "Nebelschlussleuchte einschalten",
       "State": "Primary",
       "Actions": [
         "ToggleFogLightRear"
@@ -448,11 +462,10 @@
     },
     {
       "Name": "Warning Light",
-      "Tooltip": "",
+      "ToolTip": "",
       "State": "Primary",
       "Actions": [
-        "ToggleWarningLights",
-        "None"
+        "ToggleWarningLights"
       ],
       "States": [
         "Primary",
@@ -461,8 +474,8 @@
     },
     {
       "Name": "AirCon Airflow",
+      "ToolTip": "",
       "State": "Airflow 2",
-      "Value": "0.333333",
       "Actions": [
         "AirCon AirflowFakeLeft",
         "AirCon AirflowFakeRight"
@@ -476,24 +489,21 @@
     },
     {
       "Name": "Driver Fan Speed",
+      "ToolTip": "",
       "State": "None",
-      "Value": "0.5",
-      "Actions": [
-        "None"
-      ],
+      "Actions": [],
       "States": []
     },
     {
       "Name": "Driver Temperature",
+      "ToolTip": "",
       "State": "None",
-      "Value": "0.5",
-      "Actions": [
-        "None"
-      ],
+      "Actions": [],
       "States": []
     },
     {
       "Name": "Air Condition",
+      "ToolTip": "",
       "State": "Primary",
       "Actions": [
         "ToggleAirCondition"
@@ -505,12 +515,11 @@
     },
     {
       "Name": "Air Condition Temperature",
-      "Tooltip": "",
+      "ToolTip": "",
       "State": "Primary",
       "Actions": [
         "AirconditionPlus",
-        "AirconditionMinus",
-        "None"
+        "AirconditionMinus"
       ],
       "States": [
         "Primary",
@@ -519,8 +528,8 @@
     },
     {
       "Name": "AirCon Warmer",
-      "Tooltip": "",
-      "State": "false",
+      "ToolTip": "",
+      "State": "Off",
       "Actions": [
         "AirconditionPlus"
       ],
@@ -531,8 +540,8 @@
     },
     {
       "Name": "AirCon Colder",
-      "Tooltip": "",
-      "State": "false",
+      "ToolTip": "",
+      "State": "Off",
       "Actions": [
         "AirconditionMinus"
       ],
@@ -543,6 +552,7 @@
     },
     {
       "Name": "Aircon Mode 1",
+      "ToolTip": "",
       "State": "Primary",
       "Actions": [],
       "States": [
@@ -552,6 +562,7 @@
     },
     {
       "Name": "Aircon Mode 2",
+      "ToolTip": "",
       "State": "Primary",
       "Actions": [],
       "States": [
@@ -561,6 +572,7 @@
     },
     {
       "Name": "Reset Lifting",
+      "ToolTip": "Auf normale Fahrhöhe zurücksetzen",
       "State": "Primary",
       "Actions": [
         "LiftReset_ButtonReset",
@@ -573,6 +585,7 @@
     },
     {
       "Name": "Kneeling",
+      "ToolTip": "Kneeling Runter",
       "State": "Primary",
       "Actions": [
         "KneelDown",
@@ -585,6 +598,7 @@
     },
     {
       "Name": "Lifting",
+      "ToolTip": "Lift runter",
       "State": "Primary",
       "Actions": [
         "LiftDown",
@@ -597,11 +611,9 @@
     },
     {
       "Name": "Door Button",
-      "Tooltip": "",
-      "State": "false",
-      "Actions": [
-        "None"
-      ],
+      "ToolTip": "",
+      "State": "Off",
+      "Actions": [],
       "States": [
         "On",
         "Off"
@@ -609,6 +621,7 @@
     },
     {
       "Name": "Driver Light",
+      "ToolTip": "Fahrerlicht einschalten",
       "State": "Primary",
       "Actions": [
         "ToggleDriversLight"
@@ -620,6 +633,7 @@
     },
     {
       "Name": "Interior Light",
+      "ToolTip": "Innenbeleuchtung einschalten",
       "State": "Primary",
       "Actions": [
         "TogglePassengersLight"
@@ -631,6 +645,7 @@
     },
     {
       "Name": "Interior Light Full",
+      "ToolTip": "Innenbeleuchtung auf 100% setzen",
       "State": "Primary",
       "Actions": [
         "INTLightFull"
@@ -642,6 +657,7 @@
     },
     {
       "Name": "Interior Light Dim",
+      "ToolTip": "Innenbeleuchtung auf 30% setzen",
       "State": "Primary",
       "Actions": [
         "INTLightDim"
@@ -653,6 +669,7 @@
     },
     {
       "Name": "Interior Light Left",
+      "ToolTip": "Innenbeleuchtung links einschalten",
       "State": "Primary",
       "Actions": [
         "INTLightLeftOnly"
@@ -664,6 +681,7 @@
     },
     {
       "Name": "Interior Light Right",
+      "ToolTip": "Innenbeleuchtung rechts einschalten",
       "State": "Primary",
       "Actions": [
         "INTLightRightOnly"
@@ -675,6 +693,7 @@
     },
     {
       "Name": "Automatic Kneeling",
+      "ToolTip": "Automatisches Absenken einschalten",
       "State": "Primary",
       "Actions": [
         "toggleAutoKneeling"
@@ -686,6 +705,7 @@
     },
     {
       "Name": "Automatic Door Closing",
+      "ToolTip": "Automatisches Türschließen ausschalten",
       "State": "Primary",
       "Actions": [
         "PreventRearAuto"
@@ -697,13 +717,12 @@
     },
     {
       "Name": "Door Lock",
-      "Tooltip": "Rechte Vordertüre sperren",
+      "ToolTip": "",
       "State": "Primary",
       "Actions": [
         "FakeDoorWingLockOff",
         "FakeDoorWingLockLeft",
-        "FakeDoorWingLockRight",
-        "None"
+        "FakeDoorWingLockRight"
       ],
       "States": [
         "Primary",
@@ -713,6 +732,7 @@
     },
     {
       "Name": "Door Lock Left",
+      "ToolTip": "Linke Vordertüre sperren",
       "State": "Primary",
       "Actions": [
         "LockLeftDoor"
@@ -724,6 +744,7 @@
     },
     {
       "Name": "Door Lock Right",
+      "ToolTip": "Rechte Vordertüre sperren",
       "State": "Primary",
       "Actions": [
         "LockRightDoor"
@@ -735,10 +756,9 @@
     },
     {
       "Name": "Button08",
+      "ToolTip": "",
       "State": "Off",
-      "Actions": [
-        "None"
-      ],
+      "Actions": [],
       "States": [
         "On",
         "Off"
@@ -746,8 +766,8 @@
     },
     {
       "Name": "Stop Brake",
-      "Tooltip": "Haltestellenbremse umschalten",
-      "State": "false",
+      "ToolTip": "Haltestellenbremse umschalten",
+      "State": "Off",
       "Actions": [
         "StopBrakeOnOff"
       ],
@@ -758,6 +778,7 @@
     },
     {
       "Name": "Door Clearance",
+      "ToolTip": "Türfreigabe aktivieren",
       "State": "Primary",
       "Actions": [
         "ToggleDoorClearance"
@@ -769,8 +790,8 @@
     },
     {
       "Name": "Door 1",
-      "Tooltip": "Vordere Tür öffnen/schließen",
-      "State": "false",
+      "ToolTip": "Vordere Tür öffnen/schließen",
+      "State": "On",
       "Actions": [
         "DoorFrontOpenClose"
       ],
@@ -781,8 +802,8 @@
     },
     {
       "Name": "Door 2",
-      "Tooltip": "Zweite Tür Öffnen/Schließen",
-      "State": "false",
+      "ToolTip": "Zweite Tür Öffnen/Schließen",
+      "State": "Off",
       "Actions": [
         "DoorMiddleOpenClose"
       ],
@@ -793,8 +814,8 @@
     },
     {
       "Name": "Door 3",
-      "Tooltip": "Dritte Tür öffnen/schließen",
-      "State": "false",
+      "ToolTip": "Dritte Tür öffnen/schließen",
+      "State": "Off",
       "Actions": [
         "DoorRearOpenClose"
       ],
@@ -805,8 +826,8 @@
     },
     {
       "Name": "Door 4",
-      "Tooltip": "Vierte Tür öffnen/schließen",
-      "State": "false",
+      "ToolTip": "Vierte Tür öffnen/schließen",
+      "State": "Off",
       "Actions": [
         "DoorFourthOpenClose"
       ],
@@ -817,21 +838,16 @@
     },
     {
       "Name": "Driver Door",
-      "Tooltip": "",
+      "ToolTip": "",
       "State": "None",
-      "Value": "1.0",
-      "Actions": [
-        "None"
-      ],
+      "Actions": [],
       "States": []
     },
     {
       "Name": "ValveReset",
-      "Tooltip": "",
-      "State": "false",
-      "Actions": [
-        "None"
-      ],
+      "ToolTip": "",
+      "State": "Off",
+      "Actions": [],
       "States": [
         "On",
         "Off"
@@ -839,6 +855,7 @@
     },
     {
       "Name": "Driver Door Lock",
+      "ToolTip": "Fahrertür sperren",
       "State": "Primary",
       "Actions": [
         "DriverDoorLock"
@@ -850,6 +867,7 @@
     },
     {
       "Name": "USB Clearance",
+      "ToolTip": "USB Anschlüsse freigeben",
       "State": "Primary",
       "Actions": [
         "ToggleUSB"
@@ -861,6 +879,7 @@
     },
     {
       "Name": "Driver Monitor",
+      "ToolTip": "",
       "State": "Off",
       "Actions": [
         "SwitchCamera"
@@ -872,6 +891,7 @@
     },
     {
       "Name": "Hill Holder",
+      "ToolTip": "Berganfahrhilfe einschalten",
       "State": "Primary",
       "Actions": [],
       "States": [
@@ -881,6 +901,7 @@
     },
     {
       "Name": "Wheelchair Request",
+      "ToolTip": "Rollstuhl Haltewunsch zurücksetzen",
       "State": "Primary",
       "Actions": [
         "WheelchairRequest"
@@ -891,9 +912,9 @@
       ]
     },
     {
-      "Name": "BoardComputer",
-      "Tooltip": "Atron auswählen",
-      "State": "false",
+      "Name": "Boardcomputer",
+      "ToolTip": "Atron auswählen",
+      "State": "Off",
       "Actions": [
         "Select Boardcomputer"
       ],
@@ -904,36 +925,28 @@
     },
     {
       "Name": "AtronHolderSled",
-      "Tooltip": "",
+      "ToolTip": "",
       "State": "None",
-      "Value": "0.5",
-      "Actions": [
-        "None"
-      ],
+      "Actions": [],
       "States": []
     },
     {
       "Name": "Vent Left",
-      "Tooltip": "",
+      "ToolTip": "",
       "State": "None",
-      "Value": "0.8",
-      "Actions": [
-        "None"
-      ],
+      "Actions": [],
       "States": []
     },
     {
       "Name": "Vent Right",
-      "Tooltip": "",
+      "ToolTip": "",
       "State": "None",
-      "Value": "0.2",
-      "Actions": [
-        "None"
-      ],
+      "Actions": [],
       "States": []
     },
     {
       "Name": "TractionControl",
+      "ToolTip": "",
       "State": "Primary",
       "Actions": [
         "ToggleASRThreshold"
@@ -945,8 +958,8 @@
     },
     {
       "Name": "15 Cent",
-      "Tooltip": "0.15 €",
-      "State": "false",
+      "ToolTip": "0.15 €",
+      "State": "Off",
       "Actions": [
         "Coins15"
       ],
@@ -957,8 +970,8 @@
     },
     {
       "Name": "20 Cent",
-      "Tooltip": "0.20 €",
-      "State": "false",
+      "ToolTip": "0.20 €",
+      "State": "Off",
       "Actions": [
         "Coins20"
       ],
@@ -969,8 +982,8 @@
     },
     {
       "Name": "30 Cent",
-      "Tooltip": "0.30 €",
-      "State": "false",
+      "ToolTip": "0.30 €",
+      "State": "Off",
       "Actions": [
         "Coins30"
       ],
@@ -981,8 +994,8 @@
     },
     {
       "Name": "50 Cent",
-      "Tooltip": "0.50 €",
-      "State": "false",
+      "ToolTip": "0.50 €",
+      "State": "Off",
       "Actions": [
         "Coins50"
       ],
@@ -993,8 +1006,8 @@
     },
     {
       "Name": "60 Cent",
-      "Tooltip": "0.60 €",
-      "State": "false",
+      "ToolTip": "0.60 €",
+      "State": "Off",
       "Actions": [
         "Coins60"
       ],
@@ -1005,8 +1018,8 @@
     },
     {
       "Name": "1 Euro",
-      "Tooltip": "1 €",
-      "State": "false",
+      "ToolTip": "1 €",
+      "State": "Off",
       "Actions": [
         "Coins100"
       ],
@@ -1017,8 +1030,8 @@
     },
     {
       "Name": "2 Euro",
-      "Tooltip": "2 €",
-      "State": "false",
+      "ToolTip": "2 €",
+      "State": "Off",
       "Actions": [
         "Coins200"
       ],
@@ -1029,8 +1042,8 @@
     },
     {
       "Name": "4 Euro",
-      "Tooltip": "4 €",
-      "State": "false",
+      "ToolTip": "4 €",
+      "State": "Off",
       "Actions": [
         "Coins400"
       ],
@@ -1041,8 +1054,8 @@
     },
     {
       "Name": "6 Euro",
-      "Tooltip": "6 €",
-      "State": "false",
+      "ToolTip": "6 €",
+      "State": "Off",
       "Actions": [
         "Coins600"
       ],
@@ -1053,8 +1066,8 @@
     },
     {
       "Name": "8 Euro",
-      "Tooltip": "8 €",
-      "State": "false",
+      "ToolTip": "8 €",
+      "State": "Off",
       "Actions": [
         "Coins800"
       ],
@@ -1065,8 +1078,8 @@
     },
     {
       "Name": "5 Cent",
-      "Tooltip": "0,05 €",
-      "State": "false",
+      "ToolTip": "0,05 €",
+      "State": "Off",
       "Actions": [
         "Coins5"
       ],
@@ -1077,8 +1090,8 @@
     },
     {
       "Name": "10 Cent",
-      "Tooltip": "0.1 €",
-      "State": "false",
+      "ToolTip": "0.1 €",
+      "State": "Off",
       "Actions": [
         "Coins10"
       ],
@@ -1089,8 +1102,8 @@
     },
     {
       "Name": "Cash Money",
-      "Tooltip": "",
-      "State": "false",
+      "ToolTip": "",
+      "State": "Off",
       "Actions": [
         "Take Cash Money"
       ],
@@ -1100,97 +1113,114 @@
       ]
     }
   ],
-  "Doors": [
+  "AllLamps":
+  {
+    "Default Emissive Materials": 0,
+    "Light Indicator Left": 0,
+    "Light Indicator Right": 0,
+    "Light Daytime Right": 0,
+    "Light Daytime Left": 0,
+    "Light Main": 0,
+    "Light Parking": 0,
+    "Light Headlight": 0,
+    "Light Travelling": 0,
+    "Light Flasher": 0,
+    "Light Brake": 1,
+    "Light Reverse": 0,
+    "Light Front Fog": 0,
+    "Light Rear Fog": 0,
+    "Light License Plate": 0,
+    "Passenger Lights": 0,
+    "Passenger Lights Left": 0,
+    "Passenger Lights Right": 0,
+    "Light Door 1": 1,
+    "Light Door 2": 0,
+    "Light Door 3": 0,
+    "Light Door 4": 0,
+    "Second Door Light Ext": 0,
+    "Third Door Light Ext": 0,
+    "Fourth Door Light Ext": 0,
+    "Light Driver": 0,
+    "LightOnOff": 0,
+    "LED Warning": 0,
+    "LED Stop Brake": 1,
+    "ButtonLight Door 1": 1,
+    "ButtonLight Door 2": 0,
+    "ButtonLight Door 3": 0,
+    "ButtonLight Door 4": 0,
+    "SecondDoorRequest": 0,
+    "ThirdDoorRequest": 0,
+    "FourthDoorRequest": 0,
+    "CameraButtonLED": 0,
+    "Default Emissive": 0,
+    "DB Warning Light": 0,
+    "DB Dot": 0,
+    "DB Parkbrake": 0,
+    "Dashboard Indicator Right": 0,
+    "Dashboard Fixing Brake": 1,
+    "Dashboard Door 2": 0,
+    "Dashboard Brake Assist": 0,
+    "Dashboard Differential": 0,
+    "Dashboard Fog Light": 0,
+    "Dashboard Engine": 0,
+    "Dashboard Turning": 0,
+    "Dashboard Load Transfer": 0,
+    "Dashboard Lifting": 0,
+    "Dashboard Retarder": 0,
+    "Dashboard Seatbelts": 0,
+    "DB Stop Request": 0,
+    "DoorClearanceButton": 0,
+    "USB_Clearance": 0
+  },
+  "PassengerDoorsOpen": "true",
+  "doors": [
     {
       "Name": "Door Front",
       "Open": "true",
       "Progress": "1.0",
-      "StopRequest": "false"
+      "StopRequest": "false",
+      "Index": "First"
     },
     {
       "Name": "Door Fourth",
       "Open": "false",
       "Progress": "0.0",
-      "StopRequest": "false"
+      "StopRequest": "false",
+      "Index": "Fourth"
     },
     {
       "Name": "Door Third",
       "Open": "false",
       "Progress": "0.0",
-      "StopRequest": "false"
+      "StopRequest": "false",
+      "Index": "Third"
     },
     {
       "Name": "Door Second",
       "Open": "false",
       "Progress": "0.0",
-      "StopRequest": "false"
+      "StopRequest": "false",
+      "Index": "Second "
     }
   ],
-  "UMG": {
-    "Driver Display": "/vehicles/BP_Solaris_Urbino_18m_4D_C_2147441325/driverdisplayfull",
-    "Driver Display Simulator": "/vehicles/BP_Solaris_Urbino_18m_4D_C_2147441325/driverdisplay",
-    "Navigation": "/vehicles/BP_Solaris_Urbino_18m_4D_C_2147441325/navigation",
-    "Atron": "/vehicles/BP_Solaris_Urbino_18m_4D_C_2147441325/boardcomputer"
-  },
-  "AllLamps": {
-    "Default Emissive Materials": 0.0,
-    "Light Indicator Left": 0.0,
-    "Light Indicator Right": 0.0,
-    "Light Daytime Right": 1.0,
-    "Light Daytime Left": 1.0,
-    "Light MAIN": 1.0,
-    "Light Parking": 0.0,
-    "Light Headlight": 0.0,
-    "Light Travelling": 0.0,
-    "Light Flasher": 0.0,
-    "Light BRAKE": 1.0,
-    "Light Reverse": 0.0,
-    "Light Front Fog": 0.0,
-    "Light Rear Fog": 0.0,
-    "Light License Plate": 10.0,
-    "Passenger Lights": 0.0,
-    "Passenger Lights Left": 0.0,
-    "Passenger Lights Right": 0.0,
-    "Light Door 1": 1.0,
-    "Light Door 2": 0.0,
-    "Light Door 3": 0.0,
-    "Light Door 4": 0.0,
-    "Second Door Light Ext": 0.0,
-    "Third Door Light Ext": 0.0,
-    "Fourth Door Light Ext": 0.0,
-    "Light Driver": 0.0,
-    "LightOnOff": 0.0,
-    "LED Warning": 0.0,
-    "LED Stop Brake": 1.0,
-    "ButtonLight Door 1": 1.0,
-    "ButtonLight Door 2": 0.0,
-    "ButtonLight Door 3": 0.0,
-    "ButtonLight Door 4": 0.0,
-    "SecondDoorRequest": 0.0,
-    "ThirdDoorRequest": 0.0,
-    "FourthDoorRequest": 0.0,
-    "CameraButtonLED": 0.0,
-    "Default Emissive": 0.0,
-    "DB Warning Light": 0.0,
-    "DB Dot": 0.0,
-    "DB Parkbrake": 0.0,
-    "Dashboard Indicator Right": 0.0,
-    "Dashboard Fixing Brake": 1.0,
-    "Dashboard Door 2": 0.0,
-    "Dashboard Brake Assist": 0.0,
-    "Dashboard Differential": 0.0,
-    "Dashboard Fog Light": 0.0,
-    "Dashboard Engine": 0.0,
-    "Dashboard Turning": 0.0,
-    "Dashboard Load Transfer": 0.0,
-    "Dashboard Lifting": 0.0,
-    "Dashboard Retarder": 0.0,
-    "Dashboard Seatbelts": 0.0,
-    "DB Stop Request": 0.0,
-    "DoorClearanceButton": 0.0,
-    "USB_Clearance": 0.0
-  },
-  "BusLogic": {
-    "Sales": {}
+  "LuggageDoorsOpen": "false",
+  "IsRadioPlaying": "false",
+  "ActiveRadioChannel": "NONE",
+  "NumSeats": "36",
+  "NumOccupiedSeats": "0",
+  "IgnitionEnabled": "true",
+  "EngineTemperature": "0.0",
+  "WiperLevel": "0",
+  "DestinationDisplayActive": "true",
+  "CruiseControlActive": "false",
+  "AllowedSpeed": "30",
+  "IsAtStop": "false",
+  "DirtIntensity": "0.0",
+  "CurrentFuel": "248.362686",
+  "MaxFuel": "300",
+  "DisplayFuel": "0.827876",
+  "BusLogic":
+  {
+    "Asset": "/Game/Maps/Castrop/Castrop.Castrop:PersistentLevel.BP_Solaris_Urbino_18m_4D_C_2147352571.BP_TheBus_BusLogic_C_2147351878"
   }
 }

@@ -1,5 +1,1226 @@
-{"ActorName":"BP_Solaris_Urbino_18m_3D_C_2146245266","IsPlayerControlled":"true","VehicleModel":"Urban","InputIdentifier":"Urbino","Speed":0.0,"RPM":0.0,"IdleRPM":0.0,"MaxRPM":11000.0,"Mass":13300.0,"Steering":0.0,"Throttle":0.0,"Brake":0.4,"FixingBrake":"true","Load":0.0,"EngineStarted":"true","GearboxType":"None","LowFuelWarning":"false","Location":{"X":113.274551,"Y":-412.914228,"Z":-580.278871},"Rotation":{"Roll":-6.407436,"Pitch":1.428653,"Yaw":-35.697479},"IndicatorState":0,"IndicatorValue":0,"WarningLights":"false","IsOffroad":"false","Gearbox":{},"Wheels":[{"CurrentSuspension":30.870062,"PreviousSuspension":30.870052,"Location":{"X":329.052307,"Y":-116.899414,"Z":50.272699},"Rotation":{"Roll":0.0,"Pitch":-36.780937,"Yaw":0.0},"SuspensionForce":5909585.030747,"OnGround":"true","HasContraction":"true"},{"CurrentSuspension":17.528963,"PreviousSuspension":17.528954,"Location":{"X":329.052307,"Y":116.899414,"Z":36.9316},"Rotation":{"Roll":0.0,"Pitch":0.0,"Yaw":0.0},"SuspensionForce":-827671.765762,"OnGround":"true","HasContraction":"true"},{"CurrentSuspension":30.743441,"PreviousSuspension":30.743433,"Location":{"X":-260.139771,"Y":-116.899414,"Z":50.146078},"Rotation":{"Roll":0.0,"Pitch":-36.779236,"Yaw":0.0},"SuspensionForce":16447410.541689,"OnGround":"true","HasContraction":"true"},{"CurrentSuspension":23.827965,"PreviousSuspension":23.827955,"Location":{"X":-260.139771,"Y":116.899414,"Z":43.230602},"Rotation":{"Roll":0.0,"Pitch":-31.565111,"Yaw":0.0},"SuspensionForce":10292642.162521,"OnGround":"true","HasContraction":"true"},{"CurrentSuspension":29.479784,"PreviousSuspension":29.479784,"Location":{"X":-340.291626,"Y":-116.899994,"Z":14.882608},"Rotation":{"Roll":0.0,"Pitch":-40.759556,"Yaw":0.0},"SuspensionForce":1491493.655975,"OnGround":"true","HasContraction":"true"},{"CurrentSuspension":29.210485,"PreviousSuspension":29.210485,"Location":{"X":-340.291626,"Y":116.899994,"Z":14.613309},"Rotation":{"Roll":0.0,"Pitch":-45.60815,"Yaw":0.0},"SuspensionForce":1443019.844025,"OnGround":"true","HasContraction":"true"}],"IsRadioPlaying":"false","ActiveRadioChannel":"","RadioVolume":1.0,"PassengerDoorsOpen":"false","LuggageDoorsOpen":"false","NumSeats":43,"NumOccupiedSeats":0,"IgnitionEnabled":"true","EngineTemperature":0.419559,"WiperLevel":0,"DestinationDisplayActive":"true","CruiseControlActive":"false","AllowedSpeed":0.0,"IsAtStop":"false","DirtIntensity":0.0,"CurrentFuel":283.786621,"MaxFuel":300.0,"DisplayFuel":0.945955,"Buttons":[{"Name":"Pantograph","Tooltip":"Stromabnehmer einfahren","State":"Primary","Actions":["Deactivate Pantograph","Activate Pantograph","None"],"States":["Primary","Secondary"]},{"Name":"Driver Window","Tooltip":"","State":"Primary","Actions":["DriverWindowClose","DriverWindowOpen","None"],"States":["Primary","Secondary"]},{"Name":"Manual Shade","Tooltip":"","State":"None","Value":"0.0","Actions":["WindowShadeSideUp","WindowShadeSideDown"],"States":[]},{"Name":"Window Shade Up","State":"Off","Actions":["WindowShadeUp"],"States":["On","Off"]},{"Name":"Window Shade Down","State":"Off","Actions":["WindowShadeDown"],"States":["On","Off"]},{"Name":"FakeWindowShadeFront","Tooltip":"","State":"Primary","Actions":["WindowShadeUp","WindowShadeDown","None"],"States":["Primary","Secondary"]},{"Name":"Wiper","Tooltip":"","State":"Off","Actions":["WiperDown","WiperUp"],"States":["Fast","On","Interval","Off"]},{"Name":"Window Heating","State":"Primary","Actions":[],"States":["Primary","Secondary"]},{"Name":"Mirror Heating","State":"Primary","Actions":[],"States":["Primary","Secondary"]},{"Name":"Horn","Tooltip":"Hupe","State":"false","Actions":["Horn"],"States":["On","Off"]},{"Name":"ParkingBrake","Tooltip":"Feststellbremse","State":"Primary","Actions":["FixingBrake"],"States":["Primary","Secondary"]},{"Name":"Gear Selector","Tooltip":"","State":"Neutral","Actions":["GearDown","SetGearR","GearUp","SetGearD"],"States":["Drive","Neutral","Reverse"]},{"Name":"Gear Drive","State":"Off","Actions":["SetGearD"],"States":["On","Off"]},{"Name":"Gear Neutral","State":"Off","Actions":["SetGearN"],"States":["On","Off"]},{"Name":"Gear Reverse","State":"Off","Actions":["SetGearR"],"States":["On","Off"]},{"Name":"Fake Ignition","Tooltip":"","State":"Start","Actions":["MotorStartStop"],"States":["Start","On","Off"]},{"Name":"Indicator","Tooltip":"","State":"Primary","Actions":["IndicatorDown","IndicatorUp","None"],"States":["Primary","Secondary","Tertiary"]},{"Name":"Light Switch","State":"Off","Value":"0.0","Actions":["Lightswitch","LightSwitchDownFake","LightSwitchUpFake"],"States":["Off","Parking Lights","Headlights"]},{"Name":"Headlight","State":"Primary","Actions":["ToggleLightSwitch"],"States":["Primary","Secondary"]},{"Name":"Main Light","State":"Primary","Actions":["ToggleMainLight"],"States":["Primary","Secondary"]},{"Name":"Traveller Lights","Tooltip":"Fernlicht einschalten","State":"Primary","Actions":["ToggleTravellerLights"],"States":["Primary","Secondary"]},{"Name":"High Beam Flasher","Tooltip":"","State":"false","Actions":["High Beam Flasher On"],"States":["On","Off"]},{"Name":"Fog Light Front","State":"Primary","Actions":["ToggleFogLight"],"States":["Primary","Secondary"]},{"Name":"Fog Light Rear","State":"Primary","Actions":["ToggleFogLightRear"],"States":["Primary","Secondary"]},{"Name":"Warning Light","Tooltip":"","State":"Primary","Actions":["ToggleWarningLights","None"],"States":["Primary","Secondary"]},{"Name":"AirCon Airflow","State":"Airflow 2","Value":"0.333333","Actions":["AirCon AirflowFakeLeft","AirCon AirflowFakeRight"],"States":["Airflow 1","Airflow 2","Airflow 3","Airflow 4"]},{"Name":"Driver Fan Speed","State":"None","Value":"0.5","Actions":["None"],"States":[]},{"Name":"Driver Temperature","State":"None","Value":"0.5","Actions":["None"],"States":[]},{"Name":"Air Condition","State":"Primary","Actions":["ToggleAirCondition"],"States":["Primary","Secondary"]},{"Name":"Air Condition Temperature","Tooltip":"","State":"Primary","Actions":["AirconditionPlus","AirconditionMinus","None"],"States":["Primary","Secondary"]},{"Name":"AirCon Warmer","Tooltip":"","State":"false","Actions":["AirconditionPlus"],"States":["On","Off"]},{"Name":"AirCon Colder","Tooltip":"","State":"false","Actions":["AirconditionMinus"],"States":["On","Off"]},{"Name":"Aircon Mode 1","State":"Primary","Actions":[],"States":["Primary","Secondary"]},{"Name":"Reset Lifting","State":"Primary","Actions":["LiftReset_ButtonReset","LiftReset"],"States":["Primary","Secondary"]},{"Name":"Kneeling","State":"Primary","Actions":["KneelDown","KneelUp"],"States":["Primary","Secondary"]},{"Name":"Lifting","State":"Primary","Actions":["LiftUp","LiftDown"],"States":["Primary","Secondary"]},{"Name":"Door Button","Tooltip":"","State":"false","Actions":["None"],"States":["On","Off"]},{"Name":"Driver Light","State":"Primary","Actions":["ToggleDriversLight"],"States":["Primary","Secondary"]},{"Name":"Interior Light","State":"Primary","Actions":["TogglePassengersLight"],"States":["Primary","Secondary"]},{"Name":"Interior Light Full","State":"Primary","Actions":["INTLightFull"],"States":["Primary","Secondary"]},{"Name":"Interior Light Dim","State":"Primary","Actions":["INTLightDim"],"States":["Primary","Secondary"]},{"Name":"Interior Light Left","State":"Primary","Actions":["INTLightLeftOnly"],"States":["Primary","Secondary"]},{"Name":"Interior Light Right","State":"Primary","Actions":["INTLightRightOnly"],"States":["Primary","Secondary"]},{"Name":"Auto Kneeling","State":"Primary","Actions":["toggleAutoKneeling"],"States":["Primary","Secondary"]},{"Name":"Door Autoclose","State":"Primary","Actions":["PreventRearAuto"],"States":["Primary","Secondary"]},{"Name":"Fake Door Lock","Tooltip":"Rechte Vordertüre sperren","State":"Primary","Actions":["FakeDoorWingLockOff","FakeDoorWingLockLeft","FakeDoorWingLockRight","None"],"States":["Primary","Secondary","Tertiary"]},{"Name":"Door Lock Left","State":"Primary","Actions":["LockLeftDoor"],"States":["Primary","Secondary"]},{"Name":"Door Lock Right","State":"Primary","Actions":["LockRightDoor"],"States":["Primary","Secondary"]},{"Name":"Button08","State":"Off","Actions":["None"],"States":["On","Off"]},{"Name":"Stop Brake","Tooltip":"Haltestellenbremse umschalten","State":"false","Actions":["StopBrakeOnOff"],"States":["On","Off"]},{"Name":"DoorClearance","State":"Primary","Actions":["ToggleDoorClearance"],"States":["Primary","Secondary"]},{"Name":"Door 1 Button","Tooltip":"Vordere Tür öffnen/schließen","State":"true","Actions":["DoorFrontOpenClose"],"States":["On","Off"]},{"Name":"Door 2 Button","Tooltip":"Zweite Tür Öffnen/Schließen","State":"false","Actions":["DoorMiddleOpenClose"],"States":["On","Off"]},{"Name":"Door 3 Button","Tooltip":"Dritte Tür öffnen/schließen","State":"false","Actions":["DoorRearOpenClose"],"States":["On","Off"]},{"Name":"Door 4 Button","Tooltip":"Vierte Tür öffnen/schließen","State":"false","Actions":["DoorFourthOpenClose"],"States":["On","Off"]},{"Name":"Driver Door","Tooltip":"","State":"None","Value":"1.0","Actions":["None"],"States":[]},{"Name":"ValveReset","Tooltip":"","State":"false","Actions":["None"],"States":["On","Off"]},{"Name":"Driver Door Lock","State":"Primary","Actions":["DriverDoorLock"],"States":["Primary","Secondary"]},{"Name":"USB Clearance","State":"Primary","Actions":["ToggleUSB"],"States":["Primary","Secondary"]},{"Name":"Driver Monitor","State":"Off","Actions":["SwitchCamera"],"States":["On","Off"]},{"Name":"Hill Holder","State":"Primary","Actions":[],"States":["Primary","Secondary"]},{"Name":"Wheelchair Request","State":"Primary","Actions":["WheelchairRequest"],"States":["Primary","Secondary"]},{"Name":"BoardComputer","Tooltip":"Atron auswählen","State":"false","Actions":["Select Boardcomputer"],"States":["On","Off"]},{"Name":"AtronHolderSled","Tooltip":"","State":"None","Value":"0.5","Actions":["None"],"States":[]},{"Name":"Vent Left","Tooltip":"","State":"None","Value":"0.8","Actions":["None"],"States":[]},{"Name":"Vent Right","Tooltip":"","State":"None","Value":"0.2","Actions":["None"],"States":[]},{"Name":"15 Cent","Tooltip":"0.15 €","State":"false","Actions":["Coins15"],"States":["On","Off"]},{"Name":"20 Cent","Tooltip":"0.20 €","State":"false","Actions":["Coins20"],"States":["On","Off"]},{"Name":"30 Cent","Tooltip":"0.30 €","State":"false","Actions":["Coins30"],"States":["On","Off"]},{"Name":"50 Cent","Tooltip":"0.50 €","State":"false","Actions":["Coins50"],"States":["On","Off"]},{"Name":"60 Cent","Tooltip":"0.60 €","State":"false","Actions":["Coins60"],"States":["On","Off"]},{"Name":"1 Euro","Tooltip":"1 €","State":"false","Actions":["Coins100"],"States":["On","Off"]},{"Name":"2 Euro","Tooltip":"2 €","State":"false","Actions":["Coins200"],"States":["On","Off"]},{"Name":"4 Euro","Tooltip":"4 €","State":"false","Actions":["Coins400"],"States":["On","Off"]},{"Name":"6 Euro","Tooltip":"6 €","State":"false","Actions":["Coins600"],"States":["On","Off"]},{"Name":"8 Euro","Tooltip":"8 €","State":"false","Actions":["Coins800"],"States":["On","Off"]},{"Name":"5 Cent","Tooltip":"0,05 €","State":"false","Actions":["Coins5"],"States":["On","Off"]},{"Name":"10 Cent","Tooltip":"0.1 €","State":"false","Actions":["Coins10"],"States":["On","Off"]},{"Name":"Cash Money","Tooltip":"","State":"false","Actions":["Take Cash Money"],"States":["On","Off"]}],"Doors":[{"Name":"Door Front","Open":"false","Progress":"0.0","StopRequest":"false"},{"Name":"Door Fourth","Open":"false","Progress":"0.0","StopRequest":"false"},{"Name":"Door Third","Open":"false","Progress":"0.0","StopRequest":"false"},{"Name":"Door Second","Open":"false","Progress":"0.0","StopRequest":"false"}],"UMG":{"Driver Display":"/vehicles/BP_Solaris_Urbino_18m_3D_C_2146245266/driverdisplayfull","Driver Display Simulator":"/vehicles/BP_Solaris_Urbino_18m_3D_C_2146245266/driverdisplay","Atron":"/vehicles/BP_Solaris_Urbino_18m_3D_C_2146245266/boardcomputer","Navigation":"/vehicles/BP_Solaris_Urbino_18m_3D_C_2146245266/navigation"},"AllLamps":{"Default Emissive Materials":0.0,"IndicatorLeft":0.0,"IndicatorRight":0.0,"LightDaytimeRight":1.0,"LightDaytimeLeft":1.0,"LightMain":1.0,"LightParking":0.0,"LightHeadlight":0.0,"LightTraveling1":0.0,"LightFlasher":0.0,"LightBrake":1.0,"LightReversal":0.0,"LightFog":0.0,"LightRearFog":0.0,"LightLicensePlate":10.0,"Passenger Lights":0.0,"Passenger Lights Left":0.0,"Passenger Lights Right":0.0,"Door 1 Light":0.0,"Door 2 Light":0.0,"Door 3 Light":0.0,"Door 4 Light":0.0,"Second Door Light Ext":0.0,"Third Door Light Ext":0.0,"Fourth Door Light Ext":0.0,"Driver Light":0.0,"LightOnOff":0.0,"Warning Light":0.0,"LED Stop Brake":0.0,"Door Button 1":0.0,"Door Button 2":0.0,"Door Button 3":0.0,"Door Button 4":0.0,"SecondDoorRequest":0.0,"ThirdDoorRequest":0.0,"FourthDoorRequest":0.0,"CameraButtonLED":0.0,"Default Emissive":0.0,"DB Warning Light":0.0,"DB Dot":0.0,"DB Parkbrake":0.0,"Dashboard Indicator Right":0.0,"Dashboard Fixing Brake":1.0,"Dashboard Door 2":0.0,"Dashboard Brake Assist":0.0,"Dashboard Differential":0.0,"Dashboard Fog Light":0.0,"Dashboard Engine":0.0,"Dashboard Turning":0.0,"Dashboard Load Transfer":0.0,"Dashboard Lifting":0.0,"Dashboard Retarder":0.0,"Dashboard Seatbelts":0.0,"DB Stop Request":0.0,"DoorClearanceButton":0.0,"USB_Clearance":0.0},"BusLogic":{
-
-	"Sales": {}
-
-}}
+{
+	"VehicleModel": "Urban",
+	"GearboxType": "Static",
+	"ActorName": "BP_Solaris_Urbino_18m_3D_C_2147374786",
+	"InputIdentifier": "urbino",
+	"IsPlayerControlled": true,
+	"Speed": 0,
+	"RPM": 0,
+	"IdleRPM": 0,
+	"MaxRPM": 11000,
+	"Mass": 20619.51953125,
+	"Steering": 0,
+	"Throttle": 0,
+	"Brake": 0.80000001192092896,
+	"Load": 0,
+	"EngineStarted": false,
+	"Gearbox":
+	{
+		"CurrentSelector": "N",
+		"CurrentGear": 0,
+		"TargetGear": 0,
+		"GearCount": 3
+	},
+	"FixingBrake": true,
+	"LowFuelWarning": false,
+	"MissingFields": [],
+	"IndicatorState": 0,
+	"IndicatorValue": 0,
+	"WarningLights": false,
+	"Location":
+	{
+		"X": 9283.5985050408181,
+		"Y": -38800.351523494071,
+		"Z": 726.90378413621715
+	},
+	"Rotation":
+	{
+		"Roll": -3.2768850111117449,
+		"Pitch": 0.93998528182701679,
+		"Yaw": -40.948749686474756
+	},
+	"Wheels": [
+		{
+			"CurrentSuspension": 18.087862014770508,
+			"PreviousSuspension": 18.087862014770508,
+			"SuspensionForce": 4247830.8199283145,
+			"Location":
+			{
+				"X": 329.05230699999998,
+				"Y": -116.89941399999999,
+				"Z": 46.087862014770508
+			},
+			"Rotation":
+			{
+				"Roll": 0,
+				"Pitch": -0.74760996692533466,
+				"Yaw": 0
+			},
+			"OnGround": true,
+			"HasContraction": true
+		},
+		{
+			"CurrentSuspension": 16.78143310546875,
+			"PreviousSuspension": 16.781435012817383,
+			"SuspensionForce": 3854158.3790705283,
+			"Location":
+			{
+				"X": 329.05230699999998,
+				"Y": 116.89941399999999,
+				"Z": 44.78143310546875
+			},
+			"Rotation":
+			{
+				"Roll": 0,
+				"Pitch": -0.52059109904109124,
+				"Yaw": 0
+			},
+			"OnGround": true,
+			"HasContraction": true
+		},
+		{
+			"CurrentSuspension": 22.700380325317383,
+			"PreviousSuspension": 22.700401306152344,
+			"SuspensionForce": 3485066.1742943758,
+			"Location":
+			{
+				"X": -260.139771,
+				"Y": -116.89941399999999,
+				"Z": 50.700380325317383
+			},
+			"Rotation":
+			{
+				"Roll": 0,
+				"Pitch": -0.69533223025499258,
+				"Yaw": 0
+			},
+			"OnGround": true,
+			"HasContraction": true
+		},
+		{
+			"CurrentSuspension": 21.523811340332031,
+			"PreviousSuspension": 21.523832321166992,
+			"SuspensionForce": 3167824.7293881043,
+			"Location":
+			{
+				"X": -260.139771,
+				"Y": 116.89941399999999,
+				"Z": 49.523811340332031
+			},
+			"Rotation":
+			{
+				"Roll": 0,
+				"Pitch": -0.48720919454607553,
+				"Yaw": 0
+			},
+			"OnGround": true,
+			"HasContraction": true
+		},
+		{
+			"CurrentSuspension": 18.61854362487793,
+			"PreviousSuspension": 18.61854362487793,
+			"SuspensionForce": 3392521.6250195112,
+			"Location":
+			{
+				"X": -340.29162600000001,
+				"Y": -116.89999400000001,
+				"Z": 14.61854362487793
+			},
+			"Rotation":
+			{
+				"Roll": 0,
+				"Pitch": 0.052083749811539945,
+				"Yaw": 0
+			},
+			"OnGround": true,
+			"HasContraction": true
+		},
+		{
+			"CurrentSuspension": 16.550338745117188,
+			"PreviousSuspension": 16.550338745117188,
+			"SuspensionForce": 2130670.6508936048,
+			"Location":
+			{
+				"X": -340.29162600000001,
+				"Y": 116.89999400000001,
+				"Z": 12.550338745117188
+			},
+			"Rotation":
+			{
+				"Roll": 0,
+				"Pitch": -0.0229808236507099,
+				"Yaw": 0
+			},
+			"OnGround": true,
+			"HasContraction": true
+		}
+	],
+	"IsOffroad": false,
+	"UMG":
+	{
+		"Navigation": "/vehicles/BP_Solaris_Urbino_18m_3D_C_2147374786/navigation",
+		"Boardcomputer": "/vehicles/BP_Solaris_Urbino_18m_3D_C_2147374786/boardcomputer",
+		"driverdisplayfull": "/vehicles/BP_Solaris_Urbino_18m_3D_C_2147374786/driverdisplayfull",
+		"driverdisplay": "/vehicles/BP_Solaris_Urbino_18m_3D_C_2147374786/driverdisplay"
+	},
+	"Buttons": [
+		{
+			"Name": "Pantograph",
+			"ToolTip": "",
+			"State": "Primary",
+			"Actions": [
+				"Deactivate Pantograph",
+				"Activate Pantograph"
+			],
+			"States": [
+				"Primary",
+				"Secondary"
+			]
+		},
+		{
+			"Name": "Driver Window",
+			"ToolTip": "",
+			"State": "Primary",
+			"Actions": [
+				"DriverWindowClose",
+				"DriverWindowOpen"
+			],
+			"States": [
+				"Primary",
+				"Secondary"
+			]
+		},
+		{
+			"Name": "Manual Shade",
+			"ToolTip": "",
+			"State": "None",
+			"Actions": [
+				"WindowShadeSideUp",
+				"WindowShadeSideDown"
+			],
+			"States": []
+		},
+		{
+			"Name": "Window Shade Up",
+			"ToolTip": "",
+			"State": "Off",
+			"Actions": [
+				"WindowShadeUp"
+			],
+			"States": [
+				"On",
+				"Off"
+			]
+		},
+		{
+			"Name": "Window Shade Down",
+			"ToolTip": "",
+			"State": "Off",
+			"Actions": [
+				"WindowShadeDown"
+			],
+			"States": [
+				"On",
+				"Off"
+			]
+		},
+		{
+			"Name": "Window Shade",
+			"ToolTip": "",
+			"State": "Primary",
+			"Actions": [
+				"WindowShadeUp",
+				"WindowShadeDown"
+			],
+			"States": [
+				"Primary",
+				"Secondary"
+			]
+		},
+		{
+			"Name": "Wiper",
+			"ToolTip": "",
+			"State": "Off",
+			"Actions": [
+				"WiperDown",
+				"WiperUp"
+			],
+			"States": [
+				"Fast",
+				"On",
+				"interval",
+				"Off"
+			]
+		},
+		{
+			"Name": "Window Heating",
+			"ToolTip": "Fenster Heizung einschalten",
+			"State": "Primary",
+			"Actions": [],
+			"States": [
+				"Primary",
+				"Secondary"
+			]
+		},
+		{
+			"Name": "Mirror Heating",
+			"ToolTip": "Spiegelbeheizung einschalten",
+			"State": "Primary",
+			"Actions": [],
+			"States": [
+				"Primary",
+				"Secondary"
+			]
+		},
+		{
+			"Name": "Horn",
+			"ToolTip": "Hupe",
+			"State": "Off",
+			"Actions": [
+				"Horn"
+			],
+			"States": [
+				"On",
+				"Off"
+			]
+		},
+		{
+			"Name": "Parking Brake",
+			"ToolTip": "Feststellbremse",
+			"State": "Primary",
+			"Actions": [
+				"FixingBrake"
+			],
+			"States": [
+				"Primary",
+				"Secondary"
+			]
+		},
+		{
+			"Name": "Gear Selector",
+			"ToolTip": "",
+			"State": "Neutral",
+			"Actions": [
+				"GearDown",
+				"GearUp"
+			],
+			"States": [
+				"Drive",
+				"Neutral",
+				"Reverse"
+			]
+		},
+		{
+			"Name": "Gear Drive",
+			"ToolTip": "",
+			"State": "Off",
+			"Actions": [
+				"SetGearD"
+			],
+			"States": [
+				"On",
+				"Off"
+			]
+		},
+		{
+			"Name": "Gear Neutral",
+			"ToolTip": "",
+			"State": "Off",
+			"Actions": [
+				"SetGearN"
+			],
+			"States": [
+				"On",
+				"Off"
+			]
+		},
+		{
+			"Name": "Gear Reverse",
+			"ToolTip": "",
+			"State": "Off",
+			"Actions": [
+				"SetGearR"
+			],
+			"States": [
+				"On",
+				"Off"
+			]
+		},
+		{
+			"Name": "Fake Ignition",
+			"ToolTip": "",
+			"State": "On",
+			"Actions": [
+				"MotorStartStop"
+			],
+			"States": [
+				"Start",
+				"On",
+				"Off"
+			]
+		},
+		{
+			"Name": "Indicator",
+			"ToolTip": "",
+			"State": "Primary",
+			"Actions": [
+				"IndicatorDown",
+				"IndicatorUp"
+			],
+			"States": [
+				"Primary",
+				"Secondary",
+				"Tertiary"
+			]
+		},
+		{
+			"Name": "Light Switch",
+			"ToolTip": "Aus",
+			"State": "Off",
+			"Actions": [
+				"Lightswitch",
+				"LightSwitchDownFake",
+				"LightSwitchUpFake"
+			],
+			"States": [
+				"Off",
+				"Parking Lights",
+				"Headlights"
+			]
+		},
+		{
+			"Name": "Headlight",
+			"ToolTip": "Scheinwerfer einschalten",
+			"State": "Primary",
+			"Actions": [
+				"ToggleLightSwitch"
+			],
+			"States": [
+				"Primary",
+				"Secondary"
+			]
+		},
+		{
+			"Name": "Main Light",
+			"ToolTip": "Positionslichter einschalten",
+			"State": "Primary",
+			"Actions": [
+				"ToggleMainLight"
+			],
+			"States": [
+				"Primary",
+				"Secondary"
+			]
+		},
+		{
+			"Name": "High Beam",
+			"ToolTip": "Fernlicht einschalten",
+			"State": "Primary",
+			"Actions": [
+				"ToggleTravellerLights"
+			],
+			"States": [
+				"Primary",
+				"Secondary"
+			]
+		},
+		{
+			"Name": "TravellerLights",
+			"ToolTip": "",
+			"State": "Off",
+			"Actions": [
+				"High Beam Flasher On"
+			],
+			"States": [
+				"On",
+				"Off"
+			]
+		},
+		{
+			"Name": "Front Fog Light",
+			"ToolTip": "Nebelscheinwerfer einschalten",
+			"State": "Primary",
+			"Actions": [
+				"ToggleFogLight"
+			],
+			"States": [
+				"Primary",
+				"Secondary"
+			]
+		},
+		{
+			"Name": "Rear Fog Light",
+			"ToolTip": "Nebelschlussleuchte einschalten",
+			"State": "Primary",
+			"Actions": [
+				"ToggleFogLightRear"
+			],
+			"States": [
+				"Primary",
+				"Secondary"
+			]
+		},
+		{
+			"Name": "Warning Light",
+			"ToolTip": "",
+			"State": "Primary",
+			"Actions": [
+				"ToggleWarningLights"
+			],
+			"States": [
+				"Primary",
+				"Secondary"
+			]
+		},
+		{
+			"Name": "AirCon Airflow",
+			"ToolTip": "",
+			"State": "Airflow 2",
+			"Actions": [
+				"AirCon AirflowFakeLeft",
+				"AirCon AirflowFakeRight"
+			],
+			"States": [
+				"Airflow 1",
+				"Airflow 2",
+				"Airflow 3",
+				"Airflow 4"
+			]
+		},
+		{
+			"Name": "Driver Fan Speed",
+			"ToolTip": "",
+			"State": "None",
+			"Actions": [],
+			"States": []
+		},
+		{
+			"Name": "Driver Temperature",
+			"ToolTip": "",
+			"State": "None",
+			"Actions": [],
+			"States": []
+		},
+		{
+			"Name": "Air Condition",
+			"ToolTip": "",
+			"State": "Primary",
+			"Actions": [
+				"ToggleAirCondition"
+			],
+			"States": [
+				"Primary",
+				"Secondary"
+			]
+		},
+		{
+			"Name": "Air Condition Temperature",
+			"ToolTip": "",
+			"State": "Primary",
+			"Actions": [
+				"AirconditionPlus",
+				"AirconditionMinus"
+			],
+			"States": [
+				"Primary",
+				"Secondary"
+			]
+		},
+		{
+			"Name": "AirCon Warmer",
+			"ToolTip": "",
+			"State": "Off",
+			"Actions": [
+				"AirconditionPlus"
+			],
+			"States": [
+				"On",
+				"Off"
+			]
+		},
+		{
+			"Name": "AirCon Colder",
+			"ToolTip": "",
+			"State": "Off",
+			"Actions": [
+				"AirconditionMinus"
+			],
+			"States": [
+				"On",
+				"Off"
+			]
+		},
+		{
+			"Name": "Aircon Mode 1",
+			"ToolTip": "",
+			"State": "Primary",
+			"Actions": [],
+			"States": [
+				"Primary",
+				"Secondary"
+			]
+		},
+		{
+			"Name": "Aircon Mode 2",
+			"ToolTip": "",
+			"State": "Primary",
+			"Actions": [],
+			"States": [
+				"Primary",
+				"Secondary"
+			]
+		},
+		{
+			"Name": "Reset Lifting",
+			"ToolTip": "Auf normale Fahrhöhe zurücksetzen",
+			"State": "Primary",
+			"Actions": [
+				"LiftReset_ButtonReset",
+				"LiftReset"
+			],
+			"States": [
+				"Primary",
+				"Secondary"
+			]
+		},
+		{
+			"Name": "Kneeling",
+			"ToolTip": "Kneeling Runter",
+			"State": "Primary",
+			"Actions": [
+				"KneelDown",
+				"KneelUp"
+			],
+			"States": [
+				"Primary",
+				"Secondary"
+			]
+		},
+		{
+			"Name": "Lifting",
+			"ToolTip": "Lift runter",
+			"State": "Primary",
+			"Actions": [
+				"LiftDown",
+				"LiftUp"
+			],
+			"States": [
+				"Primary",
+				"Secondary"
+			]
+		},
+		{
+			"Name": "Door Button",
+			"ToolTip": "",
+			"State": "Off",
+			"Actions": [],
+			"States": [
+				"On",
+				"Off"
+			]
+		},
+		{
+			"Name": "Driver Light",
+			"ToolTip": "Fahrerlicht einschalten",
+			"State": "Primary",
+			"Actions": [
+				"ToggleDriversLight"
+			],
+			"States": [
+				"Primary",
+				"Secondary"
+			]
+		},
+		{
+			"Name": "Interior Light",
+			"ToolTip": "Innenbeleuchtung einschalten",
+			"State": "Primary",
+			"Actions": [
+				"TogglePassengersLight"
+			],
+			"States": [
+				"Primary",
+				"Secondary"
+			]
+		},
+		{
+			"Name": "Interior Light Full",
+			"ToolTip": "Innenbeleuchtung auf 100% setzen",
+			"State": "Primary",
+			"Actions": [
+				"INTLightFull"
+			],
+			"States": [
+				"Primary",
+				"Secondary"
+			]
+		},
+		{
+			"Name": "Interior Light Dim",
+			"ToolTip": "Innenbeleuchtung auf 30% setzen",
+			"State": "Primary",
+			"Actions": [
+				"INTLightDim"
+			],
+			"States": [
+				"Primary",
+				"Secondary"
+			]
+		},
+		{
+			"Name": "Interior Light Left",
+			"ToolTip": "Innenbeleuchtung links einschalten",
+			"State": "Primary",
+			"Actions": [
+				"INTLightLeftOnly"
+			],
+			"States": [
+				"Primary",
+				"Secondary"
+			]
+		},
+		{
+			"Name": "Interior Light Right",
+			"ToolTip": "Innenbeleuchtung rechts einschalten",
+			"State": "Primary",
+			"Actions": [
+				"INTLightRightOnly"
+			],
+			"States": [
+				"Primary",
+				"Secondary"
+			]
+		},
+		{
+			"Name": "Automatic Kneeling",
+			"ToolTip": "Automatisches Absenken einschalten",
+			"State": "Primary",
+			"Actions": [
+				"toggleAutoKneeling"
+			],
+			"States": [
+				"Primary",
+				"Secondary"
+			]
+		},
+		{
+			"Name": "Automatic Door Closing",
+			"ToolTip": "Automatisches Türschließen ausschalten",
+			"State": "Primary",
+			"Actions": [
+				"PreventRearAuto"
+			],
+			"States": [
+				"Primary",
+				"Secondary"
+			]
+		},
+		{
+			"Name": "Door Lock",
+			"ToolTip": "",
+			"State": "Primary",
+			"Actions": [
+				"FakeDoorWingLockOff",
+				"FakeDoorWingLockLeft",
+				"FakeDoorWingLockRight"
+			],
+			"States": [
+				"Primary",
+				"Secondary",
+				"Tertiary"
+			]
+		},
+		{
+			"Name": "Door Lock Left",
+			"ToolTip": "Linke Vordertüre sperren",
+			"State": "Primary",
+			"Actions": [
+				"LockLeftDoor"
+			],
+			"States": [
+				"Primary",
+				"Secondary"
+			]
+		},
+		{
+			"Name": "Door Lock Right",
+			"ToolTip": "Rechte Vordertüre sperren",
+			"State": "Primary",
+			"Actions": [
+				"LockRightDoor"
+			],
+			"States": [
+				"Primary",
+				"Secondary"
+			]
+		},
+		{
+			"Name": "Button08",
+			"ToolTip": "",
+			"State": "Off",
+			"Actions": [],
+			"States": [
+				"On",
+				"Off"
+			]
+		},
+		{
+			"Name": "Stop Brake",
+			"ToolTip": "Haltestellenbremse umschalten",
+			"State": "Off",
+			"Actions": [
+				"StopBrakeOnOff"
+			],
+			"States": [
+				"On",
+				"Off"
+			]
+		},
+		{
+			"Name": "Door Clearance",
+			"ToolTip": "Türfreigabe aktivieren",
+			"State": "Primary",
+			"Actions": [
+				"ToggleDoorClearance"
+			],
+			"States": [
+				"Primary",
+				"Secondary"
+			]
+		},
+		{
+			"Name": "Door 1",
+			"ToolTip": "Vordere Tür öffnen/schließen",
+			"State": "On",
+			"Actions": [
+				"DoorFrontOpenClose"
+			],
+			"States": [
+				"On",
+				"Off"
+			]
+		},
+		{
+			"Name": "Door 2",
+			"ToolTip": "Zweite Tür Öffnen/Schließen",
+			"State": "Off",
+			"Actions": [
+				"DoorMiddleOpenClose"
+			],
+			"States": [
+				"On",
+				"Off"
+			]
+		},
+		{
+			"Name": "Door 3",
+			"ToolTip": "Dritte Tür öffnen/schließen",
+			"State": "Off",
+			"Actions": [
+				"DoorRearOpenClose"
+			],
+			"States": [
+				"On",
+				"Off"
+			]
+		},
+		{
+			"Name": "Door 4",
+			"ToolTip": "Vierte Tür öffnen/schließen",
+			"State": "Off",
+			"Actions": [
+				"DoorFourthOpenClose"
+			],
+			"States": [
+				"On",
+				"Off"
+			]
+		},
+		{
+			"Name": "Driver Door",
+			"ToolTip": "",
+			"State": "None",
+			"Actions": [],
+			"States": []
+		},
+		{
+			"Name": "ValveReset",
+			"ToolTip": "",
+			"State": "Off",
+			"Actions": [],
+			"States": [
+				"On",
+				"Off"
+			]
+		},
+		{
+			"Name": "Driver Door Lock",
+			"ToolTip": "Fahrertür sperren",
+			"State": "Primary",
+			"Actions": [
+				"DriverDoorLock"
+			],
+			"States": [
+				"Primary",
+				"Secondary"
+			]
+		},
+		{
+			"Name": "USB Clearance",
+			"ToolTip": "USB Anschlüsse freigeben",
+			"State": "Primary",
+			"Actions": [
+				"ToggleUSB"
+			],
+			"States": [
+				"Primary",
+				"Secondary"
+			]
+		},
+		{
+			"Name": "Driver Monitor",
+			"ToolTip": "",
+			"State": "Off",
+			"Actions": [
+				"SwitchCamera"
+			],
+			"States": [
+				"On",
+				"Off"
+			]
+		},
+		{
+			"Name": "Hill Holder",
+			"ToolTip": "Berganfahrhilfe einschalten",
+			"State": "Primary",
+			"Actions": [],
+			"States": [
+				"Primary",
+				"Secondary"
+			]
+		},
+		{
+			"Name": "Wheelchair Request",
+			"ToolTip": "Rollstuhl Haltewunsch zurücksetzen",
+			"State": "Primary",
+			"Actions": [
+				"WheelchairRequest"
+			],
+			"States": [
+				"Primary",
+				"Secondary"
+			]
+		},
+		{
+			"Name": "Boardcomputer",
+			"ToolTip": "Atron auswählen",
+			"State": "Off",
+			"Actions": [
+				"Select Boardcomputer"
+			],
+			"States": [
+				"On",
+				"Off"
+			]
+		},
+		{
+			"Name": "AtronHolderSled",
+			"ToolTip": "",
+			"State": "None",
+			"Actions": [],
+			"States": []
+		},
+		{
+			"Name": "Vent Left",
+			"ToolTip": "",
+			"State": "None",
+			"Actions": [],
+			"States": []
+		},
+		{
+			"Name": "Vent Right",
+			"ToolTip": "",
+			"State": "None",
+			"Actions": [],
+			"States": []
+		},
+		{
+			"Name": "TractionControl",
+			"ToolTip": "",
+			"State": "Primary",
+			"Actions": [
+				"ToggleASRThreshold"
+			],
+			"States": [
+				"Primary",
+				"Secondary"
+			]
+		},
+		{
+			"Name": "15 Cent",
+			"ToolTip": "0.15 €",
+			"State": "Off",
+			"Actions": [
+				"Coins15"
+			],
+			"States": [
+				"On",
+				"Off"
+			]
+		},
+		{
+			"Name": "20 Cent",
+			"ToolTip": "0.20 €",
+			"State": "Off",
+			"Actions": [
+				"Coins20"
+			],
+			"States": [
+				"On",
+				"Off"
+			]
+		},
+		{
+			"Name": "30 Cent",
+			"ToolTip": "0.30 €",
+			"State": "Off",
+			"Actions": [
+				"Coins30"
+			],
+			"States": [
+				"On",
+				"Off"
+			]
+		},
+		{
+			"Name": "50 Cent",
+			"ToolTip": "0.50 €",
+			"State": "Off",
+			"Actions": [
+				"Coins50"
+			],
+			"States": [
+				"On",
+				"Off"
+			]
+		},
+		{
+			"Name": "60 Cent",
+			"ToolTip": "0.60 €",
+			"State": "Off",
+			"Actions": [
+				"Coins60"
+			],
+			"States": [
+				"On",
+				"Off"
+			]
+		},
+		{
+			"Name": "1 Euro",
+			"ToolTip": "1 €",
+			"State": "Off",
+			"Actions": [
+				"Coins100"
+			],
+			"States": [
+				"On",
+				"Off"
+			]
+		},
+		{
+			"Name": "2 Euro",
+			"ToolTip": "2 €",
+			"State": "Off",
+			"Actions": [
+				"Coins200"
+			],
+			"States": [
+				"On",
+				"Off"
+			]
+		},
+		{
+			"Name": "4 Euro",
+			"ToolTip": "4 €",
+			"State": "Off",
+			"Actions": [
+				"Coins400"
+			],
+			"States": [
+				"On",
+				"Off"
+			]
+		},
+		{
+			"Name": "6 Euro",
+			"ToolTip": "6 €",
+			"State": "Off",
+			"Actions": [
+				"Coins600"
+			],
+			"States": [
+				"On",
+				"Off"
+			]
+		},
+		{
+			"Name": "8 Euro",
+			"ToolTip": "8 €",
+			"State": "Off",
+			"Actions": [
+				"Coins800"
+			],
+			"States": [
+				"On",
+				"Off"
+			]
+		},
+		{
+			"Name": "5 Cent",
+			"ToolTip": "0,05 €",
+			"State": "Off",
+			"Actions": [
+				"Coins5"
+			],
+			"States": [
+				"On",
+				"Off"
+			]
+		},
+		{
+			"Name": "10 Cent",
+			"ToolTip": "0.1 €",
+			"State": "Off",
+			"Actions": [
+				"Coins10"
+			],
+			"States": [
+				"On",
+				"Off"
+			]
+		},
+		{
+			"Name": "Cash Money",
+			"ToolTip": "",
+			"State": "Off",
+			"Actions": [
+				"Take Cash Money"
+			],
+			"States": [
+				"On",
+				"Off"
+			]
+		}
+	],
+	"AllLamps":
+	{
+		"Default Emissive Materials": 0,
+		"Light Indicator Left": 0,
+		"Light Indicator Right": 0,
+		"Light Daytime Right": 0,
+		"Light Daytime Left": 0,
+		"Light Main": 0,
+		"Light Parking": 0,
+		"Light Headlight": 0,
+		"Light Travelling": 0,
+		"Light Flasher": 0,
+		"Light Brake": 1,
+		"Light Reverse": 0,
+		"Light Front Fog": 0,
+		"Light Rear Fog": 0,
+		"Light License Plate": 0,
+		"Passenger Lights": 0,
+		"Passenger Lights Left": 0,
+		"Passenger Lights Right": 0,
+		"Light Door 1": 1,
+		"Light Door 2": 0,
+		"Light Door 3": 0,
+		"Light Door 4": 0,
+		"Second Door Light Ext": 0,
+		"Third Door Light Ext": 0,
+		"Fourth Door Light Ext": 0,
+		"Light Driver": 0,
+		"LightOnOff": 0,
+		"LED Warning": 0,
+		"LED Stop Brake": 1,
+		"ButtonLight Door 1": 1,
+		"ButtonLight Door 2": 0,
+		"ButtonLight Door 3": 0,
+		"ButtonLight Door 4": 0,
+		"SecondDoorRequest": 0,
+		"ThirdDoorRequest": 0,
+		"FourthDoorRequest": 0,
+		"CameraButtonLED": 0,
+		"Default Emissive": 0,
+		"DB Warning Light": 0,
+		"DB Dot": 0,
+		"DB Parkbrake": 0,
+		"Dashboard Indicator Right": 0,
+		"Dashboard Fixing Brake": 1,
+		"Dashboard Door 2": 0,
+		"Dashboard Brake Assist": 0,
+		"Dashboard Differential": 0,
+		"Dashboard Fog Light": 0,
+		"Dashboard Engine": 0,
+		"Dashboard Turning": 0,
+		"Dashboard Load Transfer": 0,
+		"Dashboard Lifting": 0,
+		"Dashboard Retarder": 0,
+		"Dashboard Seatbelts": 0,
+		"DB Stop Request": 0,
+		"DoorClearanceButton": 0,
+		"USB_Clearance": 0
+	},
+	"PassengerDoorsOpen": "true",
+	"doors": [
+		{
+			"Name": "Door Front",
+			"Open": "true",
+			"Progress": "1.0",
+			"StopRequest": "false",
+			"Index": "First"
+		},
+		{
+			"Name": "Door Fourth",
+			"Open": "false",
+			"Progress": "0.0",
+			"StopRequest": "false",
+			"Index": "Fourth"
+		},
+		{
+			"Name": "Door Third",
+			"Open": "false",
+			"Progress": "0.0",
+			"StopRequest": "false",
+			"Index": "Third"
+		},
+		{
+			"Name": "Door Second",
+			"Open": "false",
+			"Progress": "0.0",
+			"StopRequest": "false",
+			"Index": "Second "
+		}
+	],
+	"LuggageDoorsOpen": "false",
+	"IsRadioPlaying": "false",
+	"ActiveRadioChannel": "NONE",
+	"NumSeats": "43",
+	"NumOccupiedSeats": "0",
+	"IgnitionEnabled": "true",
+	"EngineTemperature": "0.0",
+	"WiperLevel": "0",
+	"DestinationDisplayActive": "true",
+	"CruiseControlActive": "false",
+	"AllowedSpeed": "30",
+	"IsAtStop": "false",
+	"DirtIntensity": "0.0",
+	"CurrentFuel": "252.949615",
+	"MaxFuel": "300",
+	"DisplayFuel": "0.843165",
+	"BusLogic":
+	{
+		"Asset": "/Game/Maps/Castrop/Castrop.Castrop:PersistentLevel.BP_Solaris_Urbino_18m_3D_C_2147374786.BP_TheBus_BusLogic_C_2147374099"
+	}
+}
