@@ -1,6 +1,6 @@
 //! This module handles the raw interaction with The Bus Telemetry API.
 
-use serde::Deserialize;
+use serde::{Deserialize, Deserializer};
 use std::string::ToString;
 use std::time::Duration;
 
@@ -96,28 +96,56 @@ pub struct ApiVehicleType {
     #[serde(rename = "VehicleModel")]
     pub vehicle_model: String,
     /// Whether the ignition is enabled (string "true"/"false").
-    #[serde(rename = "IgnitionEnabled")]
+    #[serde(
+        rename = "IgnitionEnabled",
+        default,
+        deserialize_with = "deserialize_bool_like_string"
+    )]
     pub ignition_enabled: String,
     /// Whether the engine is started (string "true"/"false").
-    #[serde(rename = "EngineStarted")]
+    #[serde(
+        rename = "EngineStarted",
+        default,
+        deserialize_with = "deserialize_bool_like_string"
+    )]
     pub engine_started: String,
     /// Whether warning lights are active (string "true"/"false").
-    #[serde(rename = "WarningLights")]
+    #[serde(
+        rename = "WarningLights",
+        default,
+        deserialize_with = "deserialize_bool_like_string"
+    )]
     pub warning_lights: String,
     /// Whether any passenger door is open (string "true"/"false").
-    #[serde(rename = "PassengerDoorsOpen")]
+    #[serde(
+        rename = "PassengerDoorsOpen",
+        default,
+        deserialize_with = "deserialize_bool_like_string"
+    )]
     pub passenger_doors_open: String,
     /// Whether the fixing (parking) brake is engaged (string "true"/"false").
-    #[serde(rename = "FixingBrake")]
+    #[serde(
+        rename = "FixingBrake",
+        default,
+        deserialize_with = "deserialize_bool_like_string"
+    )]
     pub fixing_brake: String,
     /// Current speed in km/h.
-    #[serde(rename = "Speed")]
+    #[serde(rename = "Speed", deserialize_with = "deserialize_f32_like", default)]
     pub speed: f32,
     /// Allowed speed limit.
-    #[serde(rename = "AllowedSpeed")]
+    #[serde(
+        rename = "AllowedSpeed",
+        deserialize_with = "deserialize_f32_like",
+        default
+    )]
     pub allowed_speed: f32,
     /// Fuel level on display (0.0 to 1.0).
-    #[serde(rename = "DisplayFuel")]
+    #[serde(
+        rename = "DisplayFuel",
+        deserialize_with = "deserialize_f32_like",
+        default
+    )]
     pub display_fuel: f32,
     /// Indicator state (-1: left, 0: off, 1: right).
     #[serde(rename = "IndicatorState")]
@@ -128,6 +156,46 @@ pub struct ApiVehicleType {
     /// List of buttons and their states.
     #[serde(rename = "Buttons", default)]
     pub buttons: Vec<ApiButton>,
+}
+
+fn deserialize_bool_like_string<'de, D>(deserializer: D) -> Result<String, D::Error>
+where
+    D: Deserializer<'de>,
+{
+    #[derive(Deserialize)]
+    #[serde(untagged)]
+    enum BoolLikeString {
+        Text(String),
+        Bool(bool),
+        Int(i64),
+        Float(f64),
+    }
+
+    match BoolLikeString::deserialize(deserializer)? {
+        BoolLikeString::Text(s) => Ok(s),
+        BoolLikeString::Bool(v) => Ok(v.to_string()),
+        BoolLikeString::Int(v) => Ok(v.to_string()),
+        BoolLikeString::Float(v) => Ok(v.to_string()),
+    }
+}
+
+fn deserialize_f32_like<'de, D>(deserializer: D) -> Result<f32, D::Error>
+where
+    D: Deserializer<'de>,
+{
+    #[derive(Deserialize)]
+    #[serde(untagged)]
+    enum F32Like {
+        Float(f32),
+        Int(i64),
+        Text(String),
+    }
+
+    match F32Like::deserialize(deserializer)? {
+        F32Like::Float(v) => Ok(v),
+        F32Like::Int(v) => Ok(v as f32),
+        F32Like::Text(s) => s.parse::<f32>().map_err(serde::de::Error::custom),
+    }
 }
 
 /// Represents various lamp intensities or states.
@@ -160,13 +228,14 @@ pub struct ApiLamps {
     )]
     pub traveller_light: f32,
     /// Front door light state.
-    #[serde(rename = "Door Button 1", alias = "ButtonLight Door 1")]
+    #[serde(rename = "Door Button 1", alias = "ButtonLight Door 1", default)]
     pub front_door_light: f32,
     /// Second door light state.
     #[serde(
         rename = "Door Button 2",
         alias = "ButtonLight Door 2",
-        alias = "LightDoorMiddle"
+        alias = "LightDoorMiddle",
+        default
     )]
     pub second_door_light: f32,
     /// Third door light state.
