@@ -254,7 +254,7 @@ mod tests {
     #[test]
     fn test_get_button_by_name_gear_selector_solaris_urbino() {
         use std::fs;
-        let path = "tests/json/Solaris_Urbino.txt";
+        let path = "tests/json/BP_Solaris_Urbino_18m_3D_C.json";
         let file = fs::read_to_string(path).expect("Solaris_Urbino.txt not found");
         let data: serde_json::Value = serde_json::from_str(&file).expect("invalid json");
 
