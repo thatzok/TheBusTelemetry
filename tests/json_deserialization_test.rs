@@ -8,6 +8,8 @@ use komsi::komsi::KomsiDateTime;
 #[test]
 fn test_json_deserialization_from_files() {
 
+    test_vehicle_deserialization("tests/json/BP_Citaro_Dizel_C.json", "BP_Citaro_Dizel_C_2147436818");
+    test_vehicle_deserialization("tests/json/BP_MAN_LionsCityDD_Base_C.json", "BP_MAN_LionsCityDD_Base_C_2147472553");
     test_vehicle_deserialization("tests/json/BP_MAN_LionsCityDD_Base_C.json", "BP_MAN_LionsCityDD_Base_C_2147472553");
     test_vehicle_deserialization("tests/json/BP_Mercedes_eCitaro_12m_2Door_C.json", "BP_Mercedes_eCitaro_12m_2Door_C_2147439900");
     test_vehicle_deserialization("tests/json/BP_Scania_Citywide_12M2D_C.json", "BP_Scania_Citywide_12M2D_C_2147417565");

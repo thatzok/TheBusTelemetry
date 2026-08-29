@@ -204,7 +204,8 @@ pub struct ApiLamps {
     #[serde(
         rename = "LightHeadlight",
         alias = "LightHeadlight1",
-        alias = "Light Headlight"
+        alias = "Light Headlight",
+        alias = "LightHeadlight2"
     )]
     pub light_headlight: f32,
     #[serde(
@@ -224,7 +225,8 @@ pub struct ApiLamps {
     #[serde(
         rename = "LightTraveling",
         alias = "LightTraveling1",
-        alias = "Light Travelling"
+        alias = "Light Travelling",
+        alias = "Light High Beam"
     )]
     pub traveller_light: f32,
     /// Front door light state.

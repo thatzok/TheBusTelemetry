@@ -1,0 +1,687 @@
+{
+  "VehicleModel": "Citaro",
+  "GearboxType": "TorqueConverter",
+  "ActorName": "BP_Citaro_Dizel_C_2147436818",
+  "InputIdentifier": "O530",
+  "IsPlayerControlled": true,
+  "Speed": 0,
+  "RPM": 0,
+  "IdleRPM": 575,
+  "MaxRPM": 2250,
+  "Mass": 14900,
+  "Steering": 0,
+  "Throttle": 0,
+  "Brake": 0.80000001192092896,
+  "Load": 0,
+  "EngineStarted": false,
+  "Gearbox":
+  {
+    "CurrentSelector": "N",
+    "CurrentGear": 0,
+    "TargetGear": 0,
+    "GearCount": 3
+  },
+  "FixingBrake": true,
+  "LowFuelWarning": false,
+  "MissingFields": [],
+  "IndicatorState": 0,
+  "IndicatorValue": 0,
+  "WarningLights": false,
+  "Location":
+  {
+    "X": 9365.040450559567,
+    "Y": -38870.087504710755,
+    "Z": 717.09702232511188
+  },
+  "Rotation":
+  {
+    "Roll": -3.4013457364428077,
+    "Pitch": 0.39673370353528814,
+    "Yaw": -40.881292711259469
+  },
+  "Wheels": [
+    {
+      "CurrentSuspension": 21.576875686645508,
+      "PreviousSuspension": 21.576898574829102,
+      "SuspensionForce": 3660576.7366246008,
+      "Location":
+      {
+        "X": 225.69497999999999,
+        "Y": -122.20977499999999,
+        "Z": 58.576875686645508
+      },
+      "Rotation":
+      {
+        "Roll": 0,
+        "Pitch": -0.20970849337000624,
+        "Yaw": 0
+      },
+      "OnGround": true,
+      "HasContraction": true
+    },
+    {
+      "CurrentSuspension": 19.698940277099609,
+      "PreviousSuspension": 19.698965072631836,
+      "SuspensionForce": 2884991.1846534871,
+      "Location":
+      {
+        "X": 225.69497999999999,
+        "Y": 122.20977499999999,
+        "Z": 56.698940277099609
+      },
+      "Rotation":
+      {
+        "Roll": 0,
+        "Pitch": -0.19776590760623897,
+        "Yaw": 0
+      },
+      "OnGround": true,
+      "HasContraction": true
+    },
+    {
+      "CurrentSuspension": 20.236289978027344,
+      "PreviousSuspension": 20.236289978027344,
+      "SuspensionForce": 4365464.3666083701,
+      "Location":
+      {
+        "X": -362.89860299999998,
+        "Y": -90.191062000000002,
+        "Z": 57.236289978027344
+      },
+      "Rotation":
+      {
+        "Roll": 0,
+        "Pitch": 0.064883989148462357,
+        "Yaw": 0
+      },
+      "OnGround": true,
+      "HasContraction": true
+    },
+    {
+      "CurrentSuspension": 19.180917739868164,
+      "PreviousSuspension": 19.180919647216797,
+      "SuspensionForce": 3809511.618255788,
+      "Location":
+      {
+        "X": -362.89860299999998,
+        "Y": 90.191062000000002,
+        "Z": 56.180917739868164
+      },
+      "Rotation":
+      {
+        "Roll": 0,
+        "Pitch": -0.065008948407965117,
+        "Yaw": 0
+      },
+      "OnGround": true,
+      "HasContraction": true
+    }
+  ],
+  "IsOffroad": false,
+  "UMG":
+  {
+    "driverdisplay": "/vehicles/BP_Citaro_Dizel_C_2147436818/driverdisplay",
+    "Navigation": "/vehicles/BP_Citaro_Dizel_C_2147436818/navigation",
+    "Boardcomputer": "/vehicles/BP_Citaro_Dizel_C_2147436818/boardcomputer"
+  },
+  "Buttons": [
+    {
+      "Name": "Indicator",
+      "ToolTip": "",
+      "State": "Primary",
+      "Actions": [
+        "SetIndicatorOff",
+        "SetIndicatorDown",
+        "SetIndicatorUp"
+      ],
+      "States": [
+        "Primary",
+        "Secondary",
+        "Tertiary"
+      ]
+    },
+    {
+      "Name": "Door 1",
+      "ToolTip": "Vordere Tür öffnen/schließen",
+      "State": "On",
+      "Actions": [
+        "DoorFrontOpenClose"
+      ],
+      "States": [
+        "On",
+        "Off"
+      ]
+    },
+    {
+      "Name": "Door 2",
+      "ToolTip": "Mittlere Tür öffnen/schließen",
+      "State": "Off",
+      "Actions": [
+        "DoorRearOpenClose"
+      ],
+      "States": [
+        "On",
+        "Off"
+      ]
+    },
+    {
+      "Name": "Door Clearance",
+      "ToolTip": "",
+      "State": "Secondary",
+      "Actions": [
+        "ToggleDoorClearance"
+      ],
+      "States": [
+        "Primary",
+        "Secondary"
+      ]
+    },
+    {
+      "Name": "Parking Brake",
+      "ToolTip": "Feststellbremse",
+      "State": "Secondary",
+      "Actions": [
+        "FixingBrake"
+      ],
+      "States": [
+        "Primary",
+        "Secondary"
+      ]
+    },
+    {
+      "Name": "Gear Selector",
+      "ToolTip": "",
+      "State": "Neutral",
+      "Actions": [
+        "SetGearN",
+        "SetGearR",
+        "SetGearD"
+      ],
+      "States": [
+        "Drive",
+        "Neutral",
+        "Reverse"
+      ]
+    },
+    {
+      "Name": "Horn",
+      "ToolTip": "Hupe",
+      "State": "Off",
+      "Actions": [
+        "Horn"
+      ],
+      "States": [
+        "On",
+        "Off"
+      ]
+    },
+    {
+      "Name": "Window Shade",
+      "ToolTip": "",
+      "State": "Primary",
+      "Actions": [
+        "WindowShadeDown",
+        "WindowShadeUp"
+      ],
+      "States": [
+        "Primary",
+        "Secondary"
+      ]
+    },
+    {
+      "Name": "Wiper",
+      "ToolTip": "",
+      "State": "Off",
+      "Actions": [
+        "WiperDown",
+        "WiperUp"
+      ],
+      "States": [
+        "Fast",
+        "On",
+        "interval",
+        "Off"
+      ]
+    },
+    {
+      "Name": "Fake Ignition",
+      "ToolTip": "",
+      "State": "On",
+      "Actions": [
+        "MotorStartStop"
+      ],
+      "States": [
+        "Start",
+        "On",
+        "Off"
+      ]
+    },
+    {
+      "Name": "Light Switch",
+      "ToolTip": "Aus",
+      "State": "Off",
+      "Actions": [
+        "Lightswitch",
+        "LightSwitchDown",
+        "LightSwitchUp"
+      ],
+      "States": [
+        "Off",
+        "parking",
+        "Headlights",
+        "Front Fog Light",
+        "Rear Fog Light"
+      ]
+    },
+    {
+      "Name": "High Beam",
+      "ToolTip": "",
+      "State": "Off",
+      "Actions": [
+        "ToggleTravellerLights"
+      ],
+      "States": [
+        "Off",
+        "On"
+      ]
+    },
+    {
+      "Name": "Warning Light",
+      "ToolTip": "",
+      "State": "Secondary",
+      "Actions": [
+        "ToggleWarningLights"
+      ],
+      "States": [
+        "Primary",
+        "Secondary"
+      ]
+    },
+    {
+      "Name": "Lifting",
+      "ToolTip": "",
+      "State": "Primary",
+      "Actions": [
+        "LiftUp",
+        "LiftDown"
+      ],
+      "States": [
+        "Primary",
+        "Secondary"
+      ]
+    },
+    {
+      "Name": "Passengers Light",
+      "ToolTip": "",
+      "State": "Primary",
+      "Actions": [
+        "InteriorLightOff",
+        "InteriorLightDimmed",
+        "InteriorLightBright",
+        "TogglePassengersLight"
+      ],
+      "States": [
+        "Primary",
+        "Secondary",
+        "Tertiary"
+      ]
+    },
+    {
+      "Name": "Driver Window",
+      "ToolTip": "",
+      "State": "Primary",
+      "Actions": [
+        "DriverWindowClose",
+        "DriverWindowOpen"
+      ],
+      "States": [
+        "Primary",
+        "Secondary"
+      ]
+    },
+    {
+      "Name": "Manual Window Shade",
+      "ToolTip": "",
+      "State": "None",
+      "Actions": [
+        "WindowShadeSideUp",
+        "WindowShadeSideDown"
+      ],
+      "States": []
+    },
+    {
+      "Name": "Driver Light",
+      "ToolTip": "ee",
+      "State": "Off",
+      "Actions": [
+        "ToggleDriversLight"
+      ],
+      "States": [
+        "Off",
+        "On"
+      ]
+    },
+    {
+      "Name": "Door Lock",
+      "ToolTip": "",
+      "State": "Off",
+      "Actions": [],
+      "States": [
+        "Off",
+        "Right wing locked",
+        "Left wing locked"
+      ]
+    },
+    {
+      "Name": "Kneeling",
+      "ToolTip": "",
+      "State": "Primary",
+      "Actions": [
+        "KneelUp",
+        "KneelDown"
+      ],
+      "States": [
+        "Primary",
+        "Secondary"
+      ]
+    },
+    {
+      "Name": "Air Condition",
+      "ToolTip": "17°C",
+      "State": "170",
+      "Actions": [
+        "17°C",
+        "Air ConditionFakeLeft",
+        "Air ConditionFakeRight"
+      ],
+      "States": [
+        "170",
+        "175",
+        "180",
+        "185",
+        "190",
+        "195",
+        "200",
+        "205",
+        "210",
+        "215",
+        "220",
+        "225",
+        "230",
+        "235",
+        "240",
+        "245",
+        "250",
+        "255",
+        "260",
+        "265",
+        "270"
+      ]
+    },
+    {
+      "Name": "NOT AUS",
+      "ToolTip": "",
+      "State": "Off",
+      "Actions": [],
+      "States": [
+        "Off",
+        "On"
+      ]
+    },
+    {
+      "Name": "Air Condition ON",
+      "ToolTip": "Offf",
+      "State": "Off3",
+      "Actions": [
+        "ToggleAirCondition"
+      ],
+      "States": [
+        "Off3",
+        "Onnn?"
+      ]
+    },
+    {
+      "Name": "15 Cent",
+      "ToolTip": "0.15 €",
+      "State": "Off",
+      "Actions": [
+        "Coins15"
+      ],
+      "States": [
+        "On",
+        "Off"
+      ]
+    },
+    {
+      "Name": "20 Cent",
+      "ToolTip": "0.20 €",
+      "State": "Off",
+      "Actions": [
+        "Coins20"
+      ],
+      "States": [
+        "On",
+        "Off"
+      ]
+    },
+    {
+      "Name": "30 Cent",
+      "ToolTip": "0.30 €",
+      "State": "Off",
+      "Actions": [
+        "Coins30"
+      ],
+      "States": [
+        "On",
+        "Off"
+      ]
+    },
+    {
+      "Name": "50 Cent",
+      "ToolTip": "0.50 €",
+      "State": "Off",
+      "Actions": [
+        "Coins50"
+      ],
+      "States": [
+        "On",
+        "Off"
+      ]
+    },
+    {
+      "Name": "60 Cent",
+      "ToolTip": "0.60 €",
+      "State": "Off",
+      "Actions": [
+        "Coins60"
+      ],
+      "States": [
+        "On",
+        "Off"
+      ]
+    },
+    {
+      "Name": "1 Euro",
+      "ToolTip": "1 €",
+      "State": "Off",
+      "Actions": [
+        "Coins100"
+      ],
+      "States": [
+        "On",
+        "Off"
+      ]
+    },
+    {
+      "Name": "2 Euro",
+      "ToolTip": "2 €",
+      "State": "Off",
+      "Actions": [
+        "Coins200"
+      ],
+      "States": [
+        "On",
+        "Off"
+      ]
+    },
+    {
+      "Name": "4 Euro",
+      "ToolTip": "4 €",
+      "State": "Off",
+      "Actions": [
+        "Coins400"
+      ],
+      "States": [
+        "On",
+        "Off"
+      ]
+    },
+    {
+      "Name": "6 Euro",
+      "ToolTip": "6 €",
+      "State": "Off",
+      "Actions": [
+        "Coins600"
+      ],
+      "States": [
+        "On",
+        "Off"
+      ]
+    },
+    {
+      "Name": "8 Euro",
+      "ToolTip": "8 €",
+      "State": "Off",
+      "Actions": [
+        "Coins800"
+      ],
+      "States": [
+        "On",
+        "Off"
+      ]
+    },
+    {
+      "Name": "5 Cent",
+      "ToolTip": "0,05 €",
+      "State": "Off",
+      "Actions": [
+        "Coins5"
+      ],
+      "States": [
+        "On",
+        "Off"
+      ]
+    },
+    {
+      "Name": "10 Cent",
+      "ToolTip": "0.1 €",
+      "State": "Off",
+      "Actions": [
+        "Coins10"
+      ],
+      "States": [
+        "On",
+        "Off"
+      ]
+    },
+    {
+      "Name": "Cash Money",
+      "ToolTip": "",
+      "State": "Off",
+      "Actions": [
+        "Take Cash Money"
+      ],
+      "States": [
+        "On",
+        "Off"
+      ]
+    }
+  ],
+  "AllLamps":
+  {
+    "Light Daytime": 0,
+    "Light Parking": 0,
+    "Light Headlight": 0,
+    "Light High Beam": 0,
+    "Light Brake": 4,
+    "Light Reverse": 0,
+    "Light Front Fog": 0,
+    "Light Rear Fog": 0,
+    "Light Indicator Left": 0,
+    "Light Indicator Right": 0,
+    "Light Door 1": 1,
+    "Light Door 1 Interior": 1,
+    "Light Door 2": 0,
+    "Light Door 2 Interior": 0,
+    "Light Door 3": 0,
+    "Light Door 3 Interior": 0,
+    "Light Door 4": 0,
+    "Light Door 4 Interior": 0,
+    "Default Emissive Materials": 0,
+    "Light Passenger": 0,
+    "LED Gear Drive": 0,
+    "LED Gear Neutral": 3,
+    "LED Gear Reverse": 0,
+    "LED Warning": 0,
+    "LED Passengers Light Level 1": 0,
+    "LED Passengers Light Level 2": 0,
+    "LED Door Clearance": 0,
+    "ButtonLight Door 1": 0.17000000178813934,
+    "ButtonLight Door 2": 0,
+    "ButtonLight Door 3": 0,
+    "ButtonLight Door 4": 0,
+    "Request Button Door 2": 0,
+    "Request Button Door 3": 0,
+    "Request Button Door 4": 0,
+    "Tacho Indicator Left": 0,
+    "Tacho Indicator Right": 0,
+    "Tacho Headlight": 0,
+    "Tacho High Beam": 0,
+    "Tacho Front Fog": 0,
+    "Tacho Rear Fog": 0,
+    "Tacho Stop Brake": 1,
+    "Tacho Parking Brake": 1,
+    "Tacho Retarder": 0,
+    "Tacho Traction Control": 0,
+    "Tacho STOP": 0,
+    "Tacho Warning": 0,
+    "Vozačevo": 0
+  },
+  "PassengerDoorsOpen": "true",
+  "doors": [
+    {
+      "Name": "DoorFront",
+      "Open": "true",
+      "Progress": "1.0",
+      "StopRequest": "false",
+      "Index": "First"
+    },
+    {
+      "Name": "DoorSecond",
+      "Open": "false",
+      "Progress": "0.0",
+      "StopRequest": "false",
+      "Index": "Second "
+    }
+  ],
+  "LuggageDoorsOpen": "false",
+  "IsRadioPlaying": "false",
+  "ActiveRadioChannel": "NONE",
+  "NumSeats": "30",
+  "NumOccupiedSeats": "0",
+  "IgnitionEnabled": "true",
+  "EngineTemperature": "0.0",
+  "WiperLevel": "0",
+  "DestinationDisplayActive": "true",
+  "CruiseControlActive": "false",
+  "AllowedSpeed": "30",
+  "IsAtStop": "false",
+  "DirtIntensity": "0.0",
+  "CurrentFuel": "100.0",
+  "MaxFuel": "100",
+  "DisplayFuel": "1.0",
+  "BusLogic":
+  {
+    "Asset": "/Game/Maps/Castrop/Castrop.Castrop:PersistentLevel.BP_Citaro_Dizel_C_2147436818.BP_TheBus_BusLogic_C_2147436218"
+  }
+}
