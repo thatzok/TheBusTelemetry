@@ -28,16 +28,16 @@ fn test_world_deserialization(file_path: &str) {
         .expect(&format!("Failed to deserialize {}", file_path));
 
     assert_eq!(world.level_name, "Castrop");
-    assert_eq!(world.date_time, "2026-01-01T09:43:48");
-    assert!(world.time_factor > 0.0);
+    assert_eq!(world.date_time, "2026-08-04T10:36:33");
+    assert_eq!(world.time_factor, 0.0);
 
     let date_time = KomsiDateTime::from_iso(&world.date_time).unwrap();
     assert_eq!(date_time.year, 2026);
-    assert_eq!(date_time.month, 1);
-    assert_eq!(date_time.day, 1);
-    assert_eq!(date_time.hour, 9);
-    assert_eq!(date_time.min, 43);
-    assert_eq!(date_time.sec, 48);
+    assert_eq!(date_time.month, 8);
+    assert_eq!(date_time.day, 4);
+    assert_eq!(date_time.hour, 10);
+    assert_eq!(date_time.min, 36);
+    assert_eq!(date_time.sec, 33);
 
     println!("Successfully deserialized world: {}", world.level_name);
 }

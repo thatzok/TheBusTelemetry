@@ -70,7 +70,7 @@ impl RequestConfig {
 #[derive(Deserialize, Debug, PartialEq)]
 pub struct ApiWorldType {
     /// Name of the current level.
-    #[serde(rename = "LevelName")]
+    #[serde(rename = "Levelname")]
     pub level_name: String,
     /// Current date and time in the game.
     #[serde(rename = "DateTime")]
