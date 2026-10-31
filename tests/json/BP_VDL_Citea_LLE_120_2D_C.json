@@ -1,24 +1,24 @@
 {
   "VehicleModel": "Citea LLE",
   "GearboxType": "TorqueConverter",
-  "ActorName": "BP_VDL_Citea_LLE_120_2D_C_2147331184",
+  "ActorName": "BP_VDL_Citea_LLE_120_2D_C_2147208566",
   "InputIdentifier": "citea",
   "IsPlayerControlled": true,
   "Speed": 0,
-  "RPM": 0,
+  "RPM": 540.85357666015625,
   "IdleRPM": 600,
   "MaxRPM": 2400,
   "Mass": 9500,
   "Steering": 0,
   "Throttle": 0,
   "Brake": 0.80000001192092896,
-  "Load": 0,
-  "EngineStarted": false,
+  "Load": 0.32845404744148254,
+  "EngineStarted": true,
   "Gearbox":
   {
-    "CurrentSelector": "N",
-    "CurrentGear": 0,
-    "TargetGear": 0,
+    "CurrentSelector": "D",
+    "CurrentGear": 1,
+    "TargetGear": 1,
     "GearCount": 3
   },
   "FixingBrake": true,
@@ -29,88 +29,88 @@
   "WarningLights": false,
   "Location":
   {
-    "X": 9282.8034109809305,
-    "Y": -38799.767756031768,
-    "Z": 719.09471245230873
+    "X": 74.699980301117762,
+    "Y": -400.2163984827252,
+    "Z": -592.04937973572225
   },
   "Rotation":
   {
-    "Roll": -2.9520261965460595,
-    "Pitch": 0.50874745169653046,
-    "Yaw": -40.886549929803991
+    "Roll": -1.2185557149365993,
+    "Pitch": 1.2883542827493142,
+    "Yaw": -37.978679146387556
   },
   "Wheels": [
     {
-      "CurrentSuspension": 24.724193572998047,
-      "PreviousSuspension": 24.724206924438477,
-      "SuspensionForce": 1970124.2560741464,
+      "CurrentSuspension": 25.953989028930664,
+      "PreviousSuspension": 25.953989028930664,
+      "SuspensionForce": 2488515.8894102867,
       "Location":
       {
         "X": 360.53698700000001,
         "Y": -106.98123200000001,
-        "Z": 46.724193572998047
+        "Z": 47.953989028930664
       },
       "Rotation":
       {
         "Roll": 0,
-        "Pitch": -0.085835879018691885,
+        "Pitch": -0.068176225705773127,
         "Yaw": 0
       },
       "OnGround": true,
       "HasContraction": true
     },
     {
-      "CurrentSuspension": 24.624973297119141,
-      "PreviousSuspension": 24.62498664855957,
-      "SuspensionForce": 1932222.5922297204,
+      "CurrentSuspension": 23.078685760498047,
+      "PreviousSuspension": 23.078683853149414,
+      "SuspensionForce": 1405798.8521900491,
       "Location":
       {
         "X": 360.53698700000001,
         "Y": 106.98114,
-        "Z": 46.624973297119141
+        "Z": 50.078685760498047
       },
       "Rotation":
       {
         "Roll": 0,
-        "Pitch": -0.21812852290582563,
+        "Pitch": -0.27814901893753735,
         "Yaw": 0
       },
       "OnGround": true,
       "HasContraction": true
     },
     {
-      "CurrentSuspension": 24.911737442016602,
-      "PreviousSuspension": 24.911735534667969,
-      "SuspensionForce": 2622620.1612753067,
+      "CurrentSuspension": 24.249324798583984,
+      "PreviousSuspension": 24.249322891235352,
+      "SuspensionForce": 2306672.1404445362,
       "Location":
       {
         "X": -258.51242100000002,
         "Y": -106.981201,
-        "Z": 46.911737442016602
+        "Z": 46.249324798583984
       },
       "Rotation":
       {
         "Roll": 0,
-        "Pitch": 0.18897657353654651,
+        "Pitch": 0.059309829078132634,
         "Yaw": 0
       },
       "OnGround": true,
       "HasContraction": true
     },
     {
-      "CurrentSuspension": 24.94415283203125,
-      "PreviousSuspension": 24.944149017333984,
-      "SuspensionForce": 2637168.8981203442,
+      "CurrentSuspension": 25.876220703125,
+      "PreviousSuspension": 25.876218795776367,
+      "SuspensionForce": 3038271.270877447,
       "Location":
       {
         "X": -258.51242100000002,
         "Y": 106.981201,
-        "Z": 46.94415283203125
+        "Z": 52.876220703125
       },
       "Rotation":
       {
         "Roll": 0,
-        "Pitch": -0.17789362399806841,
+        "Pitch": 0.0198971758531457,
         "Yaw": 0
       },
       "OnGround": true,
@@ -120,9 +120,9 @@
   "IsOffroad": false,
   "UMG":
   {
-    "Navigation": "/vehicles/BP_VDL_Citea_LLE_120_2D_C_2147331184/navigation",
-    "Boardcomputer": "/vehicles/BP_VDL_Citea_LLE_120_2D_C_2147331184/boardcomputer",
-    "driverdisplay": "/vehicles/BP_VDL_Citea_LLE_120_2D_C_2147331184/driverdisplay"
+    "Navigation": "/vehicles/BP_VDL_Citea_LLE_120_2D_C_2147208566/navigation",
+    "Boardcomputer": "/vehicles/BP_VDL_Citea_LLE_120_2D_C_2147208566/boardcomputer",
+    "driverdisplay": "/vehicles/BP_VDL_Citea_LLE_120_2D_C_2147208566/driverdisplay"
   },
   "Buttons": [
     {
@@ -197,7 +197,7 @@
     {
       "Name": "Gear Selector",
       "ToolTip": "",
-      "State": "Neutral",
+      "State": "Drive",
       "Actions": [
         "SetGearN",
         "SetGearR",
@@ -212,7 +212,7 @@
     {
       "Name": "Fake Ignition",
       "ToolTip": "",
-      "State": "On",
+      "State": "Start",
       "Actions": [
         "MotorStartStop"
       ],
@@ -895,8 +895,8 @@
     "Init LEDs Electric": 0,
     "Light Driver": 0,
     "Small Lights": 1,
-    "ButtonLight GearSwitch State 1": 0,
-    "ButtonLight GearSwitch State 2": 3,
+    "ButtonLight GearSwitch State 1": 3,
+    "ButtonLight GearSwitch State 2": 0,
     "ButtonLight GearSwitch State 3": 0,
     "LED Warning": 0,
     "LED Kneeling": 0,
@@ -945,18 +945,18 @@
   "NumSeats": "34",
   "NumOccupiedSeats": "0",
   "IgnitionEnabled": "true",
-  "EngineTemperature": "0.0",
+  "EngineTemperature": "0.017087",
   "WiperLevel": "0",
   "DestinationDisplayActive": "true",
   "CruiseControlActive": "false",
-  "AllowedSpeed": "30",
+  "AllowedSpeed": "20",
   "IsAtStop": "false",
   "DirtIntensity": "0.0",
-  "CurrentFuel": "400.0",
+  "CurrentFuel": "399.961121",
   "MaxFuel": "400",
-  "DisplayFuel": "1.0",
+  "DisplayFuel": "0.999903",
   "BusLogic":
   {
-    "Asset": "/Game/Maps/Castrop/Castrop.Castrop:PersistentLevel.BP_VDL_Citea_LLE_120_2D_C_2147331184.BP_TheBus_BusLogic_C_2147330688"
+    "Asset": "/Game/Maps/Castrop/Castrop.Castrop:PersistentLevel.BP_VDL_Citea_LLE_120_2D_C_2147208566.BP_TheBus_BusLogic_C_2147208070"
   }
 }

@@ -1,24 +1,24 @@
 {
   "VehicleModel": "Lions City",
   "GearboxType": "TorqueConverter",
-  "ActorName": "BP_MAN_LionsCityDD_Base_C_2147472553",
+  "ActorName": "BP_MAN_LionsCityDD_Base_C_2147431761",
   "InputIdentifier": "MAN",
   "IsPlayerControlled": true,
   "Speed": 0,
-  "RPM": 0,
+  "RPM": 540.85443115234375,
   "IdleRPM": 600,
   "MaxRPM": 2400,
   "Mass": 17275,
   "Steering": 0,
   "Throttle": 0,
   "Brake": 0.80000001192092896,
-  "Load": 0,
-  "EngineStarted": false,
+  "Load": 0.32845205068588257,
+  "EngineStarted": true,
   "Gearbox":
   {
-    "CurrentSelector": "N",
-    "CurrentGear": 0,
-    "TargetGear": 0,
+    "CurrentSelector": "D",
+    "CurrentGear": 1,
+    "TargetGear": 1,
     "GearCount": 3
   },
   "FixingBrake": true,
@@ -29,126 +29,126 @@
   "WarningLights": false,
   "Location":
   {
-    "X": 9218.9114390924278,
-    "Y": -38744.556925652694,
-    "Z": 724.48811414773911
+    "X": 8.9800067055988428,
+    "Y": -348.77137235329519,
+    "Z": -587.26508233911045
   },
   "Rotation":
   {
-    "Roll": -3.2762029749800954,
-    "Pitch": 0.45303363177584477,
-    "Yaw": -40.867265999207319
+    "Roll": -1.7137345388646856,
+    "Pitch": 1.2516245198215441,
+    "Yaw": -38.025265235927201
   },
   "Wheels": [
     {
-      "CurrentSuspension": 17.537496566772461,
-      "PreviousSuspension": 17.537500381469727,
-      "SuspensionForce": 3637738.5686123292,
+      "CurrentSuspension": 18.253665924072266,
+      "PreviousSuspension": 18.253683090209961,
+      "SuspensionForce": 4383402.8843227122,
       "Location":
       {
         "X": 410.04699699999998,
         "Y": -107.039001,
-        "Z": 47.537496566772461
+        "Z": 48.253665924072266
       },
       "Rotation":
       {
         "Roll": 0,
-        "Pitch": -0.068605303881257629,
+        "Pitch": -0.10810127118455795,
         "Yaw": 0
       },
       "OnGround": true,
       "HasContraction": true
     },
     {
-      "CurrentSuspension": 16.414279937744141,
-      "PreviousSuspension": 16.414283752441406,
-      "SuspensionForce": 2742990.7657314437,
+      "CurrentSuspension": 15.152470588684082,
+      "PreviousSuspension": 15.152488708496094,
+      "SuspensionForce": 1924722.4054098846,
       "Location":
       {
         "X": 410.04699699999998,
         "Y": 107.039001,
-        "Z": 46.414279937744141
+        "Z": 49.152469635009766
       },
       "Rotation":
       {
         "Roll": 0,
-        "Pitch": -0.18367118615324374,
+        "Pitch": -0.56258628947994227,
         "Yaw": 0
       },
       "OnGround": true,
       "HasContraction": true
     },
     {
-      "CurrentSuspension": 17.120887756347656,
-      "PreviousSuspension": 17.120887756347656,
-      "SuspensionForce": 3236192.1695492445,
+      "CurrentSuspension": 16.273614883422852,
+      "PreviousSuspension": 16.273599624633789,
+      "SuspensionForce": 2472213.1359013226,
       "Location":
       {
         "X": -176.95700099999999,
         "Y": -107.039001,
-        "Z": 47.120887756347656
+        "Z": 46.273614883422852
       },
       "Rotation":
       {
         "Roll": 0,
-        "Pitch": 0.11282385370418171,
+        "Pitch": 0.021230196362972933,
         "Yaw": 0
       },
       "OnGround": true,
       "HasContraction": true
     },
     {
-      "CurrentSuspension": 16.111452102661133,
-      "PreviousSuspension": 16.1114501953125,
-      "SuspensionForce": 2454948.6236854047,
+      "CurrentSuspension": 17.316305160522461,
+      "PreviousSuspension": 17.316289901733398,
+      "SuspensionForce": 3281930.0137994569,
       "Location":
       {
         "X": -176.95700099999999,
         "Y": 107.039001,
-        "Z": 46.111452102661133
+        "Z": 51.316305160522461
       },
       "Rotation":
       {
         "Roll": 0,
-        "Pitch": -0.1291897553518139,
+        "Pitch": -0.0035043818179025113,
         "Yaw": 0
       },
       "OnGround": true,
       "HasContraction": true
     },
     {
-      "CurrentSuspension": 17.163225173950195,
-      "PreviousSuspension": 17.163200378417969,
-      "SuspensionForce": 2914382.1201365408,
+      "CurrentSuspension": 15.902475357055664,
+      "PreviousSuspension": 15.902487754821777,
+      "SuspensionForce": 2107324.2918717219,
       "Location":
       {
         "X": -346.52499399999999,
         "Y": -107.039001,
-        "Z": 47.163225173950195
+        "Z": 45.902475357055664
       },
       "Rotation":
       {
         "Roll": 0,
-        "Pitch": -0.17611107743392895,
+        "Pitch": -0.33470385801163688,
         "Yaw": -0
       },
       "OnGround": true,
       "HasContraction": true
     },
     {
-      "CurrentSuspension": 16.006664276123047,
-      "PreviousSuspension": 16.006641387939453,
-      "SuspensionForce": 2045255.0884932945,
+      "CurrentSuspension": 16.802099227905273,
+      "PreviousSuspension": 16.802112579345703,
+      "SuspensionForce": 2780732.6969938367,
       "Location":
       {
         "X": -346.52499399999999,
         "Y": 107.039001,
-        "Z": 46.006664276123047
+        "Z": 50.802099227905273
       },
       "Rotation":
       {
         "Roll": 0,
-        "Pitch": -0.12701084911558905,
+        "Pitch": -0.36823818956163001,
         "Yaw": -0
       },
       "OnGround": true,
@@ -158,9 +158,9 @@
   "IsOffroad": false,
   "UMG":
   {
-    "Navigation": "/vehicles/BP_MAN_LionsCityDD_Base_C_2147472553/navigation",
-    "Boardcomputer": "/vehicles/BP_MAN_LionsCityDD_Base_C_2147472553/boardcomputer",
-    "driverdisplay": "/vehicles/BP_MAN_LionsCityDD_Base_C_2147472553/driverdisplay"
+    "Navigation": "/vehicles/BP_MAN_LionsCityDD_Base_C_2147431761/navigation",
+    "Boardcomputer": "/vehicles/BP_MAN_LionsCityDD_Base_C_2147431761/boardcomputer",
+    "driverdisplay": "/vehicles/BP_MAN_LionsCityDD_Base_C_2147431761/driverdisplay"
   },
   "Buttons": [
     {
@@ -285,7 +285,7 @@
     {
       "Name": "Gear Selector",
       "ToolTip": "",
-      "State": "Neutral",
+      "State": "Drive",
       "Actions": [
         "SetGearN",
         "SetGearR",
@@ -300,7 +300,7 @@
     {
       "Name": "Fake Ignition",
       "ToolTip": "",
-      "State": "Off",
+      "State": "Start",
       "Actions": [
         "MotorStartStop"
       ],
@@ -1184,16 +1184,16 @@
     "Light Indicator Left": 0,
     "Light Indicator Right": 0,
     "Light Reverse": 0,
-    "PositionLights": 0,
-    "LightBrake": 0,
-    "Light Parking": 0,
-    "Light Daytime": 0,
+    "PositionLights": 1,
+    "LightBrake": 1,
+    "Light Parking": 1,
+    "Light Daytime": 1,
     "Light Headlight": 0,
     "Light Travelling": 0,
     "Light Front Fog": 0,
     "Light Rear Fog": 0,
     "Light Driver": 1,
-    "Light Door 1": 0,
+    "Light Door 1": 1,
     "Light Door 2": 0,
     "Light Door 3": 0,
     "LightDoorRequestButtonMiddle": 0,
@@ -1207,12 +1207,12 @@
     "LED_DashboardInfoRed": 0,
     "LED_DashboardInfoYel": 0,
     "LED Travelling": 0,
-    "LED FixingBrake": 0,
+    "LED FixingBrake": 1,
     "LED ABS": 0,
     "LED StopRequest": 0,
     "LED_DashboardInfoStopRequestWheelChair": 0,
-    "ButtonLight Door 1": 0,
-    "LED_DashboardInfoDoorOpen": 0,
+    "ButtonLight Door 1": 1,
+    "LED_DashboardInfoDoorOpen": 1,
     "LightDashboard": 0,
     "Light LaserBarrier": 0,
     "LightStopRequestPassenger": 0
@@ -1246,19 +1246,19 @@
   "ActiveRadioChannel": "NONE",
   "NumSeats": "83",
   "NumOccupiedSeats": "0",
-  "IgnitionEnabled": "false",
-  "EngineTemperature": "0.0",
+  "IgnitionEnabled": "true",
+  "EngineTemperature": "0.013693",
   "WiperLevel": "0",
   "DestinationDisplayActive": "true",
   "CruiseControlActive": "false",
-  "AllowedSpeed": "30",
+  "AllowedSpeed": "20",
   "IsAtStop": "false",
   "DirtIntensity": "0.0",
-  "CurrentFuel": "360.0",
+  "CurrentFuel": "359.977753",
   "MaxFuel": "360",
-  "DisplayFuel": "0.0",
+  "DisplayFuel": "0.999938",
   "BusLogic":
   {
-    "Asset": "/Game/Maps/Castrop/Castrop.Castrop:PersistentLevel.BP_MAN_LionsCityDD_Base_C_2147472553.BP_TheBus_BusLogic_C_2147471892"
+    "Asset": "/Game/Maps/Castrop/Castrop.Castrop:PersistentLevel.BP_MAN_LionsCityDD_Base_C_2147431761.BP_TheBus_BusLogic_C_2147431100"
   }
 }

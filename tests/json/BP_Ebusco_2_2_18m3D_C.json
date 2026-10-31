@@ -1,23 +1,23 @@
 {
   "VehicleModel": "2.2",
   "GearboxType": "Static",
-  "ActorName": "BP_Ebusco_2_2_18m3D_C_2147469372",
-  "InputIdentifier": "Ebusco_2.2",
+  "ActorName": "BP_Ebusco_2_2_18m3D_C_2147469511",
+  "InputIdentifier": "ebusco_2.2",
   "IsPlayerControlled": true,
-  "Speed": 0,
-  "RPM": 0,
+  "Speed": 0.00040803931187838316,
+  "RPM": -0.048005938529968262,
   "IdleRPM": 0,
   "MaxRPM": 11000,
   "Mass": 20737.396484375,
   "Steering": 0,
   "Throttle": 0,
   "Brake": 1,
-  "Load": 0,
-  "EngineStarted": false,
+  "Load": -0.00011729033576557413,
+  "EngineStarted": true,
   "Gearbox":
   {
-    "CurrentSelector": "N",
-    "CurrentGear": 0,
+    "CurrentSelector": "D",
+    "CurrentGear": 1,
     "TargetGear": 0,
     "GearCount": 3
   },
@@ -29,126 +29,126 @@
   "WarningLights": false,
   "Location":
   {
-    "X": 9363.7956839252747,
-    "Y": -38870.381569952515,
-    "Z": 726.3198069667792
+    "X": 83.800135139630726,
+    "Y": -444.06561940457181,
+    "Z": -582.33403058771614
   },
   "Rotation":
   {
-    "Roll": -2.7868071410513835,
-    "Pitch": 0.49348884459449072,
-    "Yaw": -40.901614064071758
+    "Roll": -4.3538336777290327,
+    "Pitch": 1.6323516834914351,
+    "Yaw": -26.281330770282661
   },
   "Wheels": [
     {
-      "CurrentSuspension": 16.760490417480469,
-      "PreviousSuspension": 16.760490417480469,
-      "SuspensionForce": 3416669.3934733672,
+      "CurrentSuspension": 20.321264266967773,
+      "PreviousSuspension": 20.312864303588867,
+      "SuspensionForce": 4824361.0037802774,
       "Location":
       {
         "X": 216.91610700000001,
         "Y": -108.88157699999999,
-        "Z": 48.760490417480469
+        "Z": 52.321264266967773
       },
       "Rotation":
       {
         "Roll": 0,
-        "Pitch": -0.2675726797079972,
+        "Pitch": 5.6018570565965513,
         "Yaw": 0
       },
       "OnGround": true,
       "HasContraction": true
     },
     {
-      "CurrentSuspension": 16.612648010253906,
-      "PreviousSuspension": 16.612648010253906,
-      "SuspensionForce": 3377163.0726594003,
+      "CurrentSuspension": 11.547512054443359,
+      "PreviousSuspension": 11.55739688873291,
+      "SuspensionForce": 2163617.989527314,
       "Location":
       {
         "X": 216.91610700000001,
         "Y": 108.88157699999999,
-        "Z": 48.612648010253906
+        "Z": 43.547512054443359
       },
       "Rotation":
       {
         "Roll": 0,
-        "Pitch": -0.13340219863142846,
+        "Pitch": 11.153606631186037,
         "Yaw": 0
       },
       "OnGround": true,
       "HasContraction": true
     },
     {
-      "CurrentSuspension": 16.981351852416992,
-      "PreviousSuspension": 16.981351852416992,
-      "SuspensionForce": 3353255.9746454861,
+      "CurrentSuspension": 16.252128601074219,
+      "PreviousSuspension": 16.272302627563477,
+      "SuspensionForce": 3813961.3451026324,
       "Location":
       {
         "X": -367.89025900000001,
         "Y": -110.284164,
-        "Z": 48.981351852416992
+        "Z": 48.252128601074219
       },
       "Rotation":
       {
         "Roll": 0,
-        "Pitch": -0.23363477884179479,
+        "Pitch": 4.2325801951075999,
         "Yaw": 0
       },
       "OnGround": true,
-      "HasContraction": true
+      "HasContraction": false
     },
     {
-      "CurrentSuspension": 17.039640426635742,
-      "PreviousSuspension": 17.039640426635742,
-      "SuspensionForce": 3368483.9261568426,
+      "CurrentSuspension": 10.97441577911377,
+      "PreviousSuspension": 11.012910842895508,
+      "SuspensionForce": 2407265.1640309249,
       "Location":
       {
         "X": -367.89025900000001,
         "Y": 110.284164,
-        "Z": 49.039640426635742
+        "Z": 42.974414825439453
       },
       "Rotation":
       {
         "Roll": 0,
-        "Pitch": -0.14319631993264673,
+        "Pitch": 6.7767115208872193,
         "Yaw": 0
       },
       "OnGround": true,
       "HasContraction": true
     },
     {
-      "CurrentSuspension": 16.747333526611328,
-      "PreviousSuspension": 16.747333526611328,
-      "SuspensionForce": 3637356.4780094661,
+      "CurrentSuspension": 15.321295738220215,
+      "PreviousSuspension": 15.334372520446777,
+      "SuspensionForce": 2432276.1071953326,
       "Location":
       {
         "X": -331.407715,
         "Y": -110.28415699999999,
-        "Z": 14.28378652661133
+        "Z": 12.857748738220216
       },
       "Rotation":
       {
         "Roll": 0,
-        "Pitch": 0.15872741119534794,
+        "Pitch": 2.9866216401733201,
         "Yaw": 0
       },
       "OnGround": true,
-      "HasContraction": true
+      "HasContraction": false
     },
     {
-      "CurrentSuspension": 16.438833236694336,
-      "PreviousSuspension": 16.438833236694336,
-      "SuspensionForce": 3390165.6138428561,
+      "CurrentSuspension": 18.352518081665039,
+      "PreviousSuspension": 18.334823608398438,
+      "SuspensionForce": 4907007.3501004074,
       "Location":
       {
         "X": -331.407715,
         "Y": 110.28415699999999,
-        "Z": 13.975286236694338
+        "Z": 15.888971081665041
       },
       "Rotation":
       {
         "Roll": 0,
-        "Pitch": 0.056811801225686638,
+        "Pitch": -5.2235696097090818,
         "Yaw": 0
       },
       "OnGround": true,
@@ -158,15 +158,15 @@
   "IsOffroad": false,
   "UMG":
   {
-    "Navigation": "/vehicles/BP_Ebusco_2_2_18m3D_C_2147469372/navigation",
-    "BoardComputer": "/vehicles/BP_Ebusco_2_2_18m3D_C_2147469372/boardcomputer",
-    "driverdisplay": "/vehicles/BP_Ebusco_2_2_18m3D_C_2147469372/driverdisplay"
+    "Navigation": "/vehicles/BP_Ebusco_2_2_18m3D_C_2147469511/navigation",
+    "Boardcomputer": "/vehicles/BP_Ebusco_2_2_18m3D_C_2147469511/boardcomputer",
+    "driverdisplay": "/vehicles/BP_Ebusco_2_2_18m3D_C_2147469511/driverdisplay"
   },
   "Buttons": [
     {
       "Name": "Gear Selector",
       "ToolTip": "",
-      "State": "Neutral",
+      "State": "Drive",
       "Actions": [
         "GearDown",
         "SetGearR",
@@ -182,7 +182,7 @@
     {
       "Name": "Fake Ignition",
       "ToolTip": "",
-      "State": "On",
+      "State": "Start",
       "Actions": [
         "MotorStartStop"
       ],
@@ -924,7 +924,7 @@
       ]
     },
     {
-      "Name": "BoardComputer",
+      "Name": "Boardcomputer",
       "ToolTip": "Atron auswählen",
       "State": "Off",
       "Actions": [
@@ -1095,7 +1095,7 @@
   "AllLamps":
   {
     "Default Emissive Materials": 0,
-    "Light Daytime": 0,
+    "Light Daytime": 1,
     "Light Parking": 0,
     "Light Headlight": 0,
     "Light Travelling": 0,
@@ -1105,9 +1105,9 @@
     "Light Reverse": 0,
     "Light Indicator Right": 0,
     "Light Indicator Left": 0,
-    "Light_Position_Main": 0,
-    "Light_Position_Right": 0,
-    "Light_Position_Left": 0,
+    "Light_Position_Main": 1,
+    "Light_Position_Right": 1,
+    "Light_Position_Left": 1,
     "Light Door 1": 1,
     "Light Door 2": 0,
     "Light Door 2 Clearance": 0,
@@ -1118,7 +1118,7 @@
     "Light Door 4": 0,
     "Light Door 4 Clearance": 0,
     "Light Door 4 Closing": 0,
-    "Light_LicensePlate": 0,
+    "Light_LicensePlate": 0.25,
     "Light Passenger": 0,
     "Light Driver": 0,
     "Light Entrance": 0,
@@ -1142,11 +1142,11 @@
     "LED_Door_2": 0,
     "LED_Door_3": 0,
     "LED_Door_4": 0,
-    "LED_GearDrive": 0,
-    "LED_GearNeutral": 1,
+    "LED_GearDrive": 1,
+    "LED_GearNeutral": 0,
     "LED_GearReverse": 0,
     "LED Warning": 0,
-    "USB Ports LED": 0,
+    "USB Ports LED": 1,
     "Right Side Warning LED": 1,
     "StopRequestSign": 0,
     "MonitorLamp": 1
@@ -1188,18 +1188,18 @@
   "NumSeats": "43",
   "NumOccupiedSeats": "0",
   "IgnitionEnabled": "true",
-  "EngineTemperature": "0.0",
+  "EngineTemperature": "0.204744",
   "WiperLevel": "0",
   "DestinationDisplayActive": "true",
   "CruiseControlActive": "false",
-  "AllowedSpeed": "30",
+  "AllowedSpeed": "20",
   "IsAtStop": "false",
   "DirtIntensity": "0.0",
-  "CurrentFuel": "500.0",
+  "CurrentFuel": "299.966492",
   "MaxFuel": "300",
-  "DisplayFuel": "1.666667",
+  "DisplayFuel": "0.999888",
   "BusLogic":
   {
-    "Asset": "/Game/Maps/Castrop/Castrop.Castrop:PersistentLevel.BP_Ebusco_2_2_18m3D_C_2147469372.BP_TheBus_BusLogic_C_2147468538"
+    "Asset": "/Game/Maps/Castrop/Castrop.Castrop:PersistentLevel.BP_Ebusco_2_2_18m3D_C_2147469511.BP_TheBus_BusLogic_C_2147468677"
   }
 }

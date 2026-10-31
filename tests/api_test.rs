@@ -236,7 +236,7 @@ mod tests {
 
         // existing
         let state = get_button_by_name(&data, "Gear Selector");
-        assert_eq!(state.as_str(), "Neutral");
+        assert_eq!(state.as_str(), "Drive");
     }
 
     #[test]
@@ -248,7 +248,7 @@ mod tests {
 
         // existing
         let state = get_button_by_name(&data, "Gear Selector");
-        assert_eq!(state.as_str(), "Neutral");
+        assert_eq!(state.as_str(), "Drive");
     }
 
     #[test]
@@ -260,7 +260,7 @@ mod tests {
 
         // existing
         let state = get_button_by_name(&data, "Gear Selector");
-        assert_eq!(state.as_str(), "Neutral");
+        assert_eq!(state.as_str(), "Drive");
     }
 }
 
@@ -285,14 +285,14 @@ fn test_api_vehicle_get_button_state_gear_selector() {
         .expect("BP_Mercedes_eCitaro_12m_2Door_C.json not found");
     let vehicle: ApiVehicleType = serde_json::from_str(&file).expect("invalid json");
     let state = vehicle.get_button_state("Gear Selector");
-    assert_eq!(state.as_str(), "Neutral");
+    assert_eq!(state.as_str(), "Drive");
 
     // Solaris Urbino 18m 4D
     let file2 = fs::read_to_string("tests/json/BP_Solaris_Urbino_18m_4D_C.json")
         .expect("BP_Solaris_Urbino_18m_4D_C.json not found");
     let vehicle2: ApiVehicleType = serde_json::from_str(&file2).expect("invalid json");
     let state2 = vehicle2.get_button_state("Gear Selector");
-    assert_eq!(state2.as_str(), "Neutral");
+    assert_eq!(state2.as_str(), "Drive");
 
     // Non-existing button
     let none_state = vehicle.get_button_state("__does_not_exist__");
@@ -339,7 +339,7 @@ fn test_api_vehicle_buttons_name_state() {
 
     // It should contain at least these known buttons with expected states
     assert!(pairs.contains(&("Wiper".to_string(), "Off".to_string())));
-    assert!(pairs.contains(&("Gear Selector".to_string(), "Neutral".to_string())));
+    assert!(pairs.contains(&("Gear Selector".to_string(), "Drive".to_string())));
 }
 
 #[test]
@@ -354,7 +354,7 @@ fn test_api_vehicle_get_button_state_contains() {
 
     // Partial matches
     assert_eq!(vehicle.get_button_state_contains("Wip"), "Off"); // matches "Wiper"
-    assert_eq!(vehicle.get_button_state_contains("Gear"), "Neutral"); // matches "Gear Selector"
+    assert_eq!(vehicle.get_button_state_contains("Gear"), "Drive"); // matches "Gear Selector"
 
     // Not found
     assert_eq!(vehicle.get_button_state_contains("__nope__"), "");
@@ -363,7 +363,7 @@ fn test_api_vehicle_get_button_state_contains() {
     let file2 = fs::read_to_string("tests/json/BP_Solaris_Urbino_18m_4D_C.json")
         .expect("BP_Solaris_Urbino_18m_4D_C.json not found");
     let vehicle2: ApiVehicleType = serde_json::from_str(&file2).expect("invalid json");
-    assert_eq!(vehicle2.get_button_state_contains("Gear"), "Neutral");
+    assert_eq!(vehicle2.get_button_state_contains("Gear"), "Drive");
 }
 
 #[test]
@@ -386,7 +386,7 @@ fn test_api_vehicle_get_button_returns_struct() {
     // Existing: Gear Selector
     let gear = vehicle.get_button("Gear Selector");
     assert!(gear.is_some());
-    assert_eq!(gear.as_ref().unwrap().state, "Neutral");
+    assert_eq!(gear.as_ref().unwrap().state, "Drive");
 
     // Not found
     assert!(vehicle.get_button("__does_not_exist__").is_none());
@@ -397,5 +397,5 @@ fn test_api_vehicle_get_button_returns_struct() {
     let vehicle2: ApiVehicleType = serde_json::from_str(&file2).expect("invalid json");
     let gear2 = vehicle2.get_button("Gear Selector");
     assert!(gear2.is_some());
-    assert_eq!(gear2.unwrap().state, "Neutral");
+    assert_eq!(gear2.unwrap().state, "Drive");
 }

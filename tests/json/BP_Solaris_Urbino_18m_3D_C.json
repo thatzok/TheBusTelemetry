@@ -1,11 +1,11 @@
 {
 	"VehicleModel": "Urban",
 	"GearboxType": "Static",
-	"ActorName": "BP_Solaris_Urbino_18m_3D_C_2147374786",
+	"ActorName": "BP_Solaris_Urbino_18m_3D_C_2147269276",
 	"InputIdentifier": "urbino",
 	"IsPlayerControlled": true,
-	"Speed": 0,
-	"RPM": 0,
+	"Speed": 0.0092696389183402061,
+	"RPM": 0.092466540634632111,
 	"IdleRPM": 0,
 	"MaxRPM": 11000,
 	"Mass": 20619.51953125,
@@ -13,11 +13,11 @@
 	"Throttle": 0,
 	"Brake": 0.80000001192092896,
 	"Load": 0,
-	"EngineStarted": false,
+	"EngineStarted": true,
 	"Gearbox":
 	{
-		"CurrentSelector": "N",
-		"CurrentGear": 0,
+		"CurrentSelector": "D",
+		"CurrentGear": 1,
 		"TargetGear": 0,
 		"GearCount": 3
 	},
@@ -29,126 +29,126 @@
 	"WarningLights": false,
 	"Location":
 	{
-		"X": 9283.5985050408181,
-		"Y": -38800.351523494071,
-		"Z": 726.90378413621715
+		"X": 68.100426594985564,
+		"Y": -407.39062566127109,
+		"Z": -581.0502094469997
 	},
 	"Rotation":
 	{
-		"Roll": -3.2768850111117449,
-		"Pitch": 0.93998528182701679,
-		"Yaw": -40.948749686474756
+		"Roll": -4.5753118389280898,
+		"Pitch": 1.9719824201703169,
+		"Yaw": -36.007022516103255
 	},
 	"Wheels": [
 		{
-			"CurrentSuspension": 18.087862014770508,
-			"PreviousSuspension": 18.087862014770508,
-			"SuspensionForce": 4247830.8199283145,
+			"CurrentSuspension": 19.762729644775391,
+			"PreviousSuspension": 19.76214599609375,
+			"SuspensionForce": 5381247.1790665546,
 			"Location":
 			{
 				"X": 329.05230699999998,
 				"Y": -116.89941399999999,
-				"Z": 46.087862014770508
+				"Z": 47.762729644775391
 			},
 			"Rotation":
 			{
 				"Roll": 0,
-				"Pitch": -0.74760996692533466,
+				"Pitch": -0.22723263383251718,
 				"Yaw": 0
 			},
 			"OnGround": true,
 			"HasContraction": true
 		},
 		{
-			"CurrentSuspension": 16.78143310546875,
-			"PreviousSuspension": 16.781435012817383,
-			"SuspensionForce": 3854158.3790705283,
+			"CurrentSuspension": 10.531898498535156,
+			"PreviousSuspension": 10.531282424926758,
+			"SuspensionForce": 2572851.2185967271,
 			"Location":
 			{
 				"X": 329.05230699999998,
 				"Y": 116.89941399999999,
-				"Z": 44.78143310546875
+				"Z": 38.531898498535156
 			},
 			"Rotation":
 			{
 				"Roll": 0,
-				"Pitch": -0.52059109904109124,
+				"Pitch": 0.48277325229861995,
 				"Yaw": 0
 			},
 			"OnGround": true,
-			"HasContraction": true
+			"HasContraction": false
 		},
 		{
-			"CurrentSuspension": 22.700380325317383,
-			"PreviousSuspension": 22.700401306152344,
-			"SuspensionForce": 3485066.1742943758,
+			"CurrentSuspension": 24.011260986328125,
+			"PreviousSuspension": 24.068809509277344,
+			"SuspensionForce": 3883678.4865232087,
 			"Location":
 			{
 				"X": -260.139771,
 				"Y": -116.89941399999999,
-				"Z": 50.700380325317383
+				"Z": 52.011260986328125
 			},
 			"Rotation":
 			{
 				"Roll": 0,
-				"Pitch": -0.69533223025499258,
+				"Pitch": -0.35700586758055325,
 				"Yaw": 0
 			},
 			"OnGround": true,
 			"HasContraction": true
 		},
 		{
-			"CurrentSuspension": 21.523811340332031,
-			"PreviousSuspension": 21.523832321166992,
-			"SuspensionForce": 3167824.7293881043,
+			"CurrentSuspension": 19.186874389648438,
+			"PreviousSuspension": 19.244524002075195,
+			"SuspensionForce": 2598001.2300158595,
 			"Location":
 			{
 				"X": -260.139771,
 				"Y": 116.89941399999999,
-				"Z": 49.523811340332031
+				"Z": 47.186874389648438
 			},
 			"Rotation":
 			{
 				"Roll": 0,
-				"Pitch": -0.48720919454607553,
+				"Pitch": 0.069392587533213923,
 				"Yaw": 0
 			},
 			"OnGround": true,
-			"HasContraction": true
+			"HasContraction": false
 		},
 		{
-			"CurrentSuspension": 18.61854362487793,
-			"PreviousSuspension": 18.61854362487793,
-			"SuspensionForce": 3392521.6250195112,
+			"CurrentSuspension": 15.190654754638672,
+			"PreviousSuspension": 15.18618106842041,
+			"SuspensionForce": 1323131.4678374412,
 			"Location":
 			{
 				"X": -340.29162600000001,
 				"Y": -116.89999400000001,
-				"Z": 14.61854362487793
+				"Z": 11.190654754638672
 			},
 			"Rotation":
 			{
 				"Roll": 0,
-				"Pitch": 0.052083749811539945,
+				"Pitch": 0.0013998982596535423,
 				"Yaw": 0
 			},
 			"OnGround": true,
-			"HasContraction": true
+			"HasContraction": false
 		},
 		{
-			"CurrentSuspension": 16.550338745117188,
-			"PreviousSuspension": 16.550338745117188,
-			"SuspensionForce": 2130670.6508936048,
+			"CurrentSuspension": 19.912448883056641,
+			"PreviousSuspension": 19.911375045776367,
+			"SuspensionForce": 4275596.592059047,
 			"Location":
 			{
 				"X": -340.29162600000001,
 				"Y": 116.89999400000001,
-				"Z": 12.550338745117188
+				"Z": 15.912448883056641
 			},
 			"Rotation":
 			{
 				"Roll": 0,
-				"Pitch": -0.0229808236507099,
+				"Pitch": -0.15340354435579073,
 				"Yaw": 0
 			},
 			"OnGround": true,
@@ -158,10 +158,10 @@
 	"IsOffroad": false,
 	"UMG":
 	{
-		"Navigation": "/vehicles/BP_Solaris_Urbino_18m_3D_C_2147374786/navigation",
-		"Boardcomputer": "/vehicles/BP_Solaris_Urbino_18m_3D_C_2147374786/boardcomputer",
-		"driverdisplayfull": "/vehicles/BP_Solaris_Urbino_18m_3D_C_2147374786/driverdisplayfull",
-		"driverdisplay": "/vehicles/BP_Solaris_Urbino_18m_3D_C_2147374786/driverdisplay"
+		"Navigation": "/vehicles/BP_Solaris_Urbino_18m_3D_C_2147269276/navigation",
+		"Boardcomputer": "/vehicles/BP_Solaris_Urbino_18m_3D_C_2147269276/boardcomputer",
+		"driverdisplayfull": "/vehicles/BP_Solaris_Urbino_18m_3D_C_2147269276/driverdisplayfull",
+		"driverdisplay": "/vehicles/BP_Solaris_Urbino_18m_3D_C_2147269276/driverdisplay"
 	},
 	"Buttons": [
 		{
@@ -299,7 +299,7 @@
 		{
 			"Name": "Gear Selector",
 			"ToolTip": "",
-			"State": "Neutral",
+			"State": "Drive",
 			"Actions": [
 				"GearDown",
 				"GearUp"
@@ -349,7 +349,7 @@
 		{
 			"Name": "Fake Ignition",
 			"ToolTip": "",
-			"State": "On",
+			"State": "Start",
 			"Actions": [
 				"MotorStartStop"
 			],
@@ -1118,9 +1118,9 @@
 		"Default Emissive Materials": 0,
 		"Light Indicator Left": 0,
 		"Light Indicator Right": 0,
-		"Light Daytime Right": 0,
-		"Light Daytime Left": 0,
-		"Light Main": 0,
+		"Light Daytime Right": 1,
+		"Light Daytime Left": 1,
+		"Light Main": 1,
 		"Light Parking": 0,
 		"Light Headlight": 0,
 		"Light Travelling": 0,
@@ -1129,7 +1129,7 @@
 		"Light Reverse": 0,
 		"Light Front Fog": 0,
 		"Light Rear Fog": 0,
-		"Light License Plate": 0,
+		"Light License Plate": 10,
 		"Passenger Lights": 0,
 		"Passenger Lights Left": 0,
 		"Passenger Lights Right": 0,
@@ -1209,18 +1209,18 @@
 	"NumSeats": "43",
 	"NumOccupiedSeats": "0",
 	"IgnitionEnabled": "true",
-	"EngineTemperature": "0.0",
+	"EngineTemperature": "0.0101",
 	"WiperLevel": "0",
 	"DestinationDisplayActive": "true",
 	"CruiseControlActive": "false",
-	"AllowedSpeed": "30",
+	"AllowedSpeed": "20",
 	"IsAtStop": "false",
 	"DirtIntensity": "0.0",
-	"CurrentFuel": "252.949615",
+	"CurrentFuel": "276.234192",
 	"MaxFuel": "300",
-	"DisplayFuel": "0.843165",
+	"DisplayFuel": "0.920781",
 	"BusLogic":
 	{
-		"Asset": "/Game/Maps/Castrop/Castrop.Castrop:PersistentLevel.BP_Solaris_Urbino_18m_3D_C_2147374786.BP_TheBus_BusLogic_C_2147374099"
+		"Asset": "/Game/Maps/Castrop/Castrop.Castrop:PersistentLevel.BP_Solaris_Urbino_18m_3D_C_2147269276.BP_TheBus_BusLogic_C_2147268589"
 	}
 }

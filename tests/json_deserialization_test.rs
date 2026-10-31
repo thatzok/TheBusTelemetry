@@ -8,16 +8,16 @@ use komsi::komsi::KomsiDateTime;
 #[test]
 fn test_json_deserialization_from_files() {
 
-    test_vehicle_deserialization("tests/json/BP_Citaro_Dizel_C.json", "BP_Citaro_Dizel_C_2147436818");
-    test_vehicle_deserialization("tests/json/BP_Ebusco_2_2_18m3D_C.json", "BP_Ebusco_2_2_18m3D_C_2147469372");
-    test_vehicle_deserialization("tests/json/BP_MAN_LionsCityDD_Base_C.json", "BP_MAN_LionsCityDD_Base_C_2147472553");
-    test_vehicle_deserialization("tests/json/BP_MAN_LionsCityDD_Base_C.json", "BP_MAN_LionsCityDD_Base_C_2147472553");
-    test_vehicle_deserialization("tests/json/BP_Mercedes_eCitaro_12m_2Door_C.json", "BP_Mercedes_eCitaro_12m_2Door_C_2147439900");
-    test_vehicle_deserialization("tests/json/BP_Scania_Citywide_12M2D_C.json", "BP_Scania_Citywide_12M2D_C_2147417565");
-    test_vehicle_deserialization("tests/json/BP_Solaris_Urbino_12m_2D_C.json", "BP_Solaris_Urbino_12m_2D_C_2147395951");
-    test_vehicle_deserialization("tests/json/BP_Solaris_Urbino_18m_3D_C.json", "BP_Solaris_Urbino_18m_3D_C_2147374786");
-    test_vehicle_deserialization("tests/json/BP_Solaris_Urbino_18m_4D_C.json", "BP_Solaris_Urbino_18m_4D_C_2147352571");
-    test_vehicle_deserialization("tests/json/BP_VDL_Citea_LLE_120_2D_C.json", "BP_VDL_Citea_LLE_120_2D_C_2147331184");
+    test_vehicle_deserialization("tests/json/BP_Citaro_Dizel_C.json", "BP_Citaro_Dizel_C_2147471210");
+    test_vehicle_deserialization("tests/json/BP_Ebusco_2_2_18m3D_C.json", "BP_Ebusco_2_2_18m3D_C_2147469511");
+    test_vehicle_deserialization("tests/json/BP_MAN_LionsCityDD_Base_C.json", "BP_MAN_LionsCityDD_Base_C_2147431761");
+    test_vehicle_deserialization("tests/json/BP_MANLionsCityA21_Game_C.json", "BP_MANLionsCityA21_Game_C_2147439025");
+    test_vehicle_deserialization("tests/json/BP_Mercedes_eCitaro_12m_2Door_C.json", "BP_Mercedes_eCitaro_12m_2Door_C_2147366132");
+    test_vehicle_deserialization("tests/json/BP_Scania_Citywide_12M2D_C.json", "BP_Scania_Citywide_12M2D_C_2147334571");
+    test_vehicle_deserialization("tests/json/BP_Solaris_Urbino_12m_2D_C.json", "BP_Solaris_Urbino_12m_2D_C_2147299883");
+    test_vehicle_deserialization("tests/json/BP_Solaris_Urbino_18m_3D_C.json", "BP_Solaris_Urbino_18m_3D_C_2147269276");
+    test_vehicle_deserialization("tests/json/BP_Solaris_Urbino_18m_4D_C.json", "BP_Solaris_Urbino_18m_4D_C_2147237467");
+    test_vehicle_deserialization("tests/json/BP_VDL_Citea_LLE_120_2D_C.json", "BP_VDL_Citea_LLE_120_2D_C_2147208566");
     
     test_world_deserialization("tests/json/world.json");
 }

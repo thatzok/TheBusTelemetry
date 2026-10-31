@@ -1,24 +1,24 @@
 {
   "VehicleModel": "Citaro",
   "GearboxType": "TorqueConverter",
-  "ActorName": "BP_Citaro_Dizel_C_2147436818",
-  "InputIdentifier": "O530",
+  "ActorName": "BP_Citaro_Dizel_C_2147471210",
+  "InputIdentifier": "o530",
   "IsPlayerControlled": true,
   "Speed": 0,
-  "RPM": 0,
+  "RPM": 395.59283447265625,
   "IdleRPM": 575,
   "MaxRPM": 2250,
   "Mass": 14900,
   "Steering": 0,
   "Throttle": 0,
   "Brake": 0.80000001192092896,
-  "Load": 0,
-  "EngineStarted": false,
+  "Load": 0.5,
+  "EngineStarted": true,
   "Gearbox":
   {
-    "CurrentSelector": "N",
-    "CurrentGear": 0,
-    "TargetGear": 0,
+    "CurrentSelector": "D",
+    "CurrentGear": 1,
+    "TargetGear": 1,
     "GearCount": 3
   },
   "FixingBrake": true,
@@ -29,88 +29,88 @@
   "WarningLights": false,
   "Location":
   {
-    "X": 9365.040450559567,
-    "Y": -38870.087504710755,
-    "Z": 717.09702232511188
+    "X": 162.3862082999477,
+    "Y": -466.11885525192389,
+    "Z": -589.87382999953468
   },
   "Rotation":
   {
-    "Roll": -3.4013457364428077,
-    "Pitch": 0.39673370353528814,
-    "Yaw": -40.881292711259469
+    "Roll": -2.6482286082551818,
+    "Pitch": 1.070394569034113,
+    "Yaw": -38.100825079856605
   },
   "Wheels": [
     {
-      "CurrentSuspension": 21.576875686645508,
-      "PreviousSuspension": 21.576898574829102,
-      "SuspensionForce": 3660576.7366246008,
+      "CurrentSuspension": 21.763788223266602,
+      "PreviousSuspension": 21.763790130615234,
+      "SuspensionForce": 3757137.5611176635,
       "Location":
       {
         "X": 225.69497999999999,
         "Y": -122.20977499999999,
-        "Z": 58.576875686645508
+        "Z": 58.763788223266602
       },
       "Rotation":
       {
         "Roll": 0,
-        "Pitch": -0.20970849337000624,
+        "Pitch": -0.1838005423470247,
         "Yaw": 0
       },
       "OnGround": true,
       "HasContraction": true
     },
     {
-      "CurrentSuspension": 19.698940277099609,
-      "PreviousSuspension": 19.698965072631836,
-      "SuspensionForce": 2884991.1846534871,
+      "CurrentSuspension": 19.389101028442383,
+      "PreviousSuspension": 19.389102935791016,
+      "SuspensionForce": 2783002.8949444946,
       "Location":
       {
         "X": 225.69497999999999,
         "Y": 122.20977499999999,
-        "Z": 56.698940277099609
+        "Z": 56.389101028442383
       },
       "Rotation":
       {
         "Roll": 0,
-        "Pitch": -0.19776590760623897,
+        "Pitch": -0.23156371370346535,
         "Yaw": 0
       },
       "OnGround": true,
       "HasContraction": true
     },
     {
-      "CurrentSuspension": 20.236289978027344,
-      "PreviousSuspension": 20.236289978027344,
-      "SuspensionForce": 4365464.3666083701,
+      "CurrentSuspension": 18.224431991577148,
+      "PreviousSuspension": 18.224430084228516,
+      "SuspensionForce": 3443127.6390552828,
       "Location":
       {
         "X": -362.89860299999998,
         "Y": -90.191062000000002,
-        "Z": 57.236289978027344
+        "Z": 55.224431991577148
       },
       "Rotation":
       {
         "Roll": 0,
-        "Pitch": 0.064883989148462357,
+        "Pitch": 0.071897004458446032,
         "Yaw": 0
       },
       "OnGround": true,
       "HasContraction": true
     },
     {
-      "CurrentSuspension": 19.180917739868164,
-      "PreviousSuspension": 19.180919647216797,
-      "SuspensionForce": 3809511.618255788,
+      "CurrentSuspension": 20.0010986328125,
+      "PreviousSuspension": 20.001094818115234,
+      "SuspensionForce": 4358878.607468551,
       "Location":
       {
         "X": -362.89860299999998,
         "Y": 90.191062000000002,
-        "Z": 56.180917739868164
+        "Z": 57.0010986328125
       },
       "Rotation":
       {
         "Roll": 0,
-        "Pitch": -0.065008948407965117,
+        "Pitch": 0.0053736127911137776,
         "Yaw": 0
       },
       "OnGround": true,
@@ -120,9 +120,9 @@
   "IsOffroad": false,
   "UMG":
   {
-    "driverdisplay": "/vehicles/BP_Citaro_Dizel_C_2147436818/driverdisplay",
-    "Navigation": "/vehicles/BP_Citaro_Dizel_C_2147436818/navigation",
-    "Boardcomputer": "/vehicles/BP_Citaro_Dizel_C_2147436818/boardcomputer"
+    "driverdisplay": "/vehicles/BP_Citaro_Dizel_C_2147471210/driverdisplay",
+    "Navigation": "/vehicles/BP_Citaro_Dizel_C_2147471210/navigation",
+    "Boardcomputer": "/vehicles/BP_Citaro_Dizel_C_2147471210/boardcomputer"
   },
   "Buttons": [
     {
@@ -191,7 +191,7 @@
     {
       "Name": "Gear Selector",
       "ToolTip": "",
-      "State": "Neutral",
+      "State": "Drive",
       "Actions": [
         "SetGearN",
         "SetGearR",
@@ -246,7 +246,7 @@
     {
       "Name": "Fake Ignition",
       "ToolTip": "",
-      "State": "On",
+      "State": "Start",
       "Actions": [
         "MotorStartStop"
       ],
@@ -619,8 +619,8 @@
     "Light Door 4 Interior": 0,
     "Default Emissive Materials": 0,
     "Light Passenger": 0,
-    "LED Gear Drive": 0,
-    "LED Gear Neutral": 3,
+    "LED Gear Drive": 3,
+    "LED Gear Neutral": 0,
     "LED Gear Reverse": 0,
     "LED Warning": 0,
     "LED Passengers Light Level 1": 0,
@@ -670,18 +670,18 @@
   "NumSeats": "30",
   "NumOccupiedSeats": "0",
   "IgnitionEnabled": "true",
-  "EngineTemperature": "0.0",
+  "EngineTemperature": "0.014101",
   "WiperLevel": "0",
   "DestinationDisplayActive": "true",
   "CruiseControlActive": "false",
-  "AllowedSpeed": "30",
+  "AllowedSpeed": "20",
   "IsAtStop": "false",
   "DirtIntensity": "0.0",
-  "CurrentFuel": "100.0",
+  "CurrentFuel": "99.992767",
   "MaxFuel": "100",
-  "DisplayFuel": "1.0",
+  "DisplayFuel": "0.999928",
   "BusLogic":
   {
-    "Asset": "/Game/Maps/Castrop/Castrop.Castrop:PersistentLevel.BP_Citaro_Dizel_C_2147436818.BP_TheBus_BusLogic_C_2147436218"
+    "Asset": "/Game/Maps/Castrop/Castrop.Castrop:PersistentLevel.BP_Citaro_Dizel_C_2147471210.BP_TheBus_BusLogic_C_2147470610"
   }
 }

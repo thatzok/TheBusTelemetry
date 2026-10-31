@@ -1,24 +1,24 @@
 {
   "VehicleModel": "Citywide LF",
   "GearboxType": "TorqueConverter",
-  "ActorName": "BP_Scania_Citywide_12M2D_C_2147417565",
+  "ActorName": "BP_Scania_Citywide_12M2D_C_2147334571",
   "InputIdentifier": "Scania",
   "IsPlayerControlled": true,
   "Speed": 0,
-  "RPM": 0,
+  "RPM": 530.8992919921875,
   "IdleRPM": 600,
   "MaxRPM": 2700,
   "Mass": 12030.65234375,
   "Steering": 0,
   "Throttle": 0,
   "Brake": 0.80000001192092896,
-  "Load": 0,
-  "EngineStarted": false,
+  "Load": 0.3840624988079071,
+  "EngineStarted": true,
   "Gearbox":
   {
-    "CurrentSelector": "N",
-    "CurrentGear": 0,
-    "TargetGear": 0,
+    "CurrentSelector": "D",
+    "CurrentGear": 1,
+    "TargetGear": 1,
     "GearCount": 3
   },
   "FixingBrake": true,
@@ -29,88 +29,88 @@
   "WarningLights": false,
   "Location":
   {
-    "X": 9417.1011541471671,
-    "Y": -38915.845010313875,
-    "Z": 728.47680051173245
+    "X": 215.42996974632192,
+    "Y": -511.44635429485743,
+    "Z": -581.66392213296183
   },
   "Rotation":
   {
-    "Roll": -3.4545330399464542,
-    "Pitch": 0.48589466003070292,
-    "Yaw": -40.893515464560394
+    "Roll": -0.23693702037257941,
+    "Pitch": 1.034615502608389,
+    "Yaw": -37.905362137170712
   },
   "Wheels": [
     {
-      "CurrentSuspension": 18.785699844360352,
-      "PreviousSuspension": 18.785703659057617,
-      "SuspensionForce": 2845162.3662888925,
+      "CurrentSuspension": 20.070405960083008,
+      "PreviousSuspension": 20.070407867431641,
+      "SuspensionForce": 3357404.7316217525,
       "Location":
       {
         "X": 200,
         "Y": -105,
-        "Z": 50.785699844360352
+        "Z": 52.070405960083008
       },
       "Rotation":
       {
         "Roll": 0,
-        "Pitch": -0.26654141600706377,
+        "Pitch": -0.34969570583936554,
         "Yaw": 0
       },
       "OnGround": true,
       "HasContraction": true
     },
     {
-      "CurrentSuspension": 17.111709594726562,
-      "PreviousSuspension": 17.111713409423828,
-      "SuspensionForce": 2305695.4057726562,
+      "CurrentSuspension": 14.958391189575195,
+      "PreviousSuspension": 14.958393096923828,
+      "SuspensionForce": 1733059.8574447343,
       "Location":
       {
         "X": 200,
         "Y": 105,
-        "Z": 49.111709594726562
+        "Z": 56.958391189575195
       },
       "Rotation":
       {
         "Roll": 0,
-        "Pitch": -0.36868010280092983,
+        "Pitch": -0.31505008353866365,
         "Yaw": 0
       },
       "OnGround": true,
       "HasContraction": true
     },
     {
-      "CurrentSuspension": 18.569961547851562,
-      "PreviousSuspension": 18.569957733154297,
-      "SuspensionForce": 3677499.0391794085,
+      "CurrentSuspension": 16.449586868286133,
+      "PreviousSuspension": 16.449583053588867,
+      "SuspensionForce": 2423422.9992991425,
       "Location":
       {
         "X": -400.36596700000001,
         "Y": -90,
-        "Z": 50.569961547851562
+        "Z": 48.449586868286133
       },
       "Rotation":
       {
         "Roll": 0,
-        "Pitch": 0.37819637769853626,
+        "Pitch": 0.017927867489685428,
         "Yaw": 0
       },
       "OnGround": true,
       "HasContraction": true
     },
     {
-      "CurrentSuspension": 17.372283935546875,
-      "PreviousSuspension": 17.372280120849609,
-      "SuspensionForce": 2954431.9108906183,
+      "CurrentSuspension": 19.539186477661133,
+      "PreviousSuspension": 19.539182662963867,
+      "SuspensionForce": 4290091.7995820269,
       "Location":
       {
         "X": -400.36596700000001,
         "Y": 90,
-        "Z": 49.372283935546875
+        "Z": 56.539186477661133
       },
       "Rotation":
       {
         "Roll": 0,
-        "Pitch": -0.34453750903267655,
+        "Pitch": 0.060424240845837147,
         "Yaw": 0
       },
       "OnGround": true,
@@ -120,9 +120,9 @@
   "IsOffroad": false,
   "UMG":
   {
-    "Navigation": "/vehicles/BP_Scania_Citywide_12M2D_C_2147417565/navigation",
-    "Boardcomputer": "/vehicles/BP_Scania_Citywide_12M2D_C_2147417565/boardcomputer",
-    "driverdisplay": "/vehicles/BP_Scania_Citywide_12M2D_C_2147417565/driverdisplay"
+    "Navigation": "/vehicles/BP_Scania_Citywide_12M2D_C_2147334571/navigation",
+    "Boardcomputer": "/vehicles/BP_Scania_Citywide_12M2D_C_2147334571/boardcomputer",
+    "driverdisplay": "/vehicles/BP_Scania_Citywide_12M2D_C_2147334571/driverdisplay"
   },
   "Buttons": [
     {
@@ -206,7 +206,7 @@
     {
       "Name": "Gear Selector",
       "ToolTip": "",
-      "State": "Neutral",
+      "State": "Drive",
       "Actions": [
         "SetGearN",
         "SetGearR",
@@ -221,7 +221,7 @@
     {
       "Name": "Fake Ignition",
       "ToolTip": "",
-      "State": "Off",
+      "State": "Start",
       "Actions": [
         "MotorStartStop"
       ],
@@ -1286,7 +1286,7 @@
   "AllLamps":
   {
     "Default Emissive Materials": 0,
-    "Light Brake": 0,
+    "Light Brake": 1,
     "DoorLightMiddle": 0,
     "DoorLightRear": 0,
     "Light Front Fog": 0,
@@ -1309,24 +1309,24 @@
     "Tacho Indicator Right": 0,
     "Tacho Travelling": 0,
     "Tacho Rear Fog": 0,
-    "TachoWarningDoorOpenLED": 0,
-    "TachoDoorOpenLED": 0,
-    "Tacho Parking Brake": 0,
+    "TachoWarningDoorOpenLED": 1,
+    "TachoDoorOpenLED": 1,
+    "Tacho Parking Brake": 1,
     "EngineWarningLED": 0,
     "SeatBeltLED": 0,
     "TachoLifting": 0,
-    "ButtonLight Door 1": 0,
+    "ButtonLight Door 1": 1,
     "ButtonLight Door 2": 0,
     "ButtonLight Door 3": 0,
-    "GearD": 0,
+    "GearD": 1,
     "GearN": 0,
     "GearR": 0,
-    "InteriorMiddle": 0,
+    "InteriorMiddle": 1,
     "ResetStopRequestButton": 0,
     "Light Parking": 0,
     "LightPositionFront": 0,
     "Light Headlight": 0,
-    "LED Stop Brake": 0,
+    "LED Stop Brake": 1,
     "TachoStopRequest": 0,
     "Tacho Retarder": 0,
     "DoorLightVeryRear": 0,
@@ -1355,19 +1355,19 @@
   "ActiveRadioChannel": "NONE",
   "NumSeats": "33",
   "NumOccupiedSeats": "0",
-  "IgnitionEnabled": "false",
-  "EngineTemperature": "0.0",
+  "IgnitionEnabled": "true",
+  "EngineTemperature": "0.010703",
   "WiperLevel": "0",
   "DestinationDisplayActive": "true",
   "CruiseControlActive": "false",
-  "AllowedSpeed": "30",
+  "AllowedSpeed": "20",
   "IsAtStop": "false",
   "DirtIntensity": "0.0",
-  "CurrentFuel": "400.0",
+  "CurrentFuel": "399.98056",
   "MaxFuel": "400",
-  "DisplayFuel": "0.0",
+  "DisplayFuel": "0.999951",
   "BusLogic":
   {
-    "Asset": "/Game/Maps/Castrop/Castrop.Castrop:PersistentLevel.BP_Scania_Citywide_12M2D_C_2147417565.BP_TheBus_BusLogic_C_2147417066"
+    "Asset": "/Game/Maps/Castrop/Castrop.Castrop:PersistentLevel.BP_Scania_Citywide_12M2D_C_2147334571.BP_TheBus_BusLogic_C_2147334072"
   }
 }

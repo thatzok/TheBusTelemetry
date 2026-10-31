@@ -1,7 +1,7 @@
 {
   "VehicleModel": "eCitybus",
   "GearboxType": "Static",
-  "ActorName": "BP_Mercedes_eCitaro_12m_2Door_C_2147439900",
+  "ActorName": "BP_Mercedes_eCitaro_12m_2Door_C_2147366132",
   "InputIdentifier": "eCitaro",
   "IsPlayerControlled": true,
   "Speed": 0,
@@ -13,11 +13,11 @@
   "Throttle": 0,
   "Brake": 0.80000001192092896,
   "Load": 0,
-  "EngineStarted": false,
+  "EngineStarted": true,
   "Gearbox":
   {
-    "CurrentSelector": "N",
-    "CurrentGear": 0,
+    "CurrentSelector": "D",
+    "CurrentGear": 1,
     "TargetGear": 0,
     "GearCount": 3
   },
@@ -29,88 +29,88 @@
   "WarningLights": false,
   "Location":
   {
-    "X": 9363.7493162974606,
-    "Y": -38869.425993567915,
-    "Z": 727.99688659895855
+    "X": 158.98272642885703,
+    "Y": -465.62612452299339,
+    "Z": -581.63562289935203
   },
   "Rotation":
   {
-    "Roll": -3.2087326351443721,
-    "Pitch": 0.54042014356514634,
-    "Yaw": -40.857071860152494
+    "Roll": -1.311938596208563,
+    "Pitch": 1.3191618913966878,
+    "Yaw": -38.0205301521192
   },
   "Wheels": [
     {
-      "CurrentSuspension": 21.193275451660156,
-      "PreviousSuspension": 21.193269729614258,
-      "SuspensionForce": 3314085.2582506123,
+      "CurrentSuspension": 21.613731384277344,
+      "PreviousSuspension": 21.613731384277344,
+      "SuspensionForce": 3696011.7596773393,
       "Location":
       {
         "X": 222.76814300000001,
         "Y": -116.451004,
-        "Z": 46.193275451660156
+        "Z": 46.613731384277344
       },
       "Rotation":
       {
         "Roll": 0,
-        "Pitch": -0.34787124847556899,
+        "Pitch": -0.19129574529647667,
         "Yaw": 0
       },
       "OnGround": true,
       "HasContraction": true
     },
     {
-      "CurrentSuspension": 20.129411697387695,
-      "PreviousSuspension": 20.129405975341797,
-      "SuspensionForce": 2700169.5211950014,
+      "CurrentSuspension": 19.096481323242188,
+      "PreviousSuspension": 19.096481323242188,
+      "SuspensionForce": 2271364.0509168748,
       "Location":
       {
         "X": 222.76814300000001,
         "Y": 116.451004,
-        "Z": 45.129411697387695
+        "Z": 49.096481323242188
       },
       "Rotation":
       {
         "Roll": 0,
-        "Pitch": -0.68371772124435815,
+        "Pitch": -0.33073980594483837,
         "Yaw": 0
       },
       "OnGround": true,
       "HasContraction": true
     },
     {
-      "CurrentSuspension": 21.647903442382812,
-      "PreviousSuspension": 21.647895812988281,
-      "SuspensionForce": 4161533.0988699701,
+      "CurrentSuspension": 20.333654403686523,
+      "PreviousSuspension": 20.333654403686523,
+      "SuspensionForce": 3268676.0274833841,
       "Location":
       {
         "X": -358.16189600000001,
         "Y": -116.451004,
-        "Z": 46.647903442382812
+        "Z": 45.333654403686523
       },
       "Rotation":
       {
         "Roll": 0,
-        "Pitch": 0.016495697772000308,
+        "Pitch": 0.034458885403112476,
         "Yaw": 0
       },
       "OnGround": true,
       "HasContraction": true
     },
     {
-      "CurrentSuspension": 20.720226287841797,
-      "PreviousSuspension": 20.720218658447266,
-      "SuspensionForce": 3552877.1623734487,
+      "CurrentSuspension": 22.263826370239258,
+      "PreviousSuspension": 22.263826370239258,
+      "SuspensionForce": 4554405.5742842536,
       "Location":
       {
         "X": -358.16189600000001,
         "Y": 116.451004,
-        "Z": 45.720226287841797
+        "Z": 52.263826370239258
       },
       "Rotation":
       {
         "Roll": 0,
-        "Pitch": -0.053565805997694234,
+        "Pitch": 0.021943360604467273,
         "Yaw": 0
       },
       "OnGround": true,
@@ -120,9 +120,9 @@
   "IsOffroad": false,
   "UMG":
   {
-    "Navigation": "/vehicles/BP_Mercedes_eCitaro_12m_2Door_C_2147439900/navigation",
-    "Boardcomputer": "/vehicles/BP_Mercedes_eCitaro_12m_2Door_C_2147439900/boardcomputer",
-    "driverdisplay": "/vehicles/BP_Mercedes_eCitaro_12m_2Door_C_2147439900/driverdisplay"
+    "Navigation": "/vehicles/BP_Mercedes_eCitaro_12m_2Door_C_2147366132/navigation",
+    "Boardcomputer": "/vehicles/BP_Mercedes_eCitaro_12m_2Door_C_2147366132/boardcomputer",
+    "driverdisplay": "/vehicles/BP_Mercedes_eCitaro_12m_2Door_C_2147366132/driverdisplay"
   },
   "Buttons": [
     {
@@ -243,7 +243,7 @@
     {
       "Name": "Gear Selector",
       "ToolTip": "",
-      "State": "Neutral",
+      "State": "Drive",
       "Actions": [
         "SetGearN",
         "SetGearR",
@@ -258,7 +258,7 @@
     {
       "Name": "Fake Ignition",
       "ToolTip": "",
-      "State": "Off",
+      "State": "Start",
       "Actions": [
         "MotorStartStop"
       ],
@@ -1080,12 +1080,12 @@
     "Default Emissive": 0,
     "Light Indicator Left": 0,
     "Light Indicator Right": 0,
-    "Light Daytime": 0,
-    "Light Main": 0,
+    "Light Daytime": 1,
+    "Light Main": 1,
     "Light Parking": 0,
     "Light Headlight": 0,
     "Light Travelling": 0,
-    "Light Brake": 0,
+    "Light Brake": 1,
     "Light Reverse": 0,
     "Light Front Fog": 0,
     "LED Front Fog": 0,
@@ -1095,11 +1095,11 @@
     "InteriorLightMain LED": 0,
     "InteriorLightDimmState LED": 0,
     "InteriorLightBrightState LED": 0,
-    "Interior Lights Door1": 0,
+    "Interior Lights Door1": 1,
     "Interior Lights Door2": 0,
     "Interior Lights Door3": 0,
     "Interior Lights Door4": 0,
-    "ButtonLight Door 1": 0,
+    "ButtonLight Door 1": 1,
     "ButtonLight Door 2": 0,
     "ButtonLight Door 3": 0,
     "ButtonLight Door 4": 0,
@@ -1108,7 +1108,7 @@
     "Door 4 WarningLight": 0,
     "Light Driver": 0,
     "LED Strip Ramp": 0,
-    "USB Lights": 0,
+    "USB Lights": 1,
     "LED Misc": 0,
     "ButtonLight LaneAssist": 0,
     "ButtonLight WindowHeating 1 State1": 0,
@@ -1124,13 +1124,13 @@
     "ButtonLight InteriorLightControl 1": 0,
     "LED Announcement": 0,
     "LED WLAN Clearance": 0,
-    "ButtonLight Camera 1": 0,
+    "ButtonLight Camera 1": 1,
     "ButtonLight SteeringWheelAdjust": 0,
-    "LED Stop Brake": 0,
-    "ButtonLight TractionControl": 0,
+    "LED Stop Brake": 1,
+    "ButtonLight TractionControl": 1,
     "ButtonLight DriverDoor": 0,
-    "ButtonLight AutomaticDoorClosing": 0,
-    "ButtonLight AutomaticKneeling": 0,
+    "ButtonLight AutomaticDoorClosing": 1,
+    "ButtonLight AutomaticKneeling": 1,
     "ButtonLight WheelchairRamp State1": 0,
     "ButtonLight WheelchairRamp State2": 0,
     "ButtonLight DoorClearance": 0,
@@ -1141,7 +1141,7 @@
     "FourthDoorRequest": 0,
     "LED Warning": 0,
     "DB Dot": 0,
-    "LED Parking Brake": 0,
+    "LED Parking Brake": 1,
     "LED StopRequest": 0,
     "Gear_N": 0
   },
@@ -1167,19 +1167,19 @@
   "ActiveRadioChannel": "NONE",
   "NumSeats": "30",
   "NumOccupiedSeats": "0",
-  "IgnitionEnabled": "false",
-  "EngineTemperature": "0.0",
+  "IgnitionEnabled": "true",
+  "EngineTemperature": "0.009646",
   "WiperLevel": "0",
   "DestinationDisplayActive": "true",
   "CruiseControlActive": "false",
-  "AllowedSpeed": "30",
+  "AllowedSpeed": "20",
   "IsAtStop": "false",
   "DirtIntensity": "0.0",
   "CurrentFuel": "243.0",
   "MaxFuel": "243",
-  "DisplayFuel": "0.0",
+  "DisplayFuel": "1.0",
   "BusLogic":
   {
-    "Asset": "/Game/Maps/Castrop/Castrop.Castrop:PersistentLevel.BP_Mercedes_eCitaro_12m_2Door_C_2147439900.BP_TheBus_BusLogic_C_2147439378"
+    "Asset": "/Game/Maps/Castrop/Castrop.Castrop:PersistentLevel.BP_Mercedes_eCitaro_12m_2Door_C_2147366132.BP_TheBus_BusLogic_C_2147365610"
   }
 }

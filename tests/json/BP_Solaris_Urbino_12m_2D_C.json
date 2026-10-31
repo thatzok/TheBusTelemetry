@@ -1,7 +1,7 @@
 {
   "VehicleModel": "Urban",
   "GearboxType": "Static",
-  "ActorName": "BP_Solaris_Urbino_12m_2D_C_2147395951",
+  "ActorName": "BP_Solaris_Urbino_12m_2D_C_2147299883",
   "InputIdentifier": "urbino",
   "IsPlayerControlled": true,
   "Speed": 0,
@@ -13,11 +13,11 @@
   "Throttle": 0,
   "Brake": 0.80000001192092896,
   "Load": 0,
-  "EngineStarted": false,
+  "EngineStarted": true,
   "Gearbox":
   {
-    "CurrentSelector": "N",
-    "CurrentGear": 0,
+    "CurrentSelector": "D",
+    "CurrentGear": 1,
     "TargetGear": 0,
     "GearCount": 3
   },
@@ -29,88 +29,88 @@
   "WarningLights": false,
   "Location":
   {
-    "X": 9282.8391169286424,
-    "Y": -38799.869003538945,
-    "Z": 726.78097815170258
+    "X": 76.143320561345305,
+    "Y": -399.53477487178617,
+    "Z": -581.24192259337121
   },
   "Rotation":
   {
-    "Roll": -3.3859636775055741,
-    "Pitch": 0.41610342749055296,
-    "Yaw": -40.883725525657184
+    "Roll": -3.0430128693724914,
+    "Pitch": 1.239872643136013,
+    "Yaw": -38.001755664898631
   },
   "Wheels": [
     {
-      "CurrentSuspension": 19.413936614990234,
-      "PreviousSuspension": 19.413942337036133,
-      "SuspensionForce": 3146569.1764186057,
+      "CurrentSuspension": 19.343786239624023,
+      "PreviousSuspension": 19.343788146972656,
+      "SuspensionForce": 3331836.2036480429,
       "Location":
       {
         "X": 329.05599999999998,
         "Y": -116.90000000000001,
-        "Z": 47.413936614990234
+        "Z": 47.343786239624023
       },
       "Rotation":
       {
         "Roll": 0,
-        "Pitch": -0.30223141217735605,
+        "Pitch": -0.42732410701465934,
         "Yaw": 0
       },
       "OnGround": true,
       "HasContraction": true
     },
     {
-      "CurrentSuspension": 17.712310791015625,
-      "PreviousSuspension": 17.712316513061523,
-      "SuspensionForce": 2599631.8386769677,
+      "CurrentSuspension": 15.677914619445801,
+      "PreviousSuspension": 15.67791748046875,
+      "SuspensionForce": 2287581.6658947016,
       "Location":
       {
         "X": 329.05599999999998,
         "Y": 116.90000000000001,
-        "Z": 45.712310791015625
+        "Z": 43.677914619445801
       },
       "Rotation":
       {
         "Roll": 0,
-        "Pitch": -0.40273823396927222,
+        "Pitch": -0.40068196757414448,
         "Yaw": 0
       },
       "OnGround": true,
       "HasContraction": true
     },
     {
-      "CurrentSuspension": 18.609954833984375,
-      "PreviousSuspension": 18.609947204589844,
-      "SuspensionForce": 4084709.4407836832,
+      "CurrentSuspension": 17.220830917358398,
+      "PreviousSuspension": 17.220819473266602,
+      "SuspensionForce": 3420270.2315190695,
       "Location":
       {
         "X": -260.13900000000001,
         "Y": -116.90000000000001,
-        "Z": 46.609954833984375
+        "Z": 45.220830917358398
       },
       "Rotation":
       {
         "Roll": 0,
-        "Pitch": 0.036332261625245797,
+        "Pitch": 0.037182259694706191,
         "Yaw": 0
       },
       "OnGround": true,
       "HasContraction": true
     },
     {
-      "CurrentSuspension": 17.048843383789062,
-      "PreviousSuspension": 17.048835754394531,
-      "SuspensionForce": 3294165.5792574408,
+      "CurrentSuspension": 18.025030136108398,
+      "PreviousSuspension": 18.025018692016602,
+      "SuspensionForce": 3824292.1199978688,
       "Location":
       {
         "X": -260.13900000000001,
         "Y": 116.90000000000001,
-        "Z": 45.048843383789062
+        "Z": 46.025030136108398
       },
       "Rotation":
       {
         "Roll": 0,
-        "Pitch": -0.038709172199597158,
+        "Pitch": 0.025916194681854812,
         "Yaw": 0
       },
       "OnGround": true,
@@ -120,10 +120,10 @@
   "IsOffroad": false,
   "UMG":
   {
-    "Navigation": "/vehicles/BP_Solaris_Urbino_12m_2D_C_2147395951/navigation",
-    "Boardcomputer": "/vehicles/BP_Solaris_Urbino_12m_2D_C_2147395951/boardcomputer",
-    "driverdisplayfull": "/vehicles/BP_Solaris_Urbino_12m_2D_C_2147395951/driverdisplayfull",
-    "driverdisplay": "/vehicles/BP_Solaris_Urbino_12m_2D_C_2147395951/driverdisplay"
+    "Navigation": "/vehicles/BP_Solaris_Urbino_12m_2D_C_2147299883/navigation",
+    "Boardcomputer": "/vehicles/BP_Solaris_Urbino_12m_2D_C_2147299883/boardcomputer",
+    "driverdisplayfull": "/vehicles/BP_Solaris_Urbino_12m_2D_C_2147299883/driverdisplayfull",
+    "driverdisplay": "/vehicles/BP_Solaris_Urbino_12m_2D_C_2147299883/driverdisplay"
   },
   "Buttons": [
     {
@@ -261,7 +261,7 @@
     {
       "Name": "Gear Selector",
       "ToolTip": "",
-      "State": "Neutral",
+      "State": "Drive",
       "Actions": [
         "GearDown",
         "GearUp"
@@ -311,7 +311,7 @@
     {
       "Name": "Fake Ignition",
       "ToolTip": "",
-      "State": "On",
+      "State": "Start",
       "Actions": [
         "MotorStartStop"
       ],
@@ -1080,9 +1080,9 @@
     "Default Emissive Materials": 0,
     "Light Indicator Left": 0,
     "Light Indicator Right": 0,
-    "Light Daytime Right": 0,
-    "Light Daytime Left": 0,
-    "Light Main": 0,
+    "Light Daytime Right": 1,
+    "Light Daytime Left": 1,
+    "Light Main": 1,
     "Light Parking": 0,
     "Light Headlight": 0,
     "Light Travelling": 0,
@@ -1091,7 +1091,7 @@
     "Light Reverse": 0,
     "Light Front Fog": 0,
     "Light Rear Fog": 0,
-    "Light License Plate": 0,
+    "Light License Plate": 10,
     "Passenger Lights": 0,
     "Passenger Lights Left": 0,
     "Passenger Lights Right": 0,
@@ -1171,18 +1171,18 @@
   "NumSeats": "28",
   "NumOccupiedSeats": "0",
   "IgnitionEnabled": "true",
-  "EngineTemperature": "0.0",
+  "EngineTemperature": "0.010931",
   "WiperLevel": "0",
   "DestinationDisplayActive": "true",
   "CruiseControlActive": "false",
-  "AllowedSpeed": "30",
+  "AllowedSpeed": "20",
   "IsAtStop": "false",
   "DirtIntensity": "0.0",
-  "CurrentFuel": "298.480164",
+  "CurrentFuel": "279.388916",
   "MaxFuel": "300",
-  "DisplayFuel": "0.994934",
+  "DisplayFuel": "0.931296",
   "BusLogic":
   {
-    "Asset": "/Game/Maps/Castrop/Castrop.Castrop:PersistentLevel.BP_Solaris_Urbino_12m_2D_C_2147395951.BP_TheBus_BusLogic_C_2147395421"
+    "Asset": "/Game/Maps/Castrop/Castrop.Castrop:PersistentLevel.BP_Solaris_Urbino_12m_2D_C_2147299883.BP_TheBus_BusLogic_C_2147299353"
   }
 }
